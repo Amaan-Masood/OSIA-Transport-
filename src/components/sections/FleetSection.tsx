@@ -79,27 +79,33 @@ const CRANE_TONNAGES = [
   },
 ];
 
-export const FleetSection: React.FC = () => {
+export interface FleetSectionProps {
+  showHeader?: boolean;
+}
+
+export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true }) => {
   const [activeImage, setActiveImage] = useState<FleetImage>(FLEET_GALLERY[0]);
 
   return (
-    <section id="fleet" className="py-16 sm:py-24 bg-blueprint text-white border-b border-white/10">
+    <section id="fleet" className="py-12 sm:py-20 bg-[#0A1B2E] text-white border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <Badge variant="orange">Inspected & Certified Fleet</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
-            Equipment & Fleet Specifications
-          </h2>
-          <p className="text-sm sm:text-base text-[#B8C6D6] leading-relaxed">
-            Real equipment photographs from our active Abu Dhabi fleet. Maintained to strict UAE municipal and HSE standards with certified operators.
-          </p>
-        </div>
+        {/* Header - Only shown when showHeader is true */}
+        {showHeader && (
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+            <Badge variant="orange">Inspected & Certified Fleet</Badge>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
+              Equipment & Fleet Specifications
+            </h2>
+            <p className="text-sm sm:text-base text-[#B8C6D6] leading-relaxed">
+              Real equipment photographs from our active Abu Dhabi fleet. Maintained to strict UAE municipal and HSE standards with certified operators.
+            </p>
+          </div>
+        )}
 
         {/* Crane Tonnage Numerals Cards (Signature Spec Sheet Layout) */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-extrabold uppercase font-display tracking-wider text-[#FF7A1A] flex items-center gap-2">
+            <h3 className="text-lg font-extrabold uppercase font-display tracking-wider text-[#EB5E1A] flex items-center gap-2">
               <Wrench className="w-5 h-5" />
               Mobile Crane Rental Capacities (Abu Dhabi)
             </h3>
@@ -110,10 +116,10 @@ export const FleetSection: React.FC = () => {
             {CRANE_TONNAGES.map((c, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 hover:border-[#FF7A1A]/50 transition-all flex flex-col justify-between"
+                className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 hover:border-[#EB5E1A]/50 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold font-display text-[#FF7A1A] tracking-tight mb-1">
+                  <div className="text-3xl sm:text-4xl font-extrabold font-display text-[#EB5E1A] tracking-tight mb-1">
                     {c.tonnage}
                   </div>
                   <div className="text-xs font-bold uppercase tracking-wider text-white mb-3">
@@ -134,7 +140,7 @@ export const FleetSection: React.FC = () => {
                     href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent(`Hello OSIA Transport! I need a quote for a ${c.tonnage} Mobile Crane in Abu Dhabi.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2 rounded-lg bg-[#FF7A1A] text-[#0A1B2E] font-extrabold text-xs uppercase tracking-wider hover:bg-[#E8640A] transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2 rounded-lg bg-[#EB5E1A] text-[#0A1B2E] font-extrabold text-xs uppercase tracking-wider hover:bg-[#D44F12] transition-colors"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
                     <span>Inquire {c.tonnage}</span>
@@ -176,7 +182,7 @@ export const FleetSection: React.FC = () => {
               </div>
               <div className="p-4 bg-[#0A1B2E]/95 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#FF7A1A] block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#EB5E1A] block">
                     {activeImage.category}
                   </span>
                   <h4 className="text-base sm:text-lg font-bold text-white font-display uppercase">
@@ -207,7 +213,7 @@ export const FleetSection: React.FC = () => {
                     onClick={() => setActiveImage(img)}
                     className={`text-left p-2.5 rounded-xl border transition-all cursor-pointer flex items-center gap-3 ${
                       isSelected
-                        ? 'bg-white/15 border-[#FF7A1A] ring-1 ring-[#FF7A1A]'
+                        ? 'bg-white/15 border-[#EB5E1A] ring-1 ring-[#EB5E1A]'
                         : 'bg-white/5 border-white/10 hover:bg-white/10'
                     }`}
                   >

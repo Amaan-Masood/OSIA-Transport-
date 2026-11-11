@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10 bg-blueprint">
+      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-3">
             <Badge variant="orange">Legal & Compliance</Badge>

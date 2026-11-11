@@ -24,7 +24,7 @@ export default function FleetPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-[#0A1B2E] text-white py-14 sm:py-20 border-b border-white/10 bg-blueprint">
+      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <Badge variant="orange">Verified Equipment Fleet</Badge>
@@ -38,8 +38,8 @@ export default function FleetPage() {
         </div>
       </section>
 
-      {/* Main Fleet Specifications & Gallery */}
-      <FleetSection />
+      {/* Main Fleet Specifications & Gallery (Header omitted to prevent duplication) */}
+      <FleetSection showHeader={false} />
 
       <CtaBand />
     </>

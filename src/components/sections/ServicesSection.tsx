@@ -130,10 +130,10 @@ export const ServicesSection: React.FC = () => {
           <Card
             accentTop="none"
             variant="dark"
-            className="flex flex-col justify-between bg-blueprint p-6 sm:p-7 border border-white/10"
+            className="flex flex-col justify-between bg-[#0A1B2E] p-6 sm:p-7 border border-white/10"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#FF7A1A]">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#EB5E1A]">
                 <Truck className="w-6 h-6" />
               </div>
               <Badge variant="orange">Custom Logistics</Badge>

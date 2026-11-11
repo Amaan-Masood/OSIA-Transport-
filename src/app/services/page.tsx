@@ -59,7 +59,7 @@ export default function ServicesHubPage() {
       <JsonLd data={breadcrumbSchema} />
       
       {/* Page Header */}
-      <section className="bg-[#0A1B2E] text-white py-14 sm:py-20 border-b border-white/10 bg-blueprint">
+      <section className="bg-[#0A1B2E] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <Badge variant="orange">Core Capabilities</Badge>

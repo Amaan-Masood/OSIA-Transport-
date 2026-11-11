@@ -61,12 +61,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10 bg-blueprint">
+      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
             <Link
               href="/services/"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B8C6D6] hover:text-[#FF7A1A] uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B8C6D6] hover:text-[#EB5E1A] uppercase tracking-wider transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to all services</span>

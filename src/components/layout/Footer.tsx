@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
               href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an immediate quote.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] transition-all shadow-md active:scale-95"
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#128C7E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] transition-all shadow-md active:scale-95"
             >
               <MessageSquare className="w-4 h-4 fill-white text-white" />
               <span>WhatsApp</span>

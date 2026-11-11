@@ -25,7 +25,7 @@ export const MobileBottomBar: React.FC = () => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 rounded-xl bg-[#22C55E] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#128C7E] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
         >
           <svg
             className="w-4 h-4 fill-white text-white"

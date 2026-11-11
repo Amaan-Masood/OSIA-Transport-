@@ -71,8 +71,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#22C55E] shrink-0 mt-0.5">
-                      <MessageSquare className="w-5 h-5 fill-[#22C55E]" />
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#128C7E] shrink-0 mt-0.5">
+                      <MessageSquare className="w-5 h-5 fill-[#128C7E]" />
                     </div>
                     <div>
                       <span className="text-xs text-[#94A3B8] uppercase font-bold block">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                         href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need a quote.')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-bold text-[#22C55E] hover:underline"
+                        className="text-lg font-bold text-[#128C7E] hover:underline"
                       >
                         +971 50 412 7930
                       </a>

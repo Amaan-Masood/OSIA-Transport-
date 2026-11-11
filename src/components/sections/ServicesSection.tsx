@@ -115,7 +115,7 @@ export const ServicesSection: React.FC = () => {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#22C55E] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#16A34A] shadow-sm transition-transform active:scale-95"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#128C7E] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0E7064] shadow-sm transition-transform active:scale-95"
                   >
                     <MessageSquare className="w-3.5 h-3.5 fill-white text-white" />
                     <span>Quote</span>

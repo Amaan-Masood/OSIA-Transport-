@@ -36,8 +36,8 @@ export const Button: React.FC<ButtonProps> = ({
     cta: 'bg-[#0284C7] text-white hover:bg-[#0369A1] shadow-[0_4px_16px_rgba(2,132,199,0.30)] hover:shadow-[0_6px_22px_rgba(2,132,199,0.40)] font-extrabold',
     // Authority Midnight Navy
     primary: 'bg-[#0B1726] text-white hover:bg-[#162842] shadow-sm hover:shadow-md font-bold',
-    // Authentic WhatsApp Green (Strictly for WhatsApp actions)
-    whatsapp: 'bg-[#22C55E] text-white hover:bg-[#16A34A] shadow-sm font-extrabold hover:shadow-md',
+    // Official Deep WhatsApp Emerald (Executive, mature & non-fluorescent)
+    whatsapp: 'bg-[#128C7E] text-white hover:bg-[#0E7064] shadow-sm font-extrabold hover:shadow-md',
     // Precision Blue (alias)
     water: 'bg-[#0284C7] text-white hover:bg-[#0369A1] shadow-sm hover:shadow-md font-bold',
     // Refined Studio Outline with crisp slate border

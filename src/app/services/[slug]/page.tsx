@@ -98,7 +98,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] shadow-md transition-all active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#128C7E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] shadow-md transition-all active:scale-95"
               >
                 <MessageSquare className="w-4 h-4 fill-white text-white" />
                 <span>Instant WhatsApp Quote</span>

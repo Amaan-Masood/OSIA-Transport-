@@ -20,9 +20,9 @@
   --color-orange-brand-text: #0369A1;
   --color-orange-contrast: #FFFFFF;
   
-  /* WhatsApp & Compliance Emerald */
-  --color-whatsapp: #22C55E;
-  --color-whatsapp-hover: #16A34A;
+  /* Official Deep WhatsApp Emerald */
+  --color-whatsapp: #128C7E;
+  --color-whatsapp-hover: #0E7064;
   --color-whatsapp-contrast: #FFFFFF;
   
   /* Surfaces & Canvas */
@@ -62,7 +62,7 @@
   --color-navy-card: #132238;
   --color-sky-brand: #0284C7;
   --color-orange-brand: #0284C7;
-  --color-whatsapp: #22C55E;
+  --color-whatsapp: #128C7E;
   --color-bg: #FFFFFF;
   --color-surface-slate: #F8FAFC;
   --color-heading: #0F172A;

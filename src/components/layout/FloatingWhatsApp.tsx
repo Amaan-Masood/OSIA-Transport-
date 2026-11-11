@@ -13,17 +13,17 @@ export const FloatingWhatsApp: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with OSIA Transport on WhatsApp"
-        className="relative group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white shadow-[0_6px_24px_rgba(37,211,102,0.45)] hover:shadow-[0_10px_32px_rgba(37,211,102,0.65)] hover:scale-110 active:scale-95 transition-all duration-200"
+        className="relative group flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#128C7E] text-white shadow-[0_4px_16px_rgba(18,140,126,0.35)] hover:shadow-[0_8px_24px_rgba(18,140,126,0.50)] hover:bg-[#0E7064] hover:scale-105 active:scale-95 transition-all duration-200"
       >
         {/* Subtle Online Pulse Ring */}
-        <span className="absolute -top-1 -right-1 flex h-4 w-4">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-4 w-4 bg-[#0A1B2E] border-2 border-white"></span>
+        <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#128C7E] border-2 border-white"></span>
         </span>
 
         {/* Authentic WhatsApp Vector Icon */}
         <svg
-          className="w-7 h-7 sm:w-8 sm:h-8 fill-current text-white transition-transform group-hover:scale-105"
+          className="w-5 h-5 sm:w-6 sm:h-6 fill-current text-white transition-transform group-hover:scale-105"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
@@ -32,7 +32,7 @@ export const FloatingWhatsApp: React.FC = () => {
         </svg>
 
         {/* Hover Tooltip (clean & non-intrusive) */}
-        <span className="pointer-events-none absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-[#0A1B2E] px-2.5 py-1 text-xs font-bold text-white shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+        <span className="pointer-events-none absolute right-full mr-2.5 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md bg-[#0B1726] px-2.5 py-1 text-xs font-bold text-white shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-150">
           WhatsApp 24/7
         </span>
       </a>

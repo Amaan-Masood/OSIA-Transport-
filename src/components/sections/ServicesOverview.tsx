@@ -116,7 +116,7 @@ export const ServicesOverview: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`WhatsApp quote for ${s.title}`}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#16A34A] hover:text-[#15803D] transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#128C7E] hover:text-[#0E7064] transition-colors"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
                   <span>WhatsApp</span>

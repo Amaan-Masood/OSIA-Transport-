@@ -6,6 +6,7 @@ import { SERVICES, SITE_CONFIG } from '@/content/site';
 import { quoteFormSchema, type QuoteFormData } from '@/lib/validation';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import { Button } from '@/components/ui/Button';
+import { CustomSelect } from '@/components/ui/CustomSelect';
 
 interface QuoteFormProps {
   initialServiceId?: string;
@@ -95,9 +96,9 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               href={submittedUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] shadow-md transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#128C7E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] shadow-md transition-all active:scale-95"
             >
-              <MessageSquare className="w-5 h-5 fill-[#0B1726]" />
+              <MessageSquare className="w-5 h-5 fill-white text-white" />
               <span>Open in WhatsApp</span>
             </a>
           </div>
@@ -138,24 +139,19 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
             </p>
           </div>
 
-          {/* Service Selector */}
+          {/* Service Selector with Custom Dropdown */}
           <div>
             <label htmlFor="quote-service" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
               Service Required <span className="text-red-500">*</span>
             </label>
-            <select
+            <CustomSelect
               id="quote-service"
               name="service"
               value={formData.service}
-              onChange={handleChange}
-              className="w-full px-3.5 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm font-semibold text-[#0F172A] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 outline-none transition-all"
-            >
-              {SERVICES.map((s) => (
-                <option key={s.id} value={s.title}>
-                  {s.title}
-                </option>
-              ))}
-            </select>
+              onChange={(val) => setFormData((prev) => ({ ...prev, service: val }))}
+              options={SERVICES.map((s) => ({ value: s.title, label: s.title, badge: s.capacitySnippet }))}
+              placeholder="Select Service Required"
+            />
           </div>
 
           {/* Dynamic Service Specific Fields */}
@@ -168,20 +164,20 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                 <label htmlFor="craneTonnage" className="block text-xs font-bold text-[#0F172A] mb-1">
                   Required Crane Capacity
                 </label>
-                <select
+                <CustomSelect
                   id="craneTonnage"
                   name="craneTonnage"
-                  value={formData.craneTonnage}
-                  onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-sm text-[#0F172A]"
-                >
-                  <option value="">Select Tonnage (or ask engineer)</option>
-                  <option value="25 Ton Mobile Crane">25 Ton Mobile Crane</option>
-                  <option value="50 Ton Mobile Crane">50 Ton Mobile Crane</option>
-                  <option value="100 Ton Mobile Crane">100 Ton Mobile Crane</option>
-                  <option value="200 Ton Mobile Crane">200 Ton Mobile Crane</option>
-                  <option value="Unsure - Need Site Assessment">Unsure - Need Site Assessment</option>
-                </select>
+                  value={formData.craneTonnage || ''}
+                  onChange={(val) => setFormData((prev) => ({ ...prev, craneTonnage: val }))}
+                  options={[
+                    '25 Ton Mobile Crane',
+                    '50 Ton Mobile Crane',
+                    '100 Ton Mobile Crane',
+                    '200 Ton Mobile Crane',
+                    'Unsure - Need Site Assessment',
+                  ]}
+                  placeholder="Select Tonnage (or ask engineer)"
+                />
               </div>
             </div>
           )}
@@ -196,34 +192,36 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                   <label htmlFor="waterType" className="block text-xs font-bold text-[#0F172A] mb-1">
                     Water Specification
                   </label>
-                  <select
+                  <CustomSelect
                     id="waterType"
                     name="waterType"
-                    value={formData.waterType}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-xs sm:text-sm text-[#0F172A]"
-                  >
-                    <option value="Drinking Sweet Water (Potable)">Drinking Sweet Water (Potable)</option>
-                    <option value="Non-Drinking Construction Water">Non-Drinking Construction Water</option>
-                    <option value="Salt Water for Compaction">Salt Water for Compaction</option>
-                    <option value="Wastewater / Septic Removal">Wastewater / Septic Removal</option>
-                  </select>
+                    value={formData.waterType || 'Drinking Sweet Water (Potable)'}
+                    onChange={(val) => setFormData((prev) => ({ ...prev, waterType: val }))}
+                    options={[
+                      'Drinking Sweet Water (Potable)',
+                      'Non-Drinking Construction Water',
+                      'Salt Water for Compaction',
+                      'Wastewater / Septic Removal',
+                    ]}
+                    placeholder="Select Water Type"
+                  />
                 </div>
                 <div>
                   <label htmlFor="tripFrequency" className="block text-xs font-bold text-[#0F172A] mb-1">
                     Delivery Frequency
                   </label>
-                  <select
+                  <CustomSelect
                     id="tripFrequency"
                     name="tripFrequency"
-                    value={formData.tripFrequency}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-xs sm:text-sm text-[#0F172A]"
-                  >
-                    <option value="One-off Urgent Trip">One-off Urgent Trip</option>
-                    <option value="Daily Scheduled Delivery">Daily Scheduled Delivery</option>
-                    <option value="Weekly / Monthly Contract">Weekly / Monthly Contract</option>
-                  </select>
+                    value={formData.tripFrequency || 'One-off Urgent Trip'}
+                    onChange={(val) => setFormData((prev) => ({ ...prev, tripFrequency: val }))}
+                    options={[
+                      'One-off Urgent Trip',
+                      'Daily Scheduled Delivery',
+                      'Weekly / Monthly Contract',
+                    ]}
+                    placeholder="Select Frequency"
+                  />
                 </div>
               </div>
             </div>

@@ -67,7 +67,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className="mb-4">
             <Link
               href="/services/"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#94A3B8] hover:text-[#F97316] uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#94A3B8] hover:text-[#38BDF8] uppercase tracking-wider transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to all services</span>
@@ -76,11 +76,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
           <div className="max-w-3xl space-y-4">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge variant={isWater ? 'water' : 'orange'}>
+              <Badge variant="water">
                 {service.capacitySnippet}
               </Badge>
               <span className="text-xs text-[#94A3B8] flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-[#F97316]" />
+                <Clock className="w-3.5 h-3.5 text-[#38BDF8]" />
                 24/7 Abu Dhabi Dispatch
               </span>
             </div>
@@ -98,16 +98,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] shadow-md transition-all active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] shadow-md transition-all active:scale-95"
               >
-                <MessageSquare className="w-4 h-4 fill-[#0B1726]" />
+                <MessageSquare className="w-4 h-4 fill-white text-white" />
                 <span>Instant WhatsApp Quote</span>
               </a>
               <a
                 href={SITE_CONFIG.phoneHref}
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#F97316]" />
+                <Phone className="w-4 h-4 text-[#38BDF8]" />
                 <span>Call Dispatch</span>
               </a>
             </div>
@@ -171,7 +171,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       key={i}
                       className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-start gap-3 text-xs text-[#334155]"
                     >
-                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isWater ? 'text-[#0284C7]' : 'text-[#F97316]'}`} />
+                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[#0284C7]" />
                       <span className="font-semibold">{app}</span>
                     </div>
                   ))}

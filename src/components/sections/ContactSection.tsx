@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#0B1726] text-white p-7 sm:p-8 rounded-2xl shadow-xl space-y-6 border border-white/10">
               <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+                <span className="text-xs font-extrabold uppercase tracking-widest text-[#38BDF8]">
                   Direct Contact
                 </span>
                 <h3 className="text-2xl font-bold font-display uppercase text-white mt-1">
@@ -36,7 +36,7 @@ export const ContactSection: React.FC = () => {
 
               <div className="space-y-4 pt-2 border-t border-white/10 text-sm">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#F97316] shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0 mt-0.5">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -45,7 +45,7 @@ export const ContactSection: React.FC = () => {
                     </span>
                     <a
                       href={SITE_CONFIG.phoneHref}
-                      className="text-base font-bold text-white hover:text-[#F97316] transition-colors"
+                      className="text-base font-bold text-white hover:text-[#38BDF8] transition-colors"
                     >
                       {SITE_CONFIG.phoneDisplay}
                     </a>
@@ -53,7 +53,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#0284C7] shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0 mt-0.5">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -62,7 +62,7 @@ export const ContactSection: React.FC = () => {
                     </span>
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
-                      className="text-sm font-semibold text-white hover:text-[#0284C7] transition-colors break-all"
+                      className="text-sm font-semibold text-white hover:text-[#38BDF8] transition-colors break-all"
                     >
                       {SITE_CONFIG.email}
                     </a>
@@ -70,7 +70,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#F97316] shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0 mt-0.5">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -84,7 +84,7 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#16A34A] shrink-0 mt-0.5">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0 mt-0.5">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -102,7 +102,7 @@ export const ContactSection: React.FC = () => {
             {/* Procurement / Corporate Documentation Notice */}
             <div className="p-6 sm:p-7 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F172A]">
-                <FileText className="w-4 h-4 text-[#F97316]" />
+                <FileText className="w-4 h-4 text-[#0284C7]" />
                 Corporate Procurement &amp; Site Access
               </div>
               <p className="text-xs text-[#475569] leading-relaxed">

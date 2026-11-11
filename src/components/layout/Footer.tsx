@@ -6,12 +6,12 @@ import { SITE_CONFIG, SERVICES, AREAS } from '@/content/site';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0B1726] text-white pt-16 pb-24 md:pb-12 border-t-2 border-[#F97316]/40">
+    <footer className="bg-[#0B1726] text-white pt-16 pb-24 md:pb-12 border-t-2 border-[#0284C7]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Highlight Box: 24/7 Dispatch Banner */}
         <div className="bg-[#132238] border border-white/10 rounded-2xl p-6 md:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
           <div className="space-y-1.5">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F97316]">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#38BDF8]">
               <Clock className="w-4 h-4" />
               Round-The-Clock Dispatch
             </div>
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 w-full md:w-auto shrink-0">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#F97316] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#EA580C] transition-all shadow-md active:scale-95"
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0284C7] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-md active:scale-95"
             >
               <Phone className="w-4 h-4" />
               <span>Call Dispatch</span>
@@ -34,9 +34,9 @@ export const Footer: React.FC = () => {
               href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an immediate quote.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] transition-all shadow-md active:scale-95"
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] transition-all shadow-md active:scale-95"
             >
-              <MessageSquare className="w-4 h-4 fill-[#0B1726]" />
+              <MessageSquare className="w-4 h-4 fill-white text-white" />
               <span>WhatsApp</span>
             </a>
           </div>
@@ -70,17 +70,17 @@ export const Footer: React.FC = () => {
             </p>
             <div className="space-y-2.5 pt-2 text-xs text-[#94A3B8]">
               <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-[#F97316] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#38BDF8] shrink-0" />
                 <span>{SITE_CONFIG.location}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#F97316] shrink-0" />
-                <a href={SITE_CONFIG.phoneHref} className="text-white hover:text-[#F97316] font-bold transition-colors">
+                <Phone className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <a href={SITE_CONFIG.phoneHref} className="text-white hover:text-[#38BDF8] font-bold transition-colors">
                   {SITE_CONFIG.phoneDisplay}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#0284C7] shrink-0" />
+                <Mail className="w-4 h-4 text-[#38BDF8] shrink-0" />
                 <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-white transition-colors">
                   {SITE_CONFIG.email}
                 </a>
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Services Hub Links */}
           <div className="space-y-3">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#38BDF8]">
               Specialized Services
             </h4>
             <ul className="space-y-2 text-xs">
@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
                     className="text-[#94A3B8] hover:text-white transition-colors flex items-center justify-between group py-0.5"
                   >
                     <span>{s.shortTitle}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#F97316] transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#38BDF8] transition-opacity" />
                   </Link>
                 </li>
               ))}

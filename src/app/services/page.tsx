@@ -38,13 +38,13 @@ const getServiceIcon = (id: string) => {
     case 'wastewater-drainage':
       return <Trash2 className="w-7 h-7 text-[#0284C7]" />;
     case 'crane-rental':
-      return <Wrench className="w-7 h-7 text-[#F97316]" />;
+      return <Wrench className="w-7 h-7 text-[#0284C7]" />;
     case 'low-bed-trailer':
-      return <Truck className="w-7 h-7 text-[#F97316]" />;
+      return <Truck className="w-7 h-7 text-[#0284C7]" />;
     case 'flatbed-trailer':
-      return <Container className="w-7 h-7 text-[#F97316]" />;
+      return <Container className="w-7 h-7 text-[#0284C7]" />;
     default:
-      return <Truck className="w-7 h-7 text-[#0B1726]" />;
+      return <Truck className="w-7 h-7 text-[#0284C7]" />;
   }
 };
 
@@ -62,11 +62,11 @@ export default function ServicesHubPage() {
       <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <Badge variant="orange">Core Capabilities</Badge>
+            <Badge variant="water">Core Capabilities</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               Specialized Fleet &amp; Transport Services in Abu Dhabi
             </h1>
-            <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed">
               Equipped with heavy Mercedes Actros water tankers, Volvo FH tractor heads, multi-axle trailers, and certified 25T–200T mobile cranes for active infrastructure sites.
             </p>
           </div>
@@ -78,21 +78,20 @@ export default function ServicesHubPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s) => {
-              const isWater = s.category === 'water';
               const whatsappUrl = buildDirectServiceWhatsAppUrl(s.title);
 
               return (
                 <Card
                   key={s.id}
-                  accentTop={isWater ? 'water' : 'orange'}
+                  accentTop="water"
                   className="flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all bg-white border border-[#E2E8F0] rounded-2xl"
                 >
                   <div className="p-6 sm:p-7 space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${isWater ? 'bg-[#E0F2FE] border-[#BAE6FD]' : 'bg-[#FFF7ED] border-[#FFEDD5]'}`}>
+                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center border bg-[#E0F2FE] border-[#BAE6FD]">
                         {getServiceIcon(s.id)}
                       </div>
-                      <Badge variant={isWater ? 'water' : 'orange'}>
+                      <Badge variant="water">
                         {s.capacitySnippet}
                       </Badge>
                     </div>
@@ -110,7 +109,7 @@ export default function ServicesHubPage() {
                     <div className="space-y-2 pt-3 border-t border-[#E2E8F0]">
                       {s.features.map((f, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs text-[#334155]">
-                          <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${isWater ? 'text-[#0284C7]' : 'text-[#F97316]'}`} />
+                          <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#0284C7]" />
                           <span>{f}</span>
                         </div>
                       ))}

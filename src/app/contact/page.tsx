@@ -28,7 +28,7 @@ export default function ContactPage() {
       <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <Badge variant="orange">Operations &amp; Dispatch</Badge>
+            <Badge variant="water">Operations &amp; Dispatch</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               Contact OSIA Transport LLC SPC
             </h1>
@@ -47,7 +47,7 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-6">
               <div className="bg-[#0B1726] text-white p-7 sm:p-8 rounded-2xl shadow-xl space-y-6 border border-white/10">
                 <div>
-                  <span className="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+                  <span className="text-xs font-extrabold uppercase tracking-widest text-[#38BDF8]">
                     Direct Hotline
                   </span>
                   <h2 className="text-2xl font-bold font-display uppercase text-white mt-1">
@@ -57,14 +57,14 @@ export default function ContactPage() {
 
                 <div className="space-y-4 text-sm">
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#F97316] shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0 mt-0.5">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
                       <span className="text-xs text-[#94A3B8] uppercase font-bold block">
                         Telephone
                       </span>
-                      <a href={SITE_CONFIG.phoneHref} className="text-lg font-bold text-white hover:text-[#F97316] transition-colors">
+                      <a href={SITE_CONFIG.phoneHref} className="text-lg font-bold text-white hover:text-[#38BDF8] transition-colors">
                         {SITE_CONFIG.phoneDisplay}
                       </a>
                     </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#F97316] shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0 mt-0.5">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>

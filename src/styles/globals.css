@@ -13,17 +13,17 @@
   --color-sky-brand-light: #E0F2FE;
   --color-sky-brand-text: #0369A1;
   
-  /* Brand Action Accent (OSIA Logo Safety Orange) */
-  --color-orange-brand: #F97316;
-  --color-orange-brand-hover: #EA580C;
-  --color-orange-brand-light: #FFF7ED;
-  --color-orange-brand-text: #C2410C;
-  --color-orange-contrast: #0B1726;
+  /* Unified to Precision Blue to banish color clutter */
+  --color-orange-brand: #0284C7;
+  --color-orange-brand-hover: #0369A1;
+  --color-orange-brand-light: #E0F2FE;
+  --color-orange-brand-text: #0369A1;
+  --color-orange-contrast: #FFFFFF;
   
   /* WhatsApp & Compliance Emerald */
   --color-whatsapp: #22C55E;
   --color-whatsapp-hover: #16A34A;
-  --color-whatsapp-contrast: #0B1726;
+  --color-whatsapp-contrast: #FFFFFF;
   
   /* Surfaces & Canvas */
   --color-bg: #FFFFFF;
@@ -51,6 +51,7 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-2xl: 24px;
   --radius-pill: 9999px;
 }
 
@@ -60,7 +61,7 @@
   --color-navy-dark: #070F1A;
   --color-navy-card: #132238;
   --color-sky-brand: #0284C7;
-  --color-orange-brand: #F97316;
+  --color-orange-brand: #0284C7;
   --color-whatsapp: #22C55E;
   --color-bg: #FFFFFF;
   --color-surface-slate: #F8FAFC;

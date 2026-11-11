@@ -16,7 +16,7 @@ export default function TermsPage() {
       <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-3">
-            <Badge variant="orange">Operational Terms</Badge>
+            <Badge variant="water">Operational Terms</Badge>
             <h1 className="text-3xl sm:text-4xl font-extrabold font-display uppercase tracking-tight text-white">
               Terms of Service
             </h1>

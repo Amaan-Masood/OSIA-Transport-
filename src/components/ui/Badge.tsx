@@ -7,18 +7,18 @@ export interface BadgeProps {
 }
 
 export const Badge: React.FC<BadgeProps> = ({
-  variant = 'neutral',
+  variant = 'water',
   children,
   className = '',
 }) => {
   const baseClasses =
-    'inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border';
+    'inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border transition-colors';
 
   const variantClasses = {
-    // Crisp Sky Blue Badge (matched to logo)
+    // Precision Sky Blue Badge (Calibrated to official logo)
     water: 'bg-[#E0F2FE] text-[#0369A1] border-[#BAE6FD]',
-    // Crisp Warm Orange Badge (matched to logo)
-    orange: 'bg-[#FFF7ED] text-[#C2410C] border-[#FFEDD5]',
+    // Orange aliased to Precision Sky Blue to guarantee zero visual fragmentation
+    orange: 'bg-[#E0F2FE] text-[#0369A1] border-[#BAE6FD]',
     // Authority Navy Badge
     navy: 'bg-[#0B1726] text-white border-[#0B1726]',
     // Clean Studio Neutral Badge

@@ -105,7 +105,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
           <div className="pt-6 border-t border-[#E2E8F0] text-xs text-[#64748B] space-y-2">
             <p className="font-semibold text-[#0F172A]">Or contact dispatch immediately via:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#F97316] hover:underline flex items-center gap-1">
+              <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#0284C7] hover:underline flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5" /> Call {SITE_CONFIG.phoneDisplay}
               </a>
               <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#0284C7] hover:underline flex items-center gap-1">
@@ -160,8 +160,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
 
           {/* Dynamic Service Specific Fields */}
           {selectedServiceItem.category === 'heavy-lifting' && (
-            <div className="bg-[#FFF7ED] border border-[#FFEDD5] rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-[#C2410C] block">
+            <div className="bg-[#E0F2FE] border border-[#BAE6FD] rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-[#0369A1] block">
                 Mobile Crane Specifications
               </span>
               <div>

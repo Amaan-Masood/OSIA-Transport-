@@ -16,19 +16,19 @@ export const MobileBottomBar: React.FC = () => {
           href={SITE_CONFIG.phoneHref}
           className="flex items-center justify-center gap-2 rounded-xl bg-[#0B1726] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
         >
-          <Phone className="w-4 h-4 text-[#F97316]" />
+          <Phone className="w-4 h-4 text-[#38BDF8]" />
           <span>Call Now</span>
         </a>
 
-        {/* WhatsApp Button (Strict Contrast: Green background + Navy text) */}
+        {/* WhatsApp Button */}
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#22C55E] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
         >
           <svg
-            className="w-4 h-4 fill-current text-[#0B1726]"
+            className="w-4 h-4 fill-white text-white"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"

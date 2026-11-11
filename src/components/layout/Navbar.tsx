@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-[#94A3B8]">
-              <Clock className="w-3.5 h-3.5 text-[#F97316]" />
+              <Clock className="w-3.5 h-3.5 text-[#38BDF8]" />
               <strong className="text-white">24/7 Dispatch:</strong> Round-the-clock Abu Dhabi Operations
             </span>
             <span className="flex items-center gap-1.5 text-[#94A3B8] hidden md:flex">
@@ -38,9 +38,9 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-5">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="flex items-center gap-1.5 text-white hover:text-[#F97316] font-semibold transition-colors"
+              className="flex items-center gap-1.5 text-white hover:text-[#38BDF8] font-semibold transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#F97316]" />
+              <Phone className="w-3.5 h-3.5 text-[#38BDF8]" />
               {SITE_CONFIG.phoneDisplay}
             </a>
             <a
@@ -171,10 +171,10 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="p-2 rounded-lg bg-[#F4F7FB] text-[#0A1B2E] hover:bg-[#EDF3FA] transition-colors"
+              className="p-2 rounded-lg bg-[#F8FAFC] text-[#0B1726] hover:bg-[#F1F5F9] transition-colors"
               aria-label="Call OSIA Transport"
             >
-              <Phone className="w-5 h-5 text-[#EB5E1A]" />
+              <Phone className="w-5 h-5 text-[#0284C7]" />
             </a>
             <button
               type="button"
@@ -204,7 +204,7 @@ export const Navbar: React.FC = () => {
                 <div className="text-xs font-extrabold uppercase text-[#64748B] mb-2 tracking-wider">
                   Our Services
                 </div>
-                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l-2 border-[#F97316]">
+                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l-2 border-[#0284C7]">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.id}

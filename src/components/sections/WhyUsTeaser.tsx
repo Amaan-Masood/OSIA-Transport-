@@ -19,7 +19,7 @@ export const WhyUsTeaser: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-slate-300 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#FFF7ED] border border-[#FFEDD5] flex items-center justify-center text-[#F97316]">
+            <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
               <MapPin className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
@@ -43,7 +43,7 @@ export const WhyUsTeaser: React.FC = () => {
           </div>
 
           <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-slate-300 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#F0FDF4] border border-[#BBF7D0] flex items-center justify-center text-[#16A34A]">
+            <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">

@@ -41,13 +41,13 @@ export const ConsentBanner: React.FC = () => {
     >
       <div className="space-y-2.5">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#F97316]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#38BDF8]">
             Privacy &amp; Transparency
           </span>
         </div>
         <p className="text-xs text-[#94A3B8] leading-relaxed">
           We use minimal analytics to measure call and WhatsApp lead performance. We do not track or sell personal data. See our{' '}
-          <Link href="/privacy-policy/" className="text-white underline hover:text-[#F97316]">
+          <Link href="/privacy-policy/" className="text-white underline hover:text-[#38BDF8]">
             Privacy Policy
           </Link>.
         </p>
@@ -55,7 +55,7 @@ export const ConsentBanner: React.FC = () => {
           <button
             type="button"
             onClick={accept}
-            className="flex-1 px-4 py-2 rounded-xl bg-[#F97316] text-[#0B1726] text-xs font-extrabold uppercase tracking-wider hover:bg-[#EA580C] transition-colors cursor-pointer"
+            className="flex-1 px-4 py-2 rounded-xl bg-[#0284C7] text-white text-xs font-extrabold uppercase tracking-wider hover:bg-[#0369A1] transition-colors cursor-pointer"
           >
             Accept
           </button>

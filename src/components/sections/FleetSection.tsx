@@ -92,7 +92,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
         {/* Header - Only shown when showHeader is true */}
         {showHeader && (
           <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-            <Badge variant="orange">Inspected &amp; Certified Fleet</Badge>
+            <Badge variant="water">Inspected &amp; Certified Fleet</Badge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               Equipment &amp; Fleet Specifications
             </h2>
@@ -105,7 +105,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
         {/* Crane Tonnage Numerals Cards (Signature Spec Sheet Layout) */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-extrabold uppercase font-display tracking-wider text-[#F97316] flex items-center gap-2">
+            <h3 className="text-lg font-extrabold uppercase font-display tracking-wider text-[#38BDF8] flex items-center gap-2">
               <Wrench className="w-5 h-5" />
               Mobile Crane Rental Capacities (Abu Dhabi)
             </h3>
@@ -116,10 +116,10 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
             {CRANE_TONNAGES.map((c, i) => (
               <div
                 key={i}
-                className="bg-[#132238] border border-white/10 rounded-2xl p-5 hover:border-[#F97316]/50 transition-all flex flex-col justify-between shadow-lg"
+                className="bg-[#132238] border border-white/10 rounded-2xl p-5 hover:border-[#38BDF8]/50 transition-all flex flex-col justify-between shadow-lg"
               >
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold font-display text-[#F97316] tracking-tight mb-1">
+                  <div className="text-3xl sm:text-4xl font-extrabold font-display text-[#38BDF8] tracking-tight mb-1">
                     {c.tonnage}
                   </div>
                   <div className="text-xs font-bold uppercase tracking-wider text-white mb-3">
@@ -140,7 +140,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                     href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent(`Hello OSIA Transport! I need a quote for a ${c.tonnage} Mobile Crane in Abu Dhabi.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#F97316] text-[#0B1726] font-extrabold text-xs uppercase tracking-wider hover:bg-[#EA580C] transition-colors shadow-sm"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-colors shadow-sm"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
                     <span>Inquire {c.tonnage}</span>
@@ -182,7 +182,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
               </div>
               <div className="p-4 bg-[#0B1726]/95 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#F97316] block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#38BDF8] block">
                     {activeImage.category}
                   </span>
                   <h4 className="text-base sm:text-lg font-bold text-white font-display uppercase">
@@ -213,7 +213,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                     onClick={() => setActiveImage(img)}
                     className={`text-left p-2.5 rounded-xl border transition-all cursor-pointer flex items-center gap-3 ${
                       isSelected
-                        ? 'bg-white/15 border-[#F97316] ring-1 ring-[#F97316]'
+                        ? 'bg-white/15 border-[#0284C7] ring-1 ring-[#0284C7]'
                         : 'bg-[#132238] border-white/10 hover:border-white/25'
                     }`}
                   >

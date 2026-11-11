@@ -8,7 +8,7 @@ export const CtaBand: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#38BDF8]">
               Immediate On-Site Mobilization
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white leading-tight">
@@ -24,16 +24,16 @@ export const CtaBand: React.FC = () => {
               href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an urgent quote.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#F97316] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#EA580C] shadow-lg hover:shadow-xl transition-all active:scale-95"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-[#0284C7] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0369A1] shadow-lg shadow-sky-500/25 hover:shadow-xl transition-all active:scale-95"
             >
-              <MessageSquare className="w-5 h-5 fill-[#0B1726]" />
+              <MessageSquare className="w-5 h-5 fill-white text-white" />
               <span>Get WhatsApp Quote</span>
             </a>
             <a
               href={SITE_CONFIG.phoneHref}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
             >
-              <Phone className="w-5 h-5 text-[#F97316]" />
+              <Phone className="w-5 h-5 text-[#38BDF8]" />
               <span>Call {SITE_CONFIG.phoneDisplay}</span>
             </a>
           </div>

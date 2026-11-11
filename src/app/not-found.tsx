@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center py-20 px-4 bg-[#F4F7FB]">
       <div className="max-w-md w-full bg-white p-8 rounded-2xl border border-[#D5DFEA] shadow-xl text-center space-y-6">
-        <div className="w-16 h-16 rounded-2xl bg-[#FFF7ED] text-[#FF7A1A] flex items-center justify-center mx-auto font-extrabold text-2xl font-display">
+        <div className="w-16 h-16 rounded-2xl bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center mx-auto font-extrabold text-2xl font-display">
           404
         </div>
         <div className="space-y-2">

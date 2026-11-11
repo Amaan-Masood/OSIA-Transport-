@@ -11,7 +11,7 @@ export const FleetTeaser: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Text & Spec Highlights */}
           <div className="lg:col-span-6 space-y-6">
-            <Badge variant="orange">Heavy Fleet Overview</Badge>
+            <Badge variant="water">Heavy Fleet Overview</Badge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white leading-tight">
               Inspected &amp; Certified Heavy Equipment
             </h2>
@@ -21,7 +21,7 @@ export const FleetTeaser: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-4 pt-2">
               <div className="p-5 rounded-2xl bg-[#132238] border border-white/10">
-                <span className="block text-3xl sm:text-4xl font-extrabold font-display text-[#F97316]">
+                <span className="block text-3xl sm:text-4xl font-extrabold font-display text-[#38BDF8]">
                   25T – 200T
                 </span>
                 <span className="text-xs text-[#94A3B8] uppercase font-bold tracking-wider mt-1 block">
@@ -29,7 +29,7 @@ export const FleetTeaser: React.FC = () => {
                 </span>
               </div>
               <div className="p-5 rounded-2xl bg-[#132238] border border-white/10">
-                <span className="block text-3xl sm:text-4xl font-extrabold font-display text-[#0284C7]">
+                <span className="block text-3xl sm:text-4xl font-extrabold font-display text-[#38BDF8]">
                   100%
                 </span>
                 <span className="text-xs text-[#94A3B8] uppercase font-bold tracking-wider mt-1 block">
@@ -41,7 +41,7 @@ export const FleetTeaser: React.FC = () => {
             <div className="pt-2">
               <Link
                 href="/fleet/"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#F97316] text-[#0B1726] font-extrabold text-xs uppercase tracking-wider hover:bg-[#EA580C] transition-all shadow-md group hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-lg shadow-sky-500/25 group hover:shadow-xl"
               >
                 <span>View Complete Fleet Specifications</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -62,7 +62,7 @@ export const FleetTeaser: React.FC = () => {
                 />
               </div>
               <div className="p-4 space-y-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#F97316] block">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#38BDF8] block">
                   Heavy Haulage
                 </span>
                 <h3 className="text-sm font-bold uppercase text-white font-display">

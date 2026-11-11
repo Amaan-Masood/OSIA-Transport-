@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <Badge variant="orange">Company Profile</Badge>
+            <Badge variant="water">Company Profile</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               About OSIA Transport LLC SPC
             </h1>
@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-5">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
                 Leading Transport &amp; Equipment Rental
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display uppercase tracking-tight text-[#0F172A]">
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Vision */}
             <div className="p-8 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-[#FFF7ED] border border-[#FFEDD5] flex items-center justify-center text-[#F97316]">
+              <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
                 <Eye className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
@@ -133,7 +133,7 @@ export default function AboutPage() {
       <section className="py-16 sm:py-24 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
               Guiding Principles
             </span>
             <h2 className="text-3xl font-extrabold font-display uppercase text-[#0F172A]">
@@ -175,7 +175,7 @@ export default function AboutPage() {
                 key={i}
                 className="p-5 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow flex items-center gap-3.5 text-xs sm:text-sm font-bold text-[#0F172A]"
               >
-                <Award className="w-5 h-5 text-[#F97316] shrink-0" />
+                <Award className="w-5 h-5 text-[#0284C7] shrink-0" />
                 <span>{sec}</span>
               </div>
             ))}

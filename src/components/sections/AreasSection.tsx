@@ -40,7 +40,7 @@ export const AreasSection: React.FC = () => {
                   href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent(`Hello OSIA Transport! We need dispatch to ${a.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-extrabold uppercase tracking-wider text-[#F97316] hover:text-[#EA580C] inline-flex items-center gap-1 group"
+                  className="text-xs font-extrabold uppercase tracking-wider text-[#0284C7] hover:text-[#0369A1] inline-flex items-center gap-1 group"
                 >
                   <span>Request Dispatch to {a.name}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -53,7 +53,7 @@ export const AreasSection: React.FC = () => {
         {/* Extended Highway Coverage Notice */}
         <div className="bg-[#0B1726] text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-[#F97316] shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-[#38BDF8] shrink-0">
               <Navigation className="w-6 h-6" />
             </div>
             <div>

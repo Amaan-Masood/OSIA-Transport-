@@ -22,7 +22,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    'inline-flex items-center justify-center font-bold tracking-wide uppercase transition-all duration-150 rounded-xl cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none';
+    'inline-flex items-center justify-center font-bold tracking-wide uppercase transition-all duration-200 rounded-xl cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none';
 
   const sizeClasses = {
     sm: 'text-xs px-4 py-2 min-h-[38px]',
@@ -30,20 +30,20 @@ export const Button: React.FC<ButtonProps> = ({
     lg: 'text-base px-8 py-3.5 min-h-[50px]',
   };
 
-  // WCAG strict contrast compliant classes
+  // Cohesive Executive Palette: OSIA Precision Blue is the singular primary accent
   const variantClasses = {
-    // Safety Orange with Deep Navy text (6.8:1 contrast - exceeds WCAG AA)
-    cta: 'bg-[#F97316] text-[#0B1726] hover:bg-[#EA580C] shadow-sm font-extrabold hover:shadow-md',
-    // Authority Navy with White text
-    primary: 'bg-[#0B1726] text-white hover:bg-[#162842] shadow-sm hover:shadow-md',
-    // WhatsApp Green with Navy text & icon (8.8:1 contrast)
-    whatsapp: 'bg-[#22C55E] text-[#0B1726] hover:bg-[#16A34A] shadow-sm font-extrabold hover:shadow-md',
-    // Sky Blue (Logo matched) with White text
-    water: 'bg-[#0284C7] text-white hover:bg-[#0369A1] shadow-sm hover:shadow-md',
-    // Outline with crisp navy border and text
-    outline: 'border-2 border-[#0B1726] text-[#0B1726] hover:bg-[#F8FAFC]',
+    // High-End Signature CTA: Precision Blue with radiant depth and crisp white typography
+    cta: 'bg-[#0284C7] text-white hover:bg-[#0369A1] shadow-[0_4px_16px_rgba(2,132,199,0.30)] hover:shadow-[0_6px_22px_rgba(2,132,199,0.40)] font-extrabold',
+    // Authority Midnight Navy
+    primary: 'bg-[#0B1726] text-white hover:bg-[#162842] shadow-sm hover:shadow-md font-bold',
+    // Authentic WhatsApp Green (Strictly for WhatsApp actions)
+    whatsapp: 'bg-[#22C55E] text-white hover:bg-[#16A34A] shadow-sm font-extrabold hover:shadow-md',
+    // Precision Blue (alias)
+    water: 'bg-[#0284C7] text-white hover:bg-[#0369A1] shadow-sm hover:shadow-md font-bold',
+    // Refined Studio Outline with crisp slate border
+    outline: 'border border-[#CBD5E1] bg-white text-[#0F172A] hover:bg-[#F8FAFC] hover:border-[#94A3B8] shadow-xs font-bold',
     // Ghost
-    ghost: 'text-[#0B1726] hover:bg-[#F8FAFC]',
+    ghost: 'text-[#0F172A] hover:bg-[#F8FAFC]',
   };
 
   const combinedClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;

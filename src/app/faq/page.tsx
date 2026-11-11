@@ -36,7 +36,7 @@ export default function FaqPage() {
       <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <Badge variant="orange">Knowledge &amp; Answers</Badge>
+            <Badge variant="water">Knowledge &amp; Answers</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               Frequently Asked Questions
             </h1>

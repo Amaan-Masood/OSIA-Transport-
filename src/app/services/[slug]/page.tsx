@@ -2,8 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Clock, ShieldCheck, Phone, MessageSquare, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowLeft, Clock, ShieldCheck, Phone, MessageSquare, CheckCircle2, ArrowRight } from 'lucide-react';
 import { SERVICES, SITE_CONFIG } from '@/content/site';
+import { SERVICE_VISUALS } from '@/content/fleetVisuals';
 import { QuoteForm } from '@/components/forms/QuoteForm';
 import { Badge } from '@/components/ui/Badge';
 import { buildDirectServiceWhatsAppUrl } from '@/lib/whatsapp';
@@ -47,6 +49,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   }
 
   const isWater = service.category === 'water';
+  const serviceVisual = SERVICE_VISUALS[service.id];
   const whatsappUrl = buildDirectServiceWhatsAppUrl(service.title);
 
   const serviceSchema = getServiceSchema(service);
@@ -130,6 +133,45 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   {service.fullDescription}
                 </p>
               </div>
+
+              {/* Verified Service Visual Showcase */}
+              {serviceVisual && (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
+                      Verified Fleet &amp; Dispatch Visual
+                    </h3>
+                    <Link
+                      href="/fleet/"
+                      className="text-xs font-extrabold uppercase tracking-wider text-[#0284C7] hover:underline inline-flex items-center gap-1"
+                    >
+                      <span>Full Fleet Library</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                  <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] shadow-xs">
+                    <div
+                      className={`relative w-full mx-auto rounded-xl overflow-hidden bg-[#0B1726] ${
+                        serviceVisual.aspect === 'portrait'
+                          ? 'aspect-[6/7] max-w-md'
+                          : 'aspect-square max-w-lg'
+                      }`}
+                    >
+                      <Image
+                        src={serviceVisual.src}
+                        alt={serviceVisual.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 520px"
+                        className="object-cover object-center"
+                      />
+                    </div>
+                    <div className="pt-3 flex items-center justify-between gap-2 text-xs text-[#475569] font-semibold">
+                      <span>{serviceVisual.label}</span>
+                      <span className="text-[#0284C7] uppercase font-bold">Abu Dhabi Active Fleet</span>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Technical Specifications Table */}
               <div className="space-y-4">

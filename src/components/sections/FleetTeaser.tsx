@@ -52,13 +52,13 @@ export const FleetTeaser: React.FC = () => {
           {/* Right Fleet Cards Grid Preview */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="rounded-2xl overflow-hidden bg-[#132238] border border-white/10 group hover:border-white/20 transition-all">
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-[6/7] w-full">
                 <Image
-                  src="/images/fleet/volvo-fh-flatbed-steel-plates.webp"
-                  alt="Volvo FH Flatbed with structural steel plates"
+                  src="/images/fleet/volvo-fh500-white-led.webp"
+                  alt="Volvo FH 500 Globetrotter Heavy Prime Mover"
                   fill
                   sizes="(max-width: 768px) 100vw, 300px"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-4 space-y-1">
@@ -66,19 +66,19 @@ export const FleetTeaser: React.FC = () => {
                   Heavy Haulage
                 </span>
                 <h3 className="text-sm font-bold uppercase text-white font-display">
-                  Volvo FH &amp; Flatbed Loaded With Steel
+                  Volvo FH 500 Globetrotter
                 </h3>
               </div>
             </div>
 
             <div className="rounded-2xl overflow-hidden bg-[#132238] border border-white/10 group hover:border-white/20 transition-all">
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-[6/7] w-full">
                 <Image
-                  src="/images/fleet/volvo-fh-globetrotter-tractor.webp"
-                  alt="Volvo FH Globetrotter prime mover"
+                  src="/images/fleet/volvo-fh500-eev-yard.webp"
+                  alt="Volvo FH 500 EEV Standby Tractor Unit"
                   fill
                   sizes="(max-width: 768px) 100vw, 300px"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-4 space-y-1">
@@ -86,7 +86,7 @@ export const FleetTeaser: React.FC = () => {
                   Heavy Tractor Units
                 </span>
                 <h3 className="text-sm font-bold uppercase text-white font-display">
-                  Volvo FH Globetrotter Fleet
+                  Volvo FH 500 EEV Fleet
                 </h3>
               </div>
             </div>

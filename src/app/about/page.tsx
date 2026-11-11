@@ -1,6 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { ShieldCheck, Target, Eye, Award, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ShieldCheck, Target, Eye, Award, CheckCircle2, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/content/site';
 import { buildMetadata } from '@/lib/seo';
 import { Badge } from '@/components/ui/Badge';
@@ -63,27 +65,47 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Quick Facts Card */}
-            <div className="lg:col-span-5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
-              <h3 className="text-lg font-bold font-display uppercase tracking-tight text-[#0F172A] border-b border-[#E2E8F0] pb-3">
-                Operational Snapshot
-              </h3>
-              <div className="space-y-4 text-xs sm:text-sm">
-                <div>
-                  <span className="text-xs font-bold text-[#64748B] uppercase block">Legal Name</span>
-                  <strong className="text-[#0F172A] text-base">{SITE_CONFIG.legalName}</strong>
+            {/* Right Brand Showcase & Operational Snapshot */}
+            <div className="lg:col-span-5 space-y-6">
+              {/* Official OSIA Twin-Tanker Brand Card */}
+              <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-sm">
+                <div className="relative aspect-[16/10] w-full bg-white">
+                  <Image
+                    src="/images/logo-twin-banner.webp"
+                    alt="OSIA Transport LLC twin tanker showcase - Reliable. Safe. On Time."
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    className="object-cover object-center"
+                  />
                 </div>
-                <div>
-                  <span className="text-xs font-bold text-[#64748B] uppercase block">Operations Center</span>
-                  <strong className="text-[#0F172A]">{SITE_CONFIG.location}</strong>
+                <div className="px-5 py-3 bg-[#F8FAFC] border-t border-[#E2E8F0] flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#0F172A]">
+                  <span>Official Fleet Identity</span>
+                  <span className="text-[#0284C7]">24/7 Abu Dhabi Dispatch</span>
                 </div>
-                <div>
-                  <span className="text-xs font-bold text-[#64748B] uppercase block">Customer Support</span>
-                  <strong className="text-[#0F172A]">{SITE_CONFIG.hours}</strong>
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-[#64748B] uppercase block">Fleet Focus</span>
-                  <strong className="text-[#0F172A]">Potable Water, Wastewater, Cranes &amp; Haulage</strong>
+              </div>
+
+              {/* Quick Facts Card */}
+              <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <h3 className="text-lg font-bold font-display uppercase tracking-tight text-[#0F172A] border-b border-[#E2E8F0] pb-3">
+                  Operational Snapshot
+                </h3>
+                <div className="space-y-4 text-xs sm:text-sm">
+                  <div>
+                    <span className="text-xs font-bold text-[#64748B] uppercase block">Legal Name</span>
+                    <strong className="text-[#0F172A] text-base">{SITE_CONFIG.legalName}</strong>
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-[#64748B] uppercase block">Operations Center</span>
+                    <strong className="text-[#0F172A]">{SITE_CONFIG.location}</strong>
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-[#64748B] uppercase block">Customer Support</span>
+                    <strong className="text-[#0F172A]">{SITE_CONFIG.hours}</strong>
+                  </div>
+                  <div>
+                    <span className="text-xs font-bold text-[#64748B] uppercase block">Fleet Focus</span>
+                    <strong className="text-[#0F172A]">Potable Water, Wastewater, Cranes &amp; Haulage</strong>
+                  </div>
                 </div>
               </div>
             </div>
@@ -157,8 +179,105 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Fleet Maintenance & Mechanical Readiness Proof */}
+      <section className="py-16 sm:py-24 bg-[#F8FAFC] border-b border-[#E2E8F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div className="space-y-2 max-w-2xl">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
+                Inspection &amp; Fleet Readiness
+              </span>
+              <h2 className="text-3xl font-extrabold font-display uppercase text-[#0F172A]">
+                Engineered &amp; Inspected Before Every Dispatch
+              </h2>
+              <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+                From OEM filtration and clean heavy-duty chassis frames to color-coded municipal tanker fleets, every OSIA vehicle undergoes routine preventive checks.
+              </p>
+            </div>
+            <Link
+              href="/fleet/"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0B1726] text-white text-xs font-extrabold uppercase tracking-wider hover:bg-[#0284C7] transition-colors self-start md:self-auto"
+            >
+              <span>Browse Fleet Library</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
+              <div className="relative aspect-square w-full bg-[#0B1726]">
+                <Image
+                  src="/images/fleet/volvo-chassis-inspection.webp"
+                  alt="Clean inspected Volvo chassis rail, bolts and OEM filter"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="p-5 space-y-1.5">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0284C7] block">
+                  Mechanical Integrity
+                </span>
+                <h3 className="text-base font-bold font-display uppercase text-[#0F172A]">
+                  OEM Filter &amp; Frame Care
+                </h3>
+                <p className="text-xs text-[#475569] leading-relaxed">
+                  Preventive servicing, clean hydraulic lines, and factory-torque chassis assemblies ready for demanding site loads.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
+              <div className="relative aspect-square w-full bg-[#0B1726]">
+                <Image
+                  src="/images/fleet/volvo-fh500-white-led.webp"
+                  alt="Volvo FH 500 Globetrotter heavy haulage prime mover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-[50%_75%]"
+                />
+              </div>
+              <div className="p-5 space-y-1.5">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0284C7] block">
+                  Heavy Prime Movers
+                </span>
+                <h3 className="text-base font-bold font-display uppercase text-[#0F172A]">
+                  Volvo FH 500 Tractor Fleet
+                </h3>
+                <p className="text-xs text-[#475569] leading-relaxed">
+                  High-torque Globetrotter tractors dedicated to heavy flatbed steel runs and multi-axle low-bed mobilization.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
+              <div className="relative aspect-square w-full bg-[#0B1726]">
+                <Image
+                  src="/images/fleet/mercedes-actros-water-tanker.webp"
+                  alt="Mercedes-Benz Actros 3341 water supply tanker"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="p-5 space-y-1.5">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0284C7] block">
+                  Color-Coded Tankers
+                </span>
+                <h3 className="text-base font-bold font-display uppercase text-[#0F172A]">
+                  Certified Water &amp; Vacuum Units
+                </h3>
+                <p className="text-xs text-[#475569] leading-relaxed">
+                  Segregated blue potable, green non-drinking, and orange vacuum tankers compliant with Abu Dhabi HSE protocols.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sectors Served */}
-      <section className="py-16 sm:py-24 bg-[#F8FAFC]">
+      <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">

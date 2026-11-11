@@ -12,14 +12,14 @@ export const HeroSection: React.FC = () => {
           {/* Left Column: Clean, uncluttered Value Prop & Actions */}
           <div className="lg:col-span-7 space-y-6">
             {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EDF3FA] border border-[#1391E5]/30 text-xs font-bold uppercase tracking-wider text-[#0B6FB8]">
-              <span className="w-2 h-2 rounded-full bg-[#1391E5]"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EDF3FA] border border-[#0E9AD2]/30 text-xs font-bold uppercase tracking-wider text-[#0B6FB8]">
+              <span className="w-2 h-2 rounded-full bg-[#0E9AD2]"></span>
               Abu Dhabi Heavy Logistics & Water Supply
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-[#0A1B2E] font-display leading-[1.05]">
-              Heavy Transport, Water Supply & <span className="text-[#FF7A1A]">Mobile Cranes</span> In Abu Dhabi
+              Heavy Transport, Water Supply & <span className="text-[#EB5E1A]">Mobile Cranes</span> In Abu Dhabi
             </h1>
 
             {/* Subtitle - clean, concise, under 20 words */}
@@ -36,7 +36,7 @@ export const HeroSection: React.FC = () => {
                 rel="noopener noreferrer"
                 variant="cta"
                 size="lg"
-                className="flex items-center gap-2 text-sm sm:text-base px-8 py-4"
+                className="flex items-center gap-2 text-sm sm:text-base px-8 py-4 font-bold"
               >
                 <MessageSquare className="w-5 h-5 fill-[#0A1B2E]" />
                 <span>Get Instant Quote</span>
@@ -46,9 +46,9 @@ export const HeroSection: React.FC = () => {
                 href={SITE_CONFIG.phoneHref}
                 variant="outline"
                 size="lg"
-                className="flex items-center gap-2 text-sm sm:text-base px-8 py-4"
+                className="flex items-center gap-2 text-sm sm:text-base px-8 py-4 font-bold"
               >
-                <Phone className="w-5 h-5 text-[#FF7A1A]" />
+                <Phone className="w-5 h-5 text-[#EB5E1A]" />
                 <span>{SITE_CONFIG.phoneDisplay}</span>
               </Button>
             </div>
@@ -56,11 +56,11 @@ export const HeroSection: React.FC = () => {
             {/* Trust Badges Bar */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#D5DFEA]">
               <div className="flex items-center gap-2 text-xs sm:text-sm text-[#22354A]">
-                <Clock className="w-4 h-4 text-[#FF7A1A] shrink-0" />
+                <Clock className="w-4 h-4 text-[#EB5E1A] shrink-0" />
                 <span className="font-bold">24/7 Dispatch</span>
               </div>
               <div className="flex items-center gap-2 text-xs sm:text-sm text-[#22354A]">
-                <ShieldCheck className="w-4 h-4 text-[#1391E5] shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#0E9AD2] shrink-0" />
                 <span className="font-bold">Certified Crew</span>
               </div>
               <div className="flex items-center gap-2 text-xs sm:text-sm text-[#22354A]">
@@ -88,7 +88,7 @@ export const HeroSection: React.FC = () => {
               {/* Verified Fleet Overlay Strip */}
               <div className="bg-[#0A1B2E] text-white p-4 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <div className="text-[11px] font-bold text-[#FF7A1A] uppercase tracking-wider">
+                  <div className="text-[11px] font-bold text-[#EB5E1A] uppercase tracking-wider">
                     Verified Operating Fleet
                   </div>
                   <div className="text-sm font-extrabold uppercase font-display text-white">
@@ -96,8 +96,8 @@ export const HeroSection: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block px-2.5 py-1 rounded bg-[#1391E5]/20 text-[#6AB8F5] text-[10px] font-extrabold uppercase tracking-wide border border-[#1391E5]/40">
-                    Active on Abu Dhabi Roads
+                  <span className="inline-block px-2.5 py-1 rounded bg-[#0E9AD2]/20 text-[#5BC3EB] text-[10px] font-extrabold uppercase tracking-wide border border-[#0E9AD2]/40">
+                    Active in Abu Dhabi
                   </span>
                 </div>
               </div>

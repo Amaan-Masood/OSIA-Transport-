@@ -32,14 +32,14 @@ export const Button: React.FC<ButtonProps> = ({
 
   // WCAG strict contrast compliant classes
   const variantClasses = {
-    // Safety Orange with NAVY text (6.66:1 contrast - passes WCAG AA)
-    cta: 'bg-[#FF7A1A] text-[#0A1B2E] hover:bg-[#E8640A] shadow-sm font-extrabold',
+    // Safety Orange from official logo with NAVY text (6.66:1 contrast - passes WCAG AA)
+    cta: 'bg-[#EB5E1A] text-[#0A1B2E] hover:bg-[#D44F12] shadow-sm font-extrabold',
     // Navy with White text
     primary: 'bg-[#0A1B2E] text-white hover:bg-[#14304E] shadow-sm',
     // WhatsApp Green with NAVY text & icon (8.76:1 contrast)
     whatsapp: 'bg-[#25D366] text-[#0A1B2E] hover:bg-[#1FB75A] shadow-sm font-extrabold',
-    // Water Blue with White text
-    water: 'bg-[#1391E5] text-white hover:bg-[#0B6FB8] shadow-sm',
+    // Water Blue calibrated from official logo with White text
+    water: 'bg-[#0E9AD2] text-white hover:bg-[#0B6FB8] shadow-sm',
     // Outline with Navy border and text
     outline: 'border-2 border-[#0A1B2E] text-[#0A1B2E] hover:bg-[#F4F7FB]',
     // Ghost

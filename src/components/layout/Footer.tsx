@@ -47,13 +47,13 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Contact */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-xl bg-white p-1 shrink-0 overflow-hidden shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-white p-1.5 shrink-0 overflow-hidden shadow-sm flex items-center justify-center">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo-transparent.png"
                   alt="OSIA Transport LLC Official Logo"
-                  fill
-                  sizes="48px"
-                  className="object-contain p-0.5"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>

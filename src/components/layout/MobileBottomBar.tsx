@@ -16,7 +16,7 @@ export const MobileBottomBar: React.FC = () => {
           href={SITE_CONFIG.phoneHref}
           className="flex items-center justify-center gap-2 rounded-lg bg-[#0A1B2E] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
         >
-          <Phone className="w-4 h-4 text-[#FF7A1A]" />
+          <Phone className="w-4 h-4 text-[#EB5E1A]" />
           <span>Call Now</span>
         </a>
 

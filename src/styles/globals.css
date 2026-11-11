@@ -1,9 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
-@import "./tokens.css";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-surface: #F4F7FB;
+  --color-surface-muted: #EDF3FA;
+  --color-surface-dark: #0A1B2E;
+  
+  --color-heading: #0A1B2E;
+  --color-text-main: #22354A;
+  --color-text-muted: #52667B;
+  
+  --color-primary: #0A1B2E;
+  --color-primary-hover: #14304E;
+  --color-primary-contrast: #FFFFFF;
+  
+  /* Calibrated from Official OSIA Logo */
+  --color-cta: #EB5E1A;
+  --color-cta-hover: #D44F12;
+  --color-cta-contrast: #0A1B2E;
+  --color-accent-text: #C2410C;
+  
+  /* Calibrated Electric Cyan-Blue from OSIA Logo */
+  --color-water: #0E9AD2;
+  --color-water-text: #0B6FB8;
+  
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1FB75A;
+  --color-whatsapp-contrast: #0A1B2E;
+  
+  --color-on-dark: #FFFFFF;
+  --color-on-dark-muted: #B8C6D6;
+  --color-on-dark-cta: #EB5E1A;
+  --color-on-dark-water: #5BC3EB;
+  
+  --color-border-subtle: #D5DFEA;
+  --color-border-control: #64748B;
+  
+  --color-status-success: #15803D;
+  --color-status-warning: #B45309;
+  --color-status-danger: #B91C1C;
+  --color-status-info: #0E9AD2;
+
+  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-body: "Barlow", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+}
 
 :root {
   color-scheme: light;
+  --color-bg: #FFFFFF;
+  --color-surface: #F4F7FB;
+  --color-surface-muted: #EDF3FA;
+  --color-surface-dark: #0A1B2E;
+  --color-heading: #0A1B2E;
+  --color-text-main: #22354A;
+  --color-text-muted: #52667B;
+  --color-primary: #0A1B2E;
+  --color-primary-hover: #14304E;
+  --color-primary-contrast: #FFFFFF;
+  --color-cta: #EB5E1A;
+  --color-cta-hover: #D44F12;
+  --color-cta-contrast: #0A1B2E;
+  --color-water: #0E9AD2;
+  --color-water-text: #0B6FB8;
+  --color-whatsapp: #25D366;
+  --color-on-dark: #FFFFFF;
+  --color-on-dark-muted: #B8C6D6;
+  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-body: "Barlow", ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
 html {

@@ -59,16 +59,14 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Brand Official Logo */}
           <Link href="/" className="flex items-center gap-3 group focus-visible:outline-2">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0">
-              <Image
-                src="/images/logo-transparent.png"
-                alt="OSIA Transport LLC Official Logo"
-                fill
-                priority
-                sizes="(max-width: 640px) 48px, 56px"
-                className="object-contain"
-              />
-            </div>
+            <Image
+              src="/images/logo-transparent.png"
+              alt="OSIA Transport LLC Official Logo"
+              width={56}
+              height={56}
+              className="w-12 h-12 sm:w-14 sm:h-14 object-contain shrink-0"
+              priority
+            />
             <div className="flex flex-col">
               <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-[#0A1B2E] uppercase font-display leading-none">
                 OSIA Transport

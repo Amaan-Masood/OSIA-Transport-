@@ -5,14 +5,14 @@ import { Badge } from '@/components/ui/Badge';
 
 export const AreasSection: React.FC = () => {
   return (
-    <section id="areas" className="py-16 sm:py-20 bg-white border-b border-[#D5DFEA]">
+    <section id="areas" className="py-16 sm:py-24 bg-white border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <Badge variant="navy">Strategic Regional Reach</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-[#0A1B2E]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-[#0F172A]">
             Abu Dhabi Coverage Hubs
           </h2>
-          <p className="text-sm sm:text-base text-[#52667B] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
             Fast response times with fleet units positioned across key industrial and development corridors.
           </p>
         </div>
@@ -21,29 +21,29 @@ export const AreasSection: React.FC = () => {
           {AREAS.map((a) => (
             <div
               key={a.slug}
-              className="p-6 rounded-2xl bg-[#F4F7FB] border border-[#D5DFEA] hover:border-[#1391E5]/40 transition-all flex flex-col justify-between"
+              className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:border-[#0284C7]/40 hover:shadow-xl transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#D5DFEA] flex items-center justify-center text-[#1391E5] mb-4">
-                  <MapPin className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7] mb-5">
+                  <MapPin className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0A1B2E] mb-2">
+                <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A] mb-2">
                   {a.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#52667B] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
                   {a.description}
                 </p>
               </div>
 
-              <div className="pt-6 mt-4 border-t border-[#D5DFEA]/60">
+              <div className="pt-6 mt-6 border-t border-[#E2E8F0]">
                 <a
                   href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent(`Hello OSIA Transport! We need dispatch to ${a.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold uppercase tracking-wider text-[#FF7A1A] hover:text-[#E8640A] inline-flex items-center gap-1"
+                  className="text-xs font-extrabold uppercase tracking-wider text-[#F97316] hover:text-[#EA580C] inline-flex items-center gap-1 group"
                 >
                   <span>Request Dispatch to {a.name}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>
@@ -51,25 +51,25 @@ export const AreasSection: React.FC = () => {
         </div>
 
         {/* Extended Highway Coverage Notice */}
-        <div className="bg-[#0A1B2E] text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="bg-[#0B1726] text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#FF7A1A] shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-[#F97316] shrink-0">
               <Navigation className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-lg font-bold font-display uppercase text-white">
-                Working on Remote Infrastructure or Inter-Emirate Routes?
+                Highway &amp; Inter-Emirate Corridors Covered
               </h4>
-              <p className="text-xs text-[#B8C6D6]">
-                We also mobilize heavy trailers and tankers across Western Region, Al Ain corridors, and Dubai highways.
+              <p className="text-xs sm:text-sm text-[#94A3B8]">
+                Continuous heavy haulage, potable water delivery, and crane support along E11 Sheikh Zayed Road and E30 trucking routes.
               </p>
             </div>
           </div>
           <a
             href={SITE_CONFIG.phoneHref}
-            className="shrink-0 px-6 py-3 rounded-lg bg-[#FF7A1A] text-[#0A1B2E] font-extrabold text-xs uppercase tracking-wider hover:bg-[#E8640A] transition-colors"
+            className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 shrink-0 transition-colors"
           >
-            Call {SITE_CONFIG.phoneDisplay}
+            Dispatch Coordination
           </a>
         </div>
       </div>

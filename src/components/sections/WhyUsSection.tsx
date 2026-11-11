@@ -4,32 +4,38 @@ import { Badge } from '@/components/ui/Badge';
 
 const REASONS = [
   {
-    icon: <MapPin className="w-6 h-6 text-[#FF7A1A]" />,
+    icon: <MapPin className="w-6 h-6 text-[#F97316]" />,
+    iconBg: 'bg-[#FFF7ED] border-[#FFEDD5]',
     title: 'Based in Abu Dhabi',
     desc: 'Strategically located for priority dispatch across Musaffah Industrial Area, Khalifa City, ICAD, and all Western Region infrastructure hubs.',
   },
   {
-    icon: <Users className="w-6 h-6 text-[#1391E5]" />,
+    icon: <Users className="w-6 h-6 text-[#0284C7]" />,
+    iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Experienced & Certified Crew',
     desc: 'Our heavy crane operators and tanker drivers hold full UAE certifications, rigorous site access passes, and extensive industrial experience.',
   },
   {
-    icon: <Truck className="w-6 h-6 text-[#FF7A1A]" />,
+    icon: <Truck className="w-6 h-6 text-[#F97316]" />,
+    iconBg: 'bg-[#FFF7ED] border-[#FFEDD5]',
     title: 'Modern & Inspected Fleet',
     desc: 'High-torque Volvo FH tractor units, Mercedes-Benz Actros tankers, and certified multi-tonnage cranes inspected to strict safety standards.',
   },
   {
-    icon: <DollarSign className="w-6 h-6 text-[#15803D]" />,
+    icon: <DollarSign className="w-6 h-6 text-[#16A34A]" />,
+    iconBg: 'bg-[#F0FDF4] border-[#BBF7D0]',
     title: 'Competitive & Transparent Pricing',
     desc: 'Fair hourly, daily, trip, and monthly contract rates with clear quotation and no surprise add-ons.',
   },
   {
-    icon: <Clock className="w-6 h-6 text-[#FF7A1A]" />,
+    icon: <Clock className="w-6 h-6 text-[#F97316]" />,
+    iconBg: 'bg-[#FFF7ED] border-[#FFEDD5]',
     title: '24/7 Standby Support',
     desc: 'Active round-the-clock telephone and WhatsApp dispatch desk for urgent dewatering, potable water top-ups, and emergency site lifting.',
   },
   {
-    icon: <ShieldCheck className="w-6 h-6 text-[#1391E5]" />,
+    icon: <ShieldCheck className="w-6 h-6 text-[#0284C7]" />,
+    iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Safety-Focused Operations',
     desc: 'Dedicated to Zero Incident safety protocols, comprehensive PPE, third-party load charts, and environmental disposal compliance.',
   },
@@ -37,14 +43,14 @@ const REASONS = [
 
 export const WhyUsSection: React.FC = () => {
   return (
-    <section id="why-us" className="py-16 sm:py-24 bg-white border-b border-[#D5DFEA]">
+    <section id="why-us" className="py-16 sm:py-24 bg-white border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <Badge variant="navy">Why Partner With Us</Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-[#0A1B2E]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-[#0F172A]">
             Reliable Service. Safe Operations. Trusted Partnership.
           </h2>
-          <p className="text-sm sm:text-base text-[#52667B] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
             We understand the high stakes of project schedules on UAE construction and industrial sites. Here is why project managers rely on OSIA Transport.
           </p>
         </div>
@@ -53,15 +59,15 @@ export const WhyUsSection: React.FC = () => {
           {REASONS.map((r, i) => (
             <div
               key={i}
-              className="p-6 sm:p-7 rounded-2xl bg-[#F4F7FB] border border-[#D5DFEA] hover:border-[#FF7A1A]/40 hover:shadow-md transition-all group"
+              className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:border-[#CBD5E1] hover:shadow-xl transition-all group"
             >
-              <div className="w-12 h-12 rounded-xl bg-white border border-[#D5DFEA] flex items-center justify-center mb-5 shadow-sm group-hover:scale-105 transition-transform">
+              <div className={`w-12 h-12 rounded-2xl border ${r.iconBg} flex items-center justify-center mb-5 shadow-sm group-hover:scale-105 transition-transform`}>
                 {r.icon}
               </div>
-              <h3 className="text-lg font-bold font-display uppercase tracking-tight text-[#0A1B2E] mb-2">
+              <h3 className="text-lg font-bold font-display uppercase tracking-tight text-[#0F172A] mb-2">
                 {r.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#52667B] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
                 {r.desc}
               </p>
             </div>

@@ -1,15 +1,15 @@
 import React from 'react';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { Phone, MessageSquare, CheckCircle2, ArrowLeft, ShieldCheck, Clock } from 'lucide-react';
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { ArrowLeft, Clock, ShieldCheck, Phone, MessageSquare, CheckCircle2 } from 'lucide-react';
 import { SERVICES, SITE_CONFIG } from '@/content/site';
-import { buildMetadata } from '@/lib/seo';
-import { Badge } from '@/components/ui/Badge';
 import { QuoteForm } from '@/components/forms/QuoteForm';
+import { Badge } from '@/components/ui/Badge';
+import { buildDirectServiceWhatsAppUrl } from '@/lib/whatsapp';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { getServiceSchema, getBreadcrumbSchema } from '@/lib/schema';
-import { buildDirectServiceWhatsAppUrl } from '@/lib/whatsapp';
+import { buildMetadata } from '@/lib/seo';
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
@@ -27,18 +27,18 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   if (!service) {
     return {
-      title: 'Service Not Found',
+      title: 'Service Not Found | OSIA Transport Abu Dhabi',
     };
   }
 
   return buildMetadata({
-    title: `${service.title} Abu Dhabi`,
+    title: `${service.title} | Abu Dhabi 24/7 Dispatch`,
     description: service.summary,
     path: `/services/${service.slug}/`,
   });
 }
 
-export default async function ServiceDetailPage({ params }: ServicePageProps) {
+export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = SERVICES.find((s) => s.slug === slug);
 
@@ -48,11 +48,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
   const isWater = service.category === 'water';
   const whatsappUrl = buildDirectServiceWhatsAppUrl(service.title);
+
   const serviceSchema = getServiceSchema(service);
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Services', url: '/services/' },
-    { name: service.shortTitle, url: `/services/${service.slug}/` },
+    { name: service.title, url: `/services/${service.slug}/` },
   ]);
 
   return (
@@ -61,12 +62,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10">
+      <section className="bg-[#0B1726] text-white py-12 sm:py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
             <Link
               href="/services/"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B8C6D6] hover:text-[#EB5E1A] uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#94A3B8] hover:text-[#F97316] uppercase tracking-wider transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to all services</span>
@@ -74,12 +75,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div className="max-w-3xl space-y-4">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-3">
               <Badge variant={isWater ? 'water' : 'orange'}>
                 {service.capacitySnippet}
               </Badge>
-              <span className="text-xs text-[#B8C6D6] flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-[#FF7A1A]" />
+              <span className="text-xs text-[#94A3B8] flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5 text-[#F97316]" />
                 24/7 Abu Dhabi Dispatch
               </span>
             </div>
@@ -88,7 +89,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               {service.title}
             </h1>
 
-            <p className="text-base sm:text-lg text-[#B8C6D6] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed">
               {service.summary}
             </p>
 
@@ -97,16 +98,16 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#25D366] text-[#0A1B2E] font-extrabold text-sm uppercase tracking-wider hover:bg-[#1FB75A] shadow-md transition-transform active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] shadow-md transition-all active:scale-95"
               >
-                <MessageSquare className="w-4 h-4 fill-[#0A1B2E]" />
+                <MessageSquare className="w-4 h-4 fill-[#0B1726]" />
                 <span>Instant WhatsApp Quote</span>
               </a>
               <a
                 href={SITE_CONFIG.phoneHref}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#FF7A1A]" />
+                <Phone className="w-4 h-4 text-[#F97316]" />
                 <span>Call Dispatch</span>
               </a>
             </div>
@@ -122,34 +123,34 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <div className="lg:col-span-7 space-y-10">
               {/* Overview */}
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
-                  Operational Overview & Standards
+                <h2 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
+                  Operational Overview &amp; Standards
                 </h2>
-                <p className="text-sm sm:text-base text-[#52667B] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
                   {service.fullDescription}
                 </p>
               </div>
 
               {/* Technical Specifications Table */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
+                <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
                   Technical Parameters
                 </h3>
-                <div className="border border-[#D5DFEA] rounded-xl overflow-hidden shadow-sm">
+                <div className="border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-sm">
                   <table className="w-full text-left text-sm">
-                    <thead className="bg-[#0A1B2E] text-white text-xs uppercase font-extrabold tracking-wider">
+                    <thead className="bg-[#0B1726] text-white text-xs uppercase font-extrabold tracking-wider">
                       <tr>
-                        <th className="py-3 px-4">Parameter</th>
-                        <th className="py-3 px-4">Specification</th>
+                        <th className="py-3.5 px-4">Parameter</th>
+                        <th className="py-3.5 px-4">Specification</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#D5DFEA] bg-white">
+                    <tbody className="divide-y divide-[#E2E8F0] bg-white">
                       {service.specTable.map((row, i) => (
-                        <tr key={i} className="hover:bg-[#F4F7FB] transition-colors">
-                          <td className="py-3 px-4 font-bold text-[#0A1B2E] bg-[#F4F7FB]/50 w-2/5">
+                        <tr key={i} className="hover:bg-[#F8FAFC] transition-colors">
+                          <td className="py-3.5 px-4 font-bold text-[#0F172A] bg-[#F8FAFC]/50 w-2/5">
                             {row.key}
                           </td>
-                          <td className="py-3 px-4 text-[#22354A] font-medium">
+                          <td className="py-3.5 px-4 text-[#334155] font-medium">
                             {row.value}
                           </td>
                         </tr>
@@ -161,16 +162,16 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
               {/* Primary Applications */}
               <div className="space-y-4">
-                <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
+                <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
                   Common Site Applications
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {service.applications.map((app, i) => (
                     <div
                       key={i}
-                      className="p-3.5 rounded-xl bg-[#F4F7FB] border border-[#D5DFEA] flex items-start gap-2.5 text-xs text-[#22354A]"
+                      className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-start gap-3 text-xs text-[#334155]"
                     >
-                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isWater ? 'text-[#1391E5]' : 'text-[#FF7A1A]'}`} />
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isWater ? 'text-[#0284C7]' : 'text-[#F97316]'}`} />
                       <span className="font-semibold">{app}</span>
                     </div>
                   ))}
@@ -178,11 +179,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </div>
 
               {/* HSE & Operational Safety Notice */}
-              <div className="p-5 rounded-xl bg-[#0A1B2E] text-white flex items-start gap-3.5">
-                <ShieldCheck className="w-6 h-6 text-[#25D366] shrink-0 mt-0.5" />
+              <div className="p-6 rounded-2xl bg-[#0B1726] text-white flex items-start gap-4 shadow-xl">
+                <ShieldCheck className="w-6 h-6 text-[#22C55E] shrink-0 mt-0.5" />
                 <div className="text-xs space-y-1">
-                  <strong className="text-white block text-sm">Strict HSE & Municipal Compliance</strong>
-                  <p className="text-[#B8C6D6] leading-relaxed">
+                  <strong className="text-white block text-sm">Strict HSE &amp; Municipal Compliance</strong>
+                  <p className="text-[#94A3B8] leading-relaxed">
                     All operations are executed in full alignment with Abu Dhabi environmental, health, and transport safety regulations. Operators hold verified licenses, PPE, and third-party inspection certifications.
                   </p>
                 </div>

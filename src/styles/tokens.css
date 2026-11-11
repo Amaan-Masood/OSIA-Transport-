@@ -1,43 +1,37 @@
 @theme {
+  --color-navy: #0B1726;
+  --color-navy-dark: #070F1A;
+  --color-navy-card: #132238;
+  --color-navy-hover: #162842;
+  
+  --color-sky-brand: #0284C7;
+  --color-sky-brand-hover: #0369A1;
+  --color-sky-brand-light: #E0F2FE;
+  --color-sky-brand-text: #0369A1;
+  
+  --color-orange-brand: #F97316;
+  --color-orange-brand-hover: #EA580C;
+  --color-orange-brand-light: #FFF7ED;
+  --color-orange-brand-text: #C2410C;
+  --color-orange-contrast: #0B1726;
+  
+  --color-whatsapp: #22C55E;
+  --color-whatsapp-hover: #16A34A;
+  --color-whatsapp-contrast: #0B1726;
+  
   --color-bg: #FFFFFF;
-  --color-surface: #F4F7FB;
-  --color-surface-muted: #EDF3FA;
-  --color-surface-dark: #0A1B2E;
+  --color-surface-slate: #F8FAFC;
+  --color-surface-muted: #F1F5F9;
   
-  --color-heading: #0A1B2E;
-  --color-text-main: #22354A;
-  --color-text-muted: #52667B;
+  --color-border-hairline: #E2E8F0;
+  --color-border-subtle: #CBD5E1;
   
-  --color-primary: #0A1B2E;
-  --color-primary-hover: #14304E;
-  --color-primary-contrast: #FFFFFF;
+  --color-heading: #0F172A;
+  --color-text-main: #334155;
+  --color-text-muted: #64748B;
   
-  /* Calibrated from Official OSIA Logo */
-  --color-cta: #EB5E1A;
-  --color-cta-hover: #D44F12;
-  --color-cta-contrast: #0A1B2E;
-  --color-accent-text: #C2410C;
-  
-  /* Calibrated Electric Cyan-Blue from OSIA Logo */
-  --color-water: #0E9AD2;
-  --color-water-text: #0B6FB8;
-  
-  --color-whatsapp: #25D366;
-  --color-whatsapp-hover: #1FB75A;
-  --color-whatsapp-contrast: #0A1B2E;
-  
-  --color-on-dark: #FFFFFF;
-  --color-on-dark-muted: #B8C6D6;
-  --color-on-dark-cta: #EB5E1A;
-  --color-on-dark-water: #5BC3EB;
-  
-  --color-border-subtle: #D5DFEA;
-  --color-border-control: #64748B;
-  
-  --color-status-success: #15803D;
-  --color-status-warning: #B45309;
-  --color-status-danger: #B91C1C;
-  --color-status-info: #0E9AD2;
+  --color-on-dark: #F8FAFC;
+  --color-on-dark-muted: #94A3B8;
 
   --font-display: "Barlow Condensed", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-body: "Barlow", ui-sans-serif, system-ui, -apple-system, sans-serif;
@@ -45,5 +39,6 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --radius-xl: 16px;
   --radius-pill: 9999px;
 }

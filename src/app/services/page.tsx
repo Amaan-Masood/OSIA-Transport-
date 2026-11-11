@@ -30,21 +30,21 @@ export const metadata: Metadata = buildMetadata({
 const getServiceIcon = (id: string) => {
   switch (id) {
     case 'sweet-water':
-      return <Droplet className="w-7 h-7 text-[#1391E5]" />;
+      return <Droplet className="w-7 h-7 text-[#0284C7]" />;
     case 'non-drinking-water':
-      return <Construction className="w-7 h-7 text-[#1391E5]" />;
+      return <Construction className="w-7 h-7 text-[#0284C7]" />;
     case 'salt-water':
-      return <Waves className="w-7 h-7 text-[#1391E5]" />;
+      return <Waves className="w-7 h-7 text-[#0284C7]" />;
     case 'wastewater-drainage':
-      return <Trash2 className="w-7 h-7 text-[#1391E5]" />;
+      return <Trash2 className="w-7 h-7 text-[#0284C7]" />;
     case 'crane-rental':
-      return <Wrench className="w-7 h-7 text-[#FF7A1A]" />;
+      return <Wrench className="w-7 h-7 text-[#F97316]" />;
     case 'low-bed-trailer':
-      return <Truck className="w-7 h-7 text-[#FF7A1A]" />;
+      return <Truck className="w-7 h-7 text-[#F97316]" />;
     case 'flatbed-trailer':
-      return <Container className="w-7 h-7 text-[#FF7A1A]" />;
+      return <Container className="w-7 h-7 text-[#F97316]" />;
     default:
-      return <Truck className="w-7 h-7 text-[#0A1B2E]" />;
+      return <Truck className="w-7 h-7 text-[#0B1726]" />;
   }
 };
 
@@ -59,22 +59,22 @@ export default function ServicesHubPage() {
       <JsonLd data={breadcrumbSchema} />
       
       {/* Page Header */}
-      <section className="bg-[#0A1B2E] text-white py-14 sm:py-20 border-b border-white/10">
+      <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <Badge variant="orange">Core Capabilities</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
-              Specialized Fleet & Transport Services in Abu Dhabi
+              Specialized Fleet &amp; Transport Services in Abu Dhabi
             </h1>
-            <p className="text-sm sm:text-base text-[#B8C6D6] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
               Equipped with heavy Mercedes Actros water tankers, Volvo FH tractor heads, multi-axle trailers, and certified 25T–200T mobile cranes for active infrastructure sites.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services List */}
-      <section className="py-16 bg-[#F4F7FB]">
+      {/* Services Grid */}
+      <section className="py-16 sm:py-24 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s) => {
@@ -85,11 +85,11 @@ export default function ServicesHubPage() {
                 <Card
                   key={s.id}
                   accentTop={isWater ? 'water' : 'orange'}
-                  className="flex flex-col justify-between hover:shadow-xl transition-shadow bg-white"
+                  className="flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all bg-white border border-[#E2E8F0] rounded-2xl"
                 >
                   <div className="p-6 sm:p-7 space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="w-14 h-14 rounded-xl bg-[#F4F7FB] border border-[#D5DFEA] flex items-center justify-center">
+                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${isWater ? 'bg-[#E0F2FE] border-[#BAE6FD]' : 'bg-[#FFF7ED] border-[#FFEDD5]'}`}>
                         {getServiceIcon(s.id)}
                       </div>
                       <Badge variant={isWater ? 'water' : 'orange'}>
@@ -97,42 +97,42 @@ export default function ServicesHubPage() {
                       </Badge>
                     </div>
 
-                    <h2 className="text-xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
-                      <Link href={`/services/${s.slug}/`} className="hover:text-[#FF7A1A] transition-colors">
+                    <h2 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
+                      <Link href={`/services/${s.slug}/`} className="hover:text-[#0284C7] transition-colors">
                         {s.title}
                       </Link>
                     </h2>
 
-                    <p className="text-xs sm:text-sm text-[#52667B] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
                       {s.summary}
                     </p>
 
-                    <div className="space-y-1.5 pt-2 border-t border-[#D5DFEA]/60">
+                    <div className="space-y-2 pt-3 border-t border-[#E2E8F0]">
                       {s.features.map((f, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs text-[#22354A]">
-                          <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${isWater ? 'text-[#1391E5]' : 'text-[#FF7A1A]'}`} />
+                        <div key={i} className="flex items-start gap-2 text-xs text-[#334155]">
+                          <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${isWater ? 'text-[#0284C7]' : 'text-[#F97316]'}`} />
                           <span>{f}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="px-6 pb-6 pt-3 border-t border-[#D5DFEA]/50 bg-[#F4F7FB]/50 flex items-center justify-between gap-3">
+                  <div className="px-6 pb-6 pt-4 border-t border-[#E2E8F0] bg-[#F8FAFC]/50 flex items-center justify-between gap-3">
                     <Link
                       href={`/services/${s.slug}/`}
-                      className="text-xs font-extrabold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors flex items-center gap-1"
+                      className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] hover:text-[#0284C7] transition-colors flex items-center gap-1 group"
                     >
                       <span>Specifications</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </Link>
 
                     <a
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#25D366] text-[#0A1B2E] font-extrabold text-xs uppercase tracking-wider hover:bg-[#1FB75A] shadow-sm transition-transform active:scale-95"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-xs uppercase tracking-wider hover:bg-[#16A34A] shadow-sm transition-transform active:scale-95"
                     >
-                      <MessageSquare className="w-3.5 h-3.5 fill-[#0A1B2E]" />
+                      <MessageSquare className="w-3.5 h-3.5 fill-[#0B1726]" />
                       <span>Inquire</span>
                     </a>
                   </div>

@@ -13,24 +13,24 @@ export const metadata: Metadata = buildMetadata({
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10">
+      <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-3">
-            <Badge variant="orange">Legal & Compliance</Badge>
+            <Badge variant="orange">Legal &amp; Compliance</Badge>
             <h1 className="text-3xl sm:text-4xl font-extrabold font-display uppercase tracking-tight text-white">
               Privacy Policy
             </h1>
-            <p className="text-sm text-[#B8C6D6]">
+            <p className="text-sm text-[#94A3B8]">
               Last updated: November 2026 · Compliant with UAE Personal Data Protection Law (PDPL)
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-14 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-sm sm:text-base text-[#52667B] leading-relaxed">
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-sm sm:text-base text-[#475569] leading-relaxed">
           <div className="space-y-3">
-            <h2 className="text-xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
+            <h2 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
               1. Overview
             </h2>
             <p>

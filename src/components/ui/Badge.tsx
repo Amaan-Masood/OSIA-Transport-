@@ -12,14 +12,19 @@ export const Badge: React.FC<BadgeProps> = ({
   className = '',
 }) => {
   const baseClasses =
-    'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-wide uppercase';
+    'inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border';
 
   const variantClasses = {
-    water: 'bg-[#EDF3FA] text-[#0B6FB8] border border-[#0E9AD2]/30',
-    orange: 'bg-[#FFF7ED] text-[#C2410C] border border-[#EB5E1A]/30',
-    navy: 'bg-[#0A1B2E] text-white',
-    neutral: 'bg-[#F4F7FB] text-[#22354A] border border-[#D5DFEA]',
-    success: 'bg-[#DCFCE7] text-[#15803D] border border-[#15803D]/20',
+    // Crisp Sky Blue Badge (matched to logo)
+    water: 'bg-[#E0F2FE] text-[#0369A1] border-[#BAE6FD]',
+    // Crisp Warm Orange Badge (matched to logo)
+    orange: 'bg-[#FFF7ED] text-[#C2410C] border-[#FFEDD5]',
+    // Authority Navy Badge
+    navy: 'bg-[#0B1726] text-white border-[#0B1726]',
+    // Clean Studio Neutral Badge
+    neutral: 'bg-[#F1F5F9] text-[#334155] border-[#E2E8F0]',
+    // Safety & Compliance Success Badge
+    success: 'bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]',
   };
 
   return (

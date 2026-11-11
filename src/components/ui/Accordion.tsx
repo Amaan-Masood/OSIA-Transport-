@@ -22,7 +22,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items, className = '' }) =
   };
 
   return (
-    <div className={`divide-y divide-[#D5DFEA] border border-[#D5DFEA] rounded-xl bg-white overflow-hidden ${className}`}>
+    <div className={`divide-y divide-[#E2E8F0] border border-[#E2E8F0] rounded-2xl bg-white overflow-hidden shadow-sm ${className}`}>
       {items.map((item) => {
         const isOpen = openId === item.id;
         return (
@@ -31,17 +31,17 @@ export const Accordion: React.FC<AccordionProps> = ({ items, className = '' }) =
               type="button"
               onClick={() => toggle(item.id)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between p-5 text-left font-bold text-[#0A1B2E] hover:bg-[#F4F7FB] focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors cursor-pointer"
+              className="flex w-full items-center justify-between p-5 md:p-6 text-left font-bold text-[#0F172A] hover:bg-[#F8FAFC] focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors cursor-pointer"
             >
               <span className="text-base md:text-lg pr-4">{item.question}</span>
               <ChevronDown
-                className={`h-5 w-5 shrink-0 text-[#FF7A1A] transition-transform duration-200 ${
-                  isOpen ? 'rotate-180' : ''
+                className={`h-5 w-5 shrink-0 text-[#0284C7] transition-transform duration-200 ${
+                  isOpen ? 'rotate-180 text-[#F97316]' : ''
                 }`}
               />
             </button>
             {isOpen && (
-              <div className="px-5 pb-5 pt-1 text-sm md:text-base text-[#52667B] leading-relaxed bg-[#F4F7FB]/50 border-t border-[#D5DFEA]/50">
+              <div className="px-5 md:px-6 pb-6 pt-2 text-sm md:text-base text-[#475569] leading-relaxed bg-[#F8FAFC]/60 border-t border-[#E2E8F0]/60">
                 {item.answer}
               </div>
             )}

@@ -24,14 +24,14 @@ export default function FleetPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-[#0A1B2E] text-white py-12 sm:py-16 border-b border-white/10">
+      <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <Badge variant="orange">Verified Equipment Fleet</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
-              Fleet & Equipment Specifications
+              Fleet &amp; Equipment Specifications
             </h1>
-            <p className="text-base sm:text-lg text-[#B8C6D6] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed">
               Explore our active Abu Dhabi fleet: all-terrain mobile cranes from 25 to 200 tons, potable water tankers, vacuum units, and heavy low-bed transport trailers.
             </p>
           </div>

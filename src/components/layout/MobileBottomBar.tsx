@@ -9,14 +9,14 @@ export const MobileBottomBar: React.FC = () => {
   const whatsappUrl = buildGeneralWhatsAppUrl();
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-[#D5DFEA] px-3 py-2.5 shadow-[0_-4px_16px_rgba(10,27,46,0.12)]">
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-[#E2E8F0] px-3 py-2.5 shadow-[0_-4px_16px_rgba(11,23,38,0.12)]">
       <div className="grid grid-cols-2 gap-2.5 h-[48px]">
         {/* Call Button */}
         <a
           href={SITE_CONFIG.phoneHref}
-          className="flex items-center justify-center gap-2 rounded-lg bg-[#0A1B2E] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#0B1726] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
         >
-          <Phone className="w-4 h-4 text-[#EB5E1A]" />
+          <Phone className="w-4 h-4 text-[#F97316]" />
           <span>Call Now</span>
         </a>
 
@@ -25,10 +25,10 @@ export const MobileBottomBar: React.FC = () => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 rounded-lg bg-[#25D366] text-[#0A1B2E] font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-xs uppercase tracking-wider shadow-sm active:scale-[0.98] transition-transform min-h-[44px]"
         >
           <svg
-            className="w-4 h-4 fill-current text-[#0A1B2E]"
+            className="w-4 h-4 fill-current text-[#0B1726]"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"

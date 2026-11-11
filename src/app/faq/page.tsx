@@ -33,14 +33,14 @@ export default function FaqPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-[#0A1B2E] text-white py-14 sm:py-20 border-b border-white/10">
+      <section className="bg-[#0B1726] text-white py-14 sm:py-20 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <Badge variant="orange">Knowledge & Answers</Badge>
+            <Badge variant="orange">Knowledge &amp; Answers</Badge>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               Frequently Asked Questions
             </h1>
-            <p className="text-base sm:text-lg text-[#B8C6D6] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed">
               Clear technical and operational answers about our transport fleet, potable water standards, and mobile crane rentals.
             </p>
           </div>
@@ -48,9 +48,9 @@ export default function FaqPage() {
       </section>
 
       {/* Main FAQ list */}
-      <section className="py-14 sm:py-20 bg-[#F4F7FB]">
+      <section className="py-16 sm:py-24 bg-[#F8FAFC]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Accordion items={accordionItems} className="shadow-sm" />
+          <Accordion items={accordionItems} />
         </div>
       </section>
 

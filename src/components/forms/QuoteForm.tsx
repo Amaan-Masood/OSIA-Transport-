@@ -68,26 +68,24 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
     setSubmittedUrl(url);
     setIsSuccess(true);
 
-    // Synchronous window.open to bypass mobile popup blockers
-    try {
+    // Open WhatsApp in new tab
+    if (typeof window !== 'undefined') {
       window.open(url, '_blank', 'noopener,noreferrer');
-    } catch {
-      // Browser blocked popup; fallback link is shown in the success view
     }
   };
 
   return (
-    <div className={`bg-white rounded-2xl border border-[#D5DFEA] p-6 sm:p-8 shadow-lg ${className}`}>
+    <div className={`bg-white rounded-2xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xl ${className}`}>
       {isSuccess && submittedUrl ? (
         <div className="space-y-6 text-center py-6 animate-in fade-in duration-300">
-          <div className="w-16 h-16 rounded-full bg-[#DCFCE7] text-[#15803D] flex items-center justify-center mx-auto shadow-sm">
+          <div className="w-16 h-16 rounded-full bg-[#F0FDF4] text-[#16A34A] border border-[#BBF7D0] flex items-center justify-center mx-auto shadow-sm">
             <CheckCircle2 className="w-9 h-9" />
           </div>
           <div className="space-y-2">
-            <h3 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
+            <h3 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
               Quote Request Prepared!
             </h3>
-            <p className="text-sm text-[#52667B] max-w-md mx-auto">
+            <p className="text-sm text-[#475569] max-w-md mx-auto">
               Your inquiry has been formatted. If WhatsApp didn’t open automatically, tap below to send it to our 24/7 dispatch team:
             </p>
           </div>
@@ -97,20 +95,20 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               href={submittedUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#25D366] text-[#0A1B2E] font-extrabold text-sm uppercase tracking-wider hover:bg-[#1FB75A] shadow-md transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#22C55E] text-[#0B1726] font-extrabold text-sm uppercase tracking-wider hover:bg-[#16A34A] shadow-md transition-all active:scale-95"
             >
-              <MessageSquare className="w-5 h-5 fill-[#0A1B2E]" />
+              <MessageSquare className="w-5 h-5 fill-[#0B1726]" />
               <span>Open in WhatsApp</span>
             </a>
           </div>
 
-          <div className="pt-6 border-t border-[#D5DFEA] text-xs text-[#52667B] space-y-2">
-            <p className="font-semibold text-[#0A1B2E]">Or contact dispatch immediately via:</p>
+          <div className="pt-6 border-t border-[#E2E8F0] text-xs text-[#64748B] space-y-2">
+            <p className="font-semibold text-[#0F172A]">Or contact dispatch immediately via:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#FF7A1A] hover:underline flex items-center gap-1">
+              <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#F97316] hover:underline flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5" /> Call {SITE_CONFIG.phoneDisplay}
               </a>
-              <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#1391E5] hover:underline flex items-center gap-1">
+              <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#0284C7] hover:underline flex items-center gap-1">
                 <Mail className="w-3.5 h-3.5" /> {SITE_CONFIG.email}
               </a>
             </div>
@@ -123,7 +121,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                 setIsSuccess(false);
                 setSubmittedUrl(null);
               }}
-              className="text-xs font-semibold text-[#52667B] hover:text-[#0A1B2E] underline cursor-pointer"
+              className="text-xs font-semibold text-[#64748B] hover:text-[#0F172A] underline cursor-pointer"
             >
               ← Submit another quote request
             </button>
@@ -131,18 +129,18 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
         </div>
       ) : (
         <form onSubmit={handleSubmit} noValidate className="space-y-5">
-          <div className="border-b border-[#D5DFEA] pb-4">
-            <h3 className="text-xl sm:text-2xl font-bold font-display uppercase tracking-tight text-[#0A1B2E]">
+          <div className="border-b border-[#E2E8F0] pb-4">
+            <h3 className="text-xl sm:text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
               Request An Instant Quote
             </h3>
-            <p className="text-xs sm:text-sm text-[#52667B] mt-1">
+            <p className="text-xs sm:text-sm text-[#475569] mt-1">
               Select your required service. We will generate your structured specifications for immediate WhatsApp dispatch.
             </p>
           </div>
 
           {/* Service Selector */}
           <div>
-            <label htmlFor="quote-service" className="block text-xs font-bold uppercase tracking-wider text-[#0A1B2E] mb-1.5">
+            <label htmlFor="quote-service" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
               Service Required <span className="text-red-500">*</span>
             </label>
             <select
@@ -150,7 +148,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-[#D5DFEA] bg-white text-sm font-semibold text-[#0A1B2E] focus:border-[#FF7A1A] focus:ring-1 focus:ring-[#FF7A1A] outline-none"
+              className="w-full px-3.5 py-3 rounded-xl border border-[#E2E8F0] bg-white text-sm font-semibold text-[#0F172A] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 outline-none transition-all"
             >
               {SERVICES.map((s) => (
                 <option key={s.id} value={s.title}>
@@ -162,12 +160,12 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
 
           {/* Dynamic Service Specific Fields */}
           {selectedServiceItem.category === 'heavy-lifting' && (
-            <div className="bg-[#FFF7ED] border border-[#FF7A1A]/30 rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
+            <div className="bg-[#FFF7ED] border border-[#FFEDD5] rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
               <span className="text-xs font-extrabold uppercase tracking-wider text-[#C2410C] block">
                 Mobile Crane Specifications
               </span>
               <div>
-                <label htmlFor="craneTonnage" className="block text-xs font-bold text-[#0A1B2E] mb-1">
+                <label htmlFor="craneTonnage" className="block text-xs font-bold text-[#0F172A] mb-1">
                   Required Crane Capacity
                 </label>
                 <select
@@ -175,7 +173,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                   name="craneTonnage"
                   value={formData.craneTonnage}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 rounded-lg border border-[#D5DFEA] bg-white text-sm text-[#0A1B2E]"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-sm text-[#0F172A]"
                 >
                   <option value="">Select Tonnage (or ask engineer)</option>
                   <option value="25 Ton Mobile Crane">25 Ton Mobile Crane</option>
@@ -189,13 +187,13 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
           )}
 
           {selectedServiceItem.category === 'water' && (
-            <div className="bg-[#EDF3FA] border border-[#1391E5]/30 rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-[#0B6FB8] block">
+            <div className="bg-[#E0F2FE] border border-[#BAE6FD] rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-[#0369A1] block">
                 Water Delivery Specifications
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label htmlFor="waterType" className="block text-xs font-bold text-[#0A1B2E] mb-1">
+                  <label htmlFor="waterType" className="block text-xs font-bold text-[#0F172A] mb-1">
                     Water Specification
                   </label>
                   <select
@@ -203,7 +201,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                     name="waterType"
                     value={formData.waterType}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 rounded-lg border border-[#D5DFEA] bg-white text-xs sm:text-sm text-[#0A1B2E]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-xs sm:text-sm text-[#0F172A]"
                   >
                     <option value="Drinking Sweet Water (Potable)">Drinking Sweet Water (Potable)</option>
                     <option value="Non-Drinking Construction Water">Non-Drinking Construction Water</option>
@@ -212,7 +210,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="tripFrequency" className="block text-xs font-bold text-[#0A1B2E] mb-1">
+                  <label htmlFor="tripFrequency" className="block text-xs font-bold text-[#0F172A] mb-1">
                     Delivery Frequency
                   </label>
                   <select
@@ -220,7 +218,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                     name="tripFrequency"
                     value={formData.tripFrequency}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 rounded-lg border border-[#D5DFEA] bg-white text-xs sm:text-sm text-[#0A1B2E]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-xs sm:text-sm text-[#0F172A]"
                   >
                     <option value="One-off Urgent Trip">One-off Urgent Trip</option>
                     <option value="Daily Scheduled Delivery">Daily Scheduled Delivery</option>
@@ -232,13 +230,13 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
           )}
 
           {selectedServiceItem.category === 'haulage' && (
-            <div className="bg-[#F4F7FB] border border-[#D5DFEA] rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
-              <span className="text-xs font-extrabold uppercase tracking-wider text-[#0A1B2E] block">
+            <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-4 space-y-3 animate-in fade-in duration-200">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] block">
                 Trailer Cargo Specifications
               </span>
               <div>
-                <label htmlFor="cargoDetails" className="block text-xs font-bold text-[#0A1B2E] mb-1">
-                  Cargo Type & Estimated Weight
+                <label htmlFor="cargoDetails" className="block text-xs font-bold text-[#0F172A] mb-1">
+                  Cargo Type &amp; Estimated Weight
                 </label>
                 <input
                   type="text"
@@ -247,7 +245,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                   value={formData.cargoDetails}
                   onChange={handleChange}
                   placeholder="e.g. 30T Excavator / 12m Steel Beams / Precast"
-                  className="w-full px-3 py-2 rounded-lg border border-[#D5DFEA] bg-white text-sm text-[#0A1B2E]"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#E2E8F0] bg-white text-sm text-[#0F172A]"
                 />
               </div>
             </div>
@@ -256,7 +254,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
           {/* Name & Phone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="quote-name" className="block text-xs font-bold uppercase tracking-wider text-[#0A1B2E] mb-1">
+              <label htmlFor="quote-name" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1">
                 Your Name / Company <span className="text-red-500">*</span>
               </label>
               <input
@@ -267,8 +265,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                 onChange={handleChange}
                 placeholder="e.g. Engineer Tariq / Al Futtaim Site"
                 aria-invalid={!!errors.name}
-                className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-[#0A1B2E] focus:outline-none ${
-                  errors.name ? 'border-red-500 bg-red-50/30' : 'border-[#D5DFEA] focus:border-[#FF7A1A]'
+                className={`w-full px-3.5 py-3 rounded-xl border text-sm text-[#0F172A] focus:outline-none transition-all ${
+                  errors.name ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20'
                 }`}
               />
               {errors.name && (
@@ -280,7 +278,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
             </div>
 
             <div>
-              <label htmlFor="quote-phone" className="block text-xs font-bold uppercase tracking-wider text-[#0A1B2E] mb-1">
+              <label htmlFor="quote-phone" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1">
                 Mobile Number <span className="text-red-500">*</span>
               </label>
               <input
@@ -291,8 +289,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                 onChange={handleChange}
                 placeholder="e.g. 050 412 7930"
                 aria-invalid={!!errors.phone}
-                className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-[#0A1B2E] focus:outline-none ${
-                  errors.phone ? 'border-red-500 bg-red-50/30' : 'border-[#D5DFEA] focus:border-[#FF7A1A]'
+                className={`w-full px-3.5 py-3 rounded-xl border text-sm text-[#0F172A] focus:outline-none transition-all ${
+                  errors.phone ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20'
                 }`}
               />
               {errors.phone && (
@@ -306,7 +304,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
 
           {/* Location */}
           <div>
-            <label htmlFor="quote-location" className="block text-xs font-bold uppercase tracking-wider text-[#0A1B2E] mb-1">
+            <label htmlFor="quote-location" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1">
               Delivery / Site Location <span className="text-red-500">*</span>
             </label>
             <input
@@ -317,8 +315,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               onChange={handleChange}
               placeholder="e.g. Musaffah Sector 14 / Khalifa City Villa / Yas South"
               aria-invalid={!!errors.location}
-              className={`w-full px-3.5 py-2.5 rounded-lg border text-sm text-[#0A1B2E] focus:outline-none ${
-                errors.location ? 'border-red-500 bg-red-50/30' : 'border-[#D5DFEA] focus:border-[#FF7A1A]'
+              className={`w-full px-3.5 py-3 rounded-xl border text-sm text-[#0F172A] focus:outline-none transition-all ${
+                errors.location ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20'
               }`}
             />
             {errors.location && (
@@ -331,7 +329,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
 
           {/* Additional Notes */}
           <div>
-            <label htmlFor="quote-details" className="block text-xs font-bold uppercase tracking-wider text-[#0A1B2E] mb-1">
+            <label htmlFor="quote-details" className="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1">
               Project Details / Specific Timing (Optional)
             </label>
             <textarea
@@ -341,17 +339,17 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               value={formData.details}
               onChange={handleChange}
               placeholder="Provide any additional specifications, site constraints, or urgent timing requirements..."
-              className="w-full px-3.5 py-2.5 rounded-lg border border-[#D5DFEA] text-sm text-[#0A1B2E] focus:border-[#FF7A1A] focus:outline-none"
+              className="w-full px-3.5 py-3 rounded-xl border border-[#E2E8F0] text-sm text-[#0F172A] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 focus:outline-none transition-all"
             />
           </div>
 
           {/* Submit Button */}
           <div className="pt-2">
-            <Button type="submit" variant="cta" size="lg" className="w-full flex items-center justify-center gap-2">
-              <span>Submit & Open In WhatsApp</span>
-              <ArrowRight className="w-4 h-4" />
+            <Button type="submit" variant="cta" size="lg" className="w-full flex items-center justify-center gap-2 font-extrabold text-base py-4 shadow-lg">
+              <span>Submit &amp; Open In WhatsApp</span>
+              <ArrowRight className="w-5 h-5" />
             </Button>
-            <p className="text-center text-[11px] text-[#52667B] mt-2">
+            <p className="text-center text-[11px] text-[#64748B] mt-2">
               Instant 24/7 routing to OSIA Transport operations desk in Abu Dhabi. No spam, no server storage.
             </p>
           </div>

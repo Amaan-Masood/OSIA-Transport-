@@ -13,17 +13,20 @@ export const Card: React.FC<CardProps> = ({
   className = '',
   ...props
 }) => {
-  const baseClasses = 'rounded-xl transition-all duration-200 overflow-hidden';
+  const baseClasses = 'rounded-2xl transition-all duration-200 overflow-hidden';
 
   const variantClasses = {
-    surface: 'bg-white border border-[#D5DFEA] shadow-[0_4px_12px_rgba(10,27,46,0.06)]',
-    dark: 'bg-[#0A1B2E] border border-white/10 text-white shadow-[0_8px_24px_rgba(0,0,0,0.3)]',
-    outline: 'bg-transparent border border-[#D5DFEA]',
+    // Crisp white surface with hairline border & subtle elevation
+    surface: 'bg-white border border-[#E2E8F0] shadow-[0_2px_10px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_24px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1]',
+    // Authority dark navy card with fine white hairline border
+    dark: 'bg-[#132238] border border-white/10 text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:border-white/20',
+    // Pure hairline outline
+    outline: 'bg-transparent border border-[#E2E8F0]',
   };
 
   const accentClasses = {
-    water: 'border-t-4 border-t-[#1391E5]',
-    orange: 'border-t-4 border-t-[#FF7A1A]',
+    water: 'border-t-4 border-t-[#0284C7]',
+    orange: 'border-t-4 border-t-[#F97316]',
     none: '',
   };
 

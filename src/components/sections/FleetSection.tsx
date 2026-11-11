@@ -67,19 +67,19 @@ const FLEET_GALLERY: FleetImage[] = [
     specs: 'Heavy Steel Infrastructure Transportation',
   },
   {
-    src: '/images/fleet/multi-axle-heavy-transport-chassis.webp',
+    src: '/images/fleet/heavy-multi-axle-chassis.webp',
     title: 'Multi-Axle Heavy Transport Chassis',
     category: 'Heavy Equipment Transport',
     specs: 'Excavator & Heavy Machinery Mobilization',
   },
   {
-    src: '/images/fleet/mercedes-actros-tractor-unit-front.webp',
+    src: '/images/fleet/renault-heavy-tractors-blue.webp',
     title: 'Heavy Tractor Units Fleet',
     category: 'Logistics Fleet',
     specs: 'Certified UAE Highway Transport Units',
   },
   {
-    src: '/images/fleet/transport-fleet-operations-yard.webp',
+    src: '/images/fleet/fleet-yard-overview.webp',
     title: 'Operations Yard & Standby Fleet',
     category: 'Inspection Center',
     specs: '24/7 Dispatch Facility in Abu Dhabi',

@@ -76,11 +76,11 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             <div className="relative rounded-3xl p-2 bg-[#F1F5F9] border border-[#E2E8F0] shadow-xl">
               <div className="relative rounded-2xl overflow-hidden bg-[#0B1726]">
-                {/* Image */}
-                <div className="relative aspect-[4/3] w-full bg-[#0B1726]">
+                {/* Image - Matched aspect-square for full uncropped vehicle framing */}
+                <div className="relative aspect-square w-full bg-[#0B1726]">
                   <Image
                     src="/images/fleet/mercedes-actros-water-tanker.webp"
-                    alt="OSIA Transport Mercedes-Benz Actros Water Tanker in Abu Dhabi"
+                    alt="OSIA Transport Mercedes-Benz Actros 3341 Water Tanker in Abu Dhabi"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 500px"

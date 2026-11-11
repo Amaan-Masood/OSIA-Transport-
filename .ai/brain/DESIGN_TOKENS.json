@@ -1,0 +1,146 @@
+{
+  "project": "OSIA Transport LLC SPC website",
+  "preset": "Custom (client brand: navy + safety-orange + water-blue)",
+  "color": {
+    "bg": "#FFFFFF",
+    "surface": "#F4F7FB",
+    "surface-muted": "#EDF3FA",
+    "surface-dark": "#0A1B2E",
+    "heading": "#0A1B2E",
+    "text": "#22354A",
+    "text-muted": "#52667B",
+    "primary": "#0A1B2E",
+    "primary-hover": "#14304E",
+    "primary-contrast": "#FFFFFF",
+    "cta": "#FF7A1A",
+    "cta-hover": "#E8640A",
+    "cta-contrast": "#0A1B2E",
+    "accent-text": "#C2410C",
+    "water": "#1391E5",
+    "water-text": "#0B6FB8",
+    "whatsapp": "#25D366",
+    "whatsapp-hover": "#1FB75A",
+    "whatsapp-contrast": "#0A1B2E",
+    "on-dark": "#FFFFFF",
+    "on-dark-muted": "#B8C6D6",
+    "on-dark-cta": "#FF7A1A",
+    "on-dark-water": "#6AB8F5",
+    "border": "#D5DFEA",
+    "border-control": "#64748B",
+    "success": "#15803D",
+    "warning": "#B45309",
+    "danger": "#B91C1C",
+    "info": "#0369A1"
+  },
+  "rules": {
+    "never": [
+      "white text on cta (2.61:1)",
+      "white text/icon on whatsapp green (1.98:1)",
+      "cta or water as text on light backgrounds (use accent-text / water-text)",
+      "raw hex in components"
+    ],
+    "semantic-split": "water services = water/water-text accents; lifting & haulage services = cta/accent-text accents; status colors are never color-only (icon + text)"
+  },
+  "type": {
+    "display": "Barlow Condensed (600,700) self-hosted woff2, latin subset",
+    "body": "Barlow (400,500,600) self-hosted woff2, latin subset",
+    "fallback": "ui-sans-serif, system-ui, 'Segoe UI', Arial, sans-serif",
+    "scale": [
+      12,
+      14,
+      16,
+      20,
+      24,
+      30,
+      36,
+      48
+    ],
+    "display_extension": {
+      "sizes": [
+        60,
+        72
+      ],
+      "use": "hero H1 and capacity numerals ONLY (documented deviation, ADR_05)"
+    },
+    "line_height": {
+      "body": 1.5,
+      "heading": 1.15
+    },
+    "max_measure_ch": 65,
+    "numbers": "tabular-nums for capacities, phone, tables"
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radius": {
+    "sm": 6,
+    "md": 8,
+    "lg": 12,
+    "pill": 9999,
+    "note": "brief asked 14-16px cards; reduced to scale value 12 for token discipline"
+  },
+  "elevation": {
+    "1": "0 1px 2px rgba(10,27,46,.06)",
+    "2": "0 4px 12px rgba(10,27,46,.10)",
+    "3": "0 12px 32px rgba(10,27,46,.16)"
+  },
+  "motion": {
+    "fast": 150,
+    "base": 200,
+    "slow": 250,
+    "easing": "ease-out",
+    "animate": [
+      "transform",
+      "opacity"
+    ],
+    "reduced_motion": "disable reveal + counters, show final values"
+  },
+  "breakpoints": [
+    360,
+    768,
+    1024,
+    1280,
+    1536
+  ],
+  "layout": {
+    "columns": {
+      "mobile": 4,
+      "tablet": 8,
+      "desktop": 12
+    },
+    "gutter": {
+      "mobile": 16,
+      "tablet": 24,
+      "desktop": 24
+    },
+    "page_margin": {
+      "mobile": 16,
+      "tablet": 32,
+      "desktop": "auto"
+    },
+    "container_max": 1200
+  },
+  "z": {
+    "base": 0,
+    "sticky": 10,
+    "dropdown": 20,
+    "overlay": 30,
+    "modal": 40,
+    "toast": 50
+  },
+  "touch": {
+    "min_target": 44,
+    "min_gap": 8,
+    "mobile_bottom_bar_height": 64
+  },
+  "signature": "Capacity-first spec-sheet look: oversized tonnage and gallon numerals on a blueprint grid, so every service reads like an equipment spec, not a generic transport template.",
+  "verified": "see contrast-report.txt (all pairs PASS)"
+}

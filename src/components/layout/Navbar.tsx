@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, Clock, Menu, X, ChevronDown } from 'lucide-react';
 import { SITE_CONFIG, SERVICES } from '@/content/site';
 import { Button } from '@/components/ui/Button';
@@ -26,7 +27,7 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-[#B8C6D6]">
-              <Clock className="w-3.5 h-3.5 text-[#FF7A1A]" />
+              <Clock className="w-3.5 h-3.5 text-[#EB5E1A]" />
               <strong className="text-white">24/7 Dispatch:</strong> Round-the-clock Abu Dhabi Operations
             </span>
             <span className="flex items-center gap-1.5 text-[#B8C6D6] hidden md:flex">
@@ -37,9 +38,9 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center gap-5">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="flex items-center gap-1.5 text-white hover:text-[#FF7A1A] font-semibold transition-colors"
+              className="flex items-center gap-1.5 text-white hover:text-[#EB5E1A] font-semibold transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#FF7A1A]" />
+              <Phone className="w-3.5 h-3.5 text-[#EB5E1A]" />
               {SITE_CONFIG.phoneDisplay}
             </a>
             <a
@@ -54,28 +55,35 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Main Nav Bar */}
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all ${scrolled ? 'py-2.5' : 'py-3.5'}`}>
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all ${scrolled ? 'py-2' : 'py-3'}`}>
         <div className="flex items-center justify-between">
-          {/* Brand Mark */}
+          {/* Brand Official Logo */}
           <Link href="/" className="flex items-center gap-3 group focus-visible:outline-2">
-            <div className="w-10 h-10 rounded-lg bg-[#0A1B2E] flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:bg-[#14304E] transition-colors">
-              <span className="text-[#FF7A1A]">O</span>S
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0">
+              <Image
+                src="/images/logo-transparent.png"
+                alt="OSIA Transport LLC Official Logo"
+                fill
+                priority
+                sizes="(max-width: 640px) 48px, 56px"
+                className="object-contain"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[#0A1B2E] uppercase font-display leading-none">
+              <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-[#0A1B2E] uppercase font-display leading-none">
                 OSIA Transport
               </span>
-              <span className="text-[10px] tracking-widest text-[#52667B] uppercase font-bold">
-                LLC SPC · Abu Dhabi
+              <span className="text-[10px] tracking-widest text-[#52667B] uppercase font-bold mt-0.5">
+                LLC · Abu Dhabi, UAE
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Items */}
+          {/* Desktop Multi-Page Nav Links */}
           <nav className="hidden lg:flex items-center gap-7">
             <Link
               href="/"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
+              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#EB5E1A] transition-colors"
             >
               Home
             </Link>
@@ -88,7 +96,7 @@ export const Navbar: React.FC = () => {
             >
               <Link
                 href="/services/"
-                className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors py-2"
+                className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#EB5E1A] transition-colors py-2"
               >
                 Services
                 <ChevronDown className="w-4 h-4 text-[#52667B]" />
@@ -103,7 +111,7 @@ export const Navbar: React.FC = () => {
                     <Link
                       key={s.id}
                       href={`/services/${s.slug}/`}
-                      className="block px-3 py-2 rounded-lg text-sm text-[#0A1B2E] hover:bg-[#F4F7FB] hover:text-[#FF7A1A] transition-colors"
+                      className="block px-3 py-2 rounded-lg text-sm text-[#0A1B2E] hover:bg-[#F4F7FB] hover:text-[#EB5E1A] transition-colors"
                     >
                       <div className="font-bold">{s.shortTitle}</div>
                       <div className="text-xs text-[#52667B] line-clamp-1">{s.capacitySnippet}</div>
@@ -112,7 +120,7 @@ export const Navbar: React.FC = () => {
                   <div className="pt-2 mt-1 border-t border-[#D5DFEA]/60 px-3">
                     <Link
                       href="/services/"
-                      className="text-xs font-bold text-[#1391E5] hover:underline"
+                      className="text-xs font-bold text-[#0E9AD2] hover:underline"
                     >
                       View All 7 Services Hub →
                     </Link>
@@ -121,39 +129,34 @@ export const Navbar: React.FC = () => {
               )}
             </div>
 
+            {/* Dedicated Page: Fleet */}
             <Link
-              href="/#fleet"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
+              href="/fleet/"
+              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#EB5E1A] transition-colors"
             >
               Fleet Specs
             </Link>
-            <Link
-              href="/#why-us"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
-            >
-              Why Us
-            </Link>
-            <Link
-              href="/#process"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
-            >
-              Process
-            </Link>
+
+            {/* Dedicated Page: About */}
             <Link
               href="/about/"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
+              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#EB5E1A] transition-colors"
             >
-              About
+              About Us
             </Link>
+
+            {/* Dedicated Page: FAQ */}
             <Link
               href="/faq/"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
+              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#EB5E1A] transition-colors"
             >
               FAQ
             </Link>
+
+            {/* Dedicated Page: Contact */}
             <Link
               href="/contact/"
-              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#FF7A1A] transition-colors"
+              className="text-sm font-bold uppercase tracking-wider text-[#0A1B2E] hover:text-[#EB5E1A] transition-colors"
             >
               Contact
             </Link>
@@ -173,7 +176,7 @@ export const Navbar: React.FC = () => {
               className="p-2 rounded-lg bg-[#F4F7FB] text-[#0A1B2E] hover:bg-[#EDF3FA] transition-colors"
               aria-label="Call OSIA Transport"
             >
-              <Phone className="w-5 h-5 text-[#FF7A1A]" />
+              <Phone className="w-5 h-5 text-[#EB5E1A]" />
             </a>
             <button
               type="button"
@@ -189,9 +192,9 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[60px] bottom-0 bg-white z-40 overflow-y-auto border-t border-[#D5DFEA] p-5 flex flex-col justify-between">
+        <div className="lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-white z-40 overflow-y-auto border-t border-[#D5DFEA] p-5 flex flex-col justify-between">
           <div className="space-y-4">
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
@@ -203,13 +206,13 @@ export const Navbar: React.FC = () => {
                 <div className="text-xs font-extrabold uppercase text-[#52667B] mb-2 tracking-wider">
                   Our Services
                 </div>
-                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l-2 border-[#FF7A1A]">
+                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l-2 border-[#EB5E1A]">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.id}
                       href={`/services/${s.slug}/`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="py-1.5 text-sm font-semibold text-[#0A1B2E] hover:text-[#FF7A1A]"
+                      className="py-1.5 text-sm font-semibold text-[#0A1B2E] hover:text-[#EB5E1A]"
                     >
                       {s.shortTitle}
                     </Link>
@@ -217,25 +220,18 @@ export const Navbar: React.FC = () => {
                   <Link
                     href="/services/"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="py-1.5 text-xs font-bold text-[#1391E5]"
+                    className="py-1.5 text-xs font-bold text-[#0E9AD2]"
                   >
                     All Services Hub →
                   </Link>
                 </div>
               </div>
               <Link
-                href="/#fleet"
+                href="/fleet/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2.5 px-3 rounded-lg text-base font-bold text-[#0A1B2E] hover:bg-[#F4F7FB]"
               >
                 Fleet Specifications
-              </Link>
-              <Link
-                href="/#why-us"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-lg text-base font-bold text-[#0A1B2E] hover:bg-[#F4F7FB]"
-              >
-                Why Choose Us
               </Link>
               <Link
                 href="/about/"

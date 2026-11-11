@@ -1,22 +1,15 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { Phone, MessageSquare, ShieldCheck, Clock, Award, ArrowRight } from 'lucide-react';
-import { SITE_CONFIG, SERVICES } from '@/content/site';
+import { Phone, MessageSquare, ShieldCheck, Clock, Award } from 'lucide-react';
+import { SITE_CONFIG } from '@/content/site';
 import { Button } from '@/components/ui/Button';
-import { buildDirectServiceWhatsAppUrl } from '@/lib/whatsapp';
 
 export const HeroSection: React.FC = () => {
-  const [selectedQuickService, setSelectedQuickService] = useState(SERVICES[0].title);
-
-  const quickWhatsAppUrl = buildDirectServiceWhatsAppUrl(selectedQuickService);
-
   return (
-    <section className="relative bg-white pt-6 pb-12 sm:pb-16 lg:pb-20 border-b border-[#D5DFEA] overflow-hidden">
+    <section className="relative bg-white pt-8 pb-14 sm:pb-18 lg:pb-24 border-b border-[#D5DFEA] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Value Prop & CTAs */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Clean, uncluttered Value Prop & Actions */}
           <div className="lg:col-span-7 space-y-6">
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EDF3FA] border border-[#1391E5]/30 text-xs font-bold uppercase tracking-wider text-[#0B6FB8]">
@@ -29,13 +22,13 @@ export const HeroSection: React.FC = () => {
               Heavy Transport, Water Supply & <span className="text-[#FF7A1A]">Mobile Cranes</span> In Abu Dhabi
             </h1>
 
-            {/* Subtitle - concise and direct */}
+            {/* Subtitle - clean, concise, under 20 words */}
             <p className="text-base sm:text-lg text-[#52667B] leading-relaxed max-w-2xl font-normal">
               24/7 dedicated dispatch of potable water tankers, certified 25T–200T mobile cranes, and heavy flatbed trailers for construction and industrial sites.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-1">
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <Button
                 asLink
                 href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an immediate quote.')}`}
@@ -43,9 +36,9 @@ export const HeroSection: React.FC = () => {
                 rel="noopener noreferrer"
                 variant="cta"
                 size="lg"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 text-sm sm:text-base px-8 py-4"
               >
-                <MessageSquare className="w-4 h-4 fill-[#0A1B2E]" />
+                <MessageSquare className="w-5 h-5 fill-[#0A1B2E]" />
                 <span>Get Instant Quote</span>
               </Button>
               <Button
@@ -53,59 +46,26 @@ export const HeroSection: React.FC = () => {
                 href={SITE_CONFIG.phoneHref}
                 variant="outline"
                 size="lg"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 text-sm sm:text-base px-8 py-4"
               >
-                <Phone className="w-4 h-4 text-[#FF7A1A]" />
+                <Phone className="w-5 h-5 text-[#FF7A1A]" />
                 <span>{SITE_CONFIG.phoneDisplay}</span>
               </Button>
             </div>
 
-            {/* Quick Quote Direct Selector */}
-            <div className="bg-[#F4F7FB] border border-[#D5DFEA] rounded-xl p-4 sm:p-5 mt-4 space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#0A1B2E]">
-                  Fast Dispatch WhatsApp Selector:
-                </span>
-                <span className="text-[11px] font-semibold text-[#1391E5]">1-Tap Connection</span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-2.5">
-                <select
-                  value={selectedQuickService}
-                  onChange={(e) => setSelectedQuickService(e.target.value)}
-                  className="flex-1 px-3 py-2.5 rounded-lg border border-[#D5DFEA] bg-white text-xs sm:text-sm font-semibold text-[#0A1B2E] outline-none focus:border-[#FF7A1A]"
-                  aria-label="Select service for fast WhatsApp quote"
-                >
-                  {SERVICES.map((s) => (
-                    <option key={s.id} value={s.title}>
-                      {s.title}
-                    </option>
-                  ))}
-                </select>
-                <a
-                  href={quickWhatsAppUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#25D366] text-[#0A1B2E] font-extrabold text-xs uppercase tracking-wider hover:bg-[#1FB75A] shadow-sm transition-transform active:scale-95"
-                >
-                  <span>Inquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-3 pt-2 border-t border-[#D5DFEA]">
-              <div className="flex items-center gap-2 text-xs text-[#22354A]">
+            {/* Trust Badges Bar */}
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#D5DFEA]">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#22354A]">
                 <Clock className="w-4 h-4 text-[#FF7A1A] shrink-0" />
-                <span className="font-semibold">24/7 On-Duty Dispatch</span>
+                <span className="font-bold">24/7 Dispatch</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-[#22354A]">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#22354A]">
                 <ShieldCheck className="w-4 h-4 text-[#1391E5] shrink-0" />
-                <span className="font-semibold">Safety Certified Operators</span>
+                <span className="font-bold">Certified Crew</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-[#22354A]">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#22354A]">
                 <Award className="w-4 h-4 text-[#15803D] shrink-0" />
-                <span className="font-semibold">Food-Grade Potable Water</span>
+                <span className="font-bold">Food-Grade Tankers</span>
               </div>
             </div>
           </div>

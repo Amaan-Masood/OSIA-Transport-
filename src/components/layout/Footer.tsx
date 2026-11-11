@@ -1,16 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, Clock, MapPin, MessageSquare, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG, SERVICES, AREAS } from '@/content/site';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0A1B2E] text-white pt-16 pb-24 md:pb-12 border-t-2 border-[#FF7A1A]/30">
+    <footer className="bg-[#0A1B2E] text-white pt-16 pb-24 md:pb-12 border-t-2 border-[#EB5E1A]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Highlight Box: 24/7 Dispatch Banner */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF7A1A]">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#EB5E1A]">
               <Clock className="w-4 h-4" />
               Round-The-Clock Dispatch
             </div>
@@ -24,7 +25,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#FF7A1A] text-[#0A1B2E] font-extrabold text-sm uppercase tracking-wider hover:bg-[#E8640A] transition-colors"
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#EB5E1A] text-[#0A1B2E] font-extrabold text-sm uppercase tracking-wider hover:bg-[#d44f12] transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span>Call Dispatch</span>
@@ -46,15 +47,21 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Contact */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-white font-extrabold text-lg">
-                <span className="text-[#FF7A1A]">O</span>S
+              <div className="relative w-12 h-12 rounded-xl bg-white p-1 shrink-0 overflow-hidden shadow-sm">
+                <Image
+                  src="/images/logo.png"
+                  alt="OSIA Transport LLC Official Logo"
+                  fill
+                  sizes="48px"
+                  className="object-contain p-0.5"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-lg uppercase tracking-tight text-white font-display block leading-none">
                   OSIA Transport
                 </span>
                 <span className="text-[10px] tracking-widest text-[#B8C6D6] uppercase font-bold">
-                  LLC SPC · Abu Dhabi
+                  LLC · Abu Dhabi, UAE
                 </span>
               </div>
             </div>
@@ -63,17 +70,17 @@ export const Footer: React.FC = () => {
             </p>
             <div className="space-y-2 pt-2 text-xs text-[#B8C6D6]">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#FF7A1A] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#EB5E1A] shrink-0" />
                 <span>{SITE_CONFIG.location}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#FF7A1A] shrink-0" />
-                <a href={SITE_CONFIG.phoneHref} className="text-white hover:text-[#FF7A1A] font-bold">
+                <Phone className="w-4 h-4 text-[#EB5E1A] shrink-0" />
+                <a href={SITE_CONFIG.phoneHref} className="text-white hover:text-[#EB5E1A] font-bold">
                   {SITE_CONFIG.phoneDisplay}
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#1391E5] shrink-0" />
+                <Mail className="w-4 h-4 text-[#0E9AD2] shrink-0" />
                 <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-white">
                   {SITE_CONFIG.email}
                 </a>
@@ -83,7 +90,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Services Hub Links */}
           <div className="space-y-3">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#FF7A1A]">
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#EB5E1A]">
               Specialized Services
             </h4>
             <ul className="space-y-2 text-xs">
@@ -94,7 +101,7 @@ export const Footer: React.FC = () => {
                     className="text-[#B8C6D6] hover:text-white transition-colors flex items-center justify-between group py-0.5"
                   >
                     <span>{s.shortTitle}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#FF7A1A] transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#EB5E1A] transition-opacity" />
                   </Link>
                 </li>
               ))}
@@ -103,7 +110,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Coverage Areas */}
           <div className="space-y-3">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#1391E5]">
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#0E9AD2]">
               Coverage & Hubs
             </h4>
             <ul className="space-y-2 text-xs text-[#B8C6D6]">
@@ -131,7 +138,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#fleet" className="hover:text-white transition-colors">
+                <Link href="/fleet/" className="hover:text-white transition-colors">
                   Fleet & Equipment Specs
                 </Link>
               </li>

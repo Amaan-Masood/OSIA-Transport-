@@ -6,11 +6,11 @@ import { Button } from '@/components/ui/Button';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative bg-white pt-8 pb-14 sm:pb-18 lg:pb-24 border-b border-[#E2E8F0] overflow-hidden">
+    <section className="relative bg-white pt-6 pb-8 sm:pt-8 sm:pb-10 lg:pb-12 border-b border-[#E2E8F0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Clean, authoritative Value Prop & Actions */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5">
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E0F2FE] border border-[#BAE6FD] text-xs font-bold uppercase tracking-wider text-[#0369A1]">
               <span className="w-2 h-2 rounded-full bg-[#0284C7] animate-pulse"></span>
@@ -28,7 +28,7 @@ export const HeroSection: React.FC = () => {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-4 pt-1">
               <Button
                 asLink
                 href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an immediate quote.')}`}
@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Trust Badges Bar - Unified in Precision Blue */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-[#E2E8F0]">
+            <div className="grid grid-cols-3 gap-4 pt-5 border-t border-[#E2E8F0]">
               <div className="flex items-center gap-2 text-xs sm:text-sm text-[#334155]">
                 <Clock className="w-4 h-4 text-[#0284C7] shrink-0" />
                 <span className="font-bold">24/7 Dispatch</span>
@@ -73,59 +73,73 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Right Column: Signature Fleet Visual */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="relative rounded-3xl p-2 bg-[#F1F5F9] border border-[#E2E8F0] shadow-xl">
-              <div className="relative rounded-2xl overflow-hidden bg-[#0B1726]">
-                {/* Image - Matched aspect-square for full uncropped vehicle framing */}
-                <div className="relative aspect-square w-full bg-[#0B1726]">
-                  <Image
-                    src="/images/fleet/mercedes-actros-water-tanker.webp"
-                    alt="OSIA Transport Mercedes-Benz Actros 3341 Water Tanker in Abu Dhabi"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 500px"
-                    className="object-cover object-center"
-                  />
-                </div>
+          <div className="lg:col-span-5">
+            <div className="relative rounded-2xl overflow-hidden bg-[#0B1726] border border-[#E2E8F0] shadow-xl">
+              {/* Image - Matched 1158/1020 ratio for full uncropped vehicle framing */}
+              <div className="relative aspect-[1158/1020] w-full bg-[#0B1726]">
+                <Image
+                  src="/images/fleet/mercedes-actros-water-tanker.webp"
+                  alt="OSIA Transport Mercedes-Benz Actros 3341 Water Tanker in Abu Dhabi"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 500px"
+                  className="object-cover object-center"
+                />
+              </div>
 
-                {/* Verified Fleet Overlay Strip */}
-                <div className="bg-[#0B1726] text-white p-4 border-t border-white/10 flex items-center justify-between">
-                  <div>
-                    <div className="text-[11px] font-extrabold text-[#38BDF8] uppercase tracking-wider">
-                      Verified Operating Fleet
-                    </div>
-                    <div className="text-sm font-extrabold uppercase font-display text-white">
-                      Mercedes Actros 3341 &amp; Volvo FH Units
-                    </div>
+              {/* Verified Fleet Overlay Strip - flush with bottom edge */}
+              <div className="bg-[#0B1726] text-white px-4 py-3 border-t border-white/10 flex items-center justify-between gap-2">
+                <div>
+                  <div className="text-[11px] font-extrabold text-[#38BDF8] uppercase tracking-wider">
+                    Verified Operating Fleet
                   </div>
-                  <div className="text-right">
-                    <span className="inline-block px-3 py-1 rounded-full bg-[#0284C7]/20 text-[#38BDF8] text-[10px] font-extrabold uppercase tracking-wide border border-[#0284C7]/40">
-                      Active in Abu Dhabi
-                    </span>
+                  <div className="text-sm font-extrabold uppercase font-display text-white">
+                    Mercedes Actros 3341 &amp; Volvo FH Units
                   </div>
+                </div>
+                <div className="text-right shrink-0">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#0284C7]/20 text-[#38BDF8] text-[10px] font-extrabold uppercase tracking-wide border border-[#0284C7]/40">
+                    Active in Abu Dhabi
+                  </span>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Spec Numbers Strip */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 text-center hover:border-[#CBD5E1] transition-all">
-                <span className="block text-2xl sm:text-3xl font-extrabold font-display text-[#0F172A] tracking-tight">
-                  25T – 200T
-                </span>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
-                  Mobile Crane Range
-                </span>
-              </div>
-              <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 text-center hover:border-[#CBD5E1] transition-all">
-                <span className="block text-2xl sm:text-3xl font-extrabold font-display text-[#0F172A] tracking-tight">
-                  100%
-                </span>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
-                  Abu Dhabi Coverage
-                </span>
-              </div>
-            </div>
+        {/* Full-Width Balanced Spec Numbers Strip - Eliminates bottom column asymmetry */}
+        <div className="mt-8 pt-6 border-t border-[#E2E8F0] grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight">
+              25T – 200T
+            </span>
+            <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
+              Mobile Crane Range
+            </span>
+          </div>
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight">
+              24/7
+            </span>
+            <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
+              Emergency Dispatch
+            </span>
+          </div>
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display uppercase text-[#0F172A] tracking-tight">
+              7 Services
+            </span>
+            <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
+              Water, Lift &amp; Haulage
+            </span>
+          </div>
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight">
+              100%
+            </span>
+            <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
+              Abu Dhabi Coverage
+            </span>
           </div>
         </div>
       </div>

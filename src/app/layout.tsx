@@ -32,7 +32,12 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_CONFIG.legalName }],
   creator: SITE_CONFIG.legalName,
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',

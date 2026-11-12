@@ -206,15 +206,15 @@ export const FLEET_LIBRARY: FleetLibraryItem[] = [
 
 export const SERVICE_VISUALS: Partial<Record<string, ServiceVisual>> = {
   'sweet-water': {
-    src: '/images/services/sweet-water-supply.webp',
-    alt: 'OSIA Transport Blue-Stripe Sweet Drinking Water Tanker in Abu Dhabi',
-    label: 'Potable Water Tanker (Blue Stripe)',
+    src: '/images/services/sweet-water-tanker.webp',
+    alt: 'Stainless Steel Sweet Potable Water Tanker Semi-Truck for Site & Villa Supply',
+    label: 'Potable Water Tanker Unit',
     aspect: 'square',
   },
   'non-drinking-water': {
-    src: '/images/services/non-drinking-water.webp',
-    alt: 'OSIA Transport Green-Stripe Non-Drinking Water Tanker in Abu Dhabi',
-    label: 'Site & Compaction Water (Green Stripe)',
+    src: '/images/services/non-drinking-tanker.webp',
+    alt: 'High-Capacity Multi-Axle Non-Drinking Construction Water Tanker Unit',
+    label: 'Site & Compaction Water Tanker',
     aspect: 'square',
   },
   'salt-water': {
@@ -224,9 +224,15 @@ export const SERVICE_VISUALS: Partial<Record<string, ServiceVisual>> = {
     aspect: 'square',
   },
   'wastewater-drainage': {
-    src: '/images/services/wastewater-removal.webp',
-    alt: 'OSIA Transport Orange-Stripe Wastewater Removal Tanker in Abu Dhabi',
-    label: 'Wastewater Vacuum Tanker (Orange Stripe)',
+    src: '/images/services/wastewater-tanker.webp',
+    alt: 'Industrial Vacuum & Wastewater Removal Tanker with Rear Suction Valves',
+    label: 'Wastewater Vacuum Tanker Unit',
+    aspect: 'square',
+  },
+  'crane-rental': {
+    src: '/images/services/mobile-crane-service.webp',
+    alt: 'Heavy Hydraulic Telescopic Mobile Crane for Construction & Industrial Lifting',
+    label: '25T–200T Mobile Hydraulic Crane',
     aspect: 'square',
   },
   'low-bed-trailer': {

@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/build-htaccess.mjs",
+    "build": "npm run check:claims && next build && node scripts/build-htaccess.mjs && npm run check:security",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --noEmit",
-    "test": "tsx tests/run-tests.ts",
+    "test": "tsx --test tests/run-tests.ts tests/security.test.ts",
     "check:claims": "node scripts/check-claims.mjs",
-    "optimize:images": "node scripts/optimize-images.mjs"
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "check:security": "node scripts/check-security.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.72.0",

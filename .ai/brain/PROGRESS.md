@@ -75,3 +75,10 @@
 ## Remove repeated service photography - 2026-11-13
 - Corrected the repeated tanker on three service cards: sweet water retains the owner original, site water and salt-water transport use different relevant reference photos. Homepage service teaser also uses distinct photos.
 - Added a regression check requiring all seven service image paths to be present and unique. 15 tests pass; lint passes.
+
+## Security hardening - 2026-11-13
+- Security-focused deep-code-audit with explicit user authorization to fix; findings and scope under .ai/audit. Unrelated tsconfig changes preserved.
+- Fixed normalized input validation, optional field limits, service allowlist, message-builder validation, safe JSON-LD and actual-header/exact-byte CSP hashing. Added private-artifact/method protection and build/CI security gates. No new dependencies.
+- Tests: 20 pass; lint/typecheck pass; npm audit reports zero vulnerabilities. Browser with production CSP verifies blank-input rejection, safe WhatsApp query encoding, no HTML execution and blocked untrusted inline scripts.
+- No local hosting access/error/WAF logs were available; cannot establish whether a live attack or breach occurred. WAF/2FA/live-header controls require host access and deployment.
+- Final production build, CSP generation and 18-page security export verification pass.

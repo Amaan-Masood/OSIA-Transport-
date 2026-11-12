@@ -1,4 +1,5 @@
 import { SITE_CONFIG } from '@/content/site';
+import { quoteFormSchema } from '@/lib/validation';
 
 export interface QuotePayload {
   name: string;
@@ -16,7 +17,8 @@ export interface QuotePayload {
 /**
  * Builds a structured, professional WhatsApp message for lead dispatch
  */
-export function buildMessage(payload: QuotePayload): string {
+export function buildMessage(input: QuotePayload): string {
+  const payload = quoteFormSchema.parse(input);
   const parts: string[] = [
     `*New Quote Request — ${SITE_CONFIG.legalName}*`,
     `Name: ${payload.name.trim()}`,

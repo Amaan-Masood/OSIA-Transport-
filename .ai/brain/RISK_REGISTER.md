@@ -16,3 +16,5 @@
 | R13 | No baseline → unrealistic lead targets | M | L | measure 30 days then set targets | Akasha | Open |
 | R14 | Single mobile number for 24/7 | H | H | confirm coverage/backup; call forwarding | Owner | Open |
 | R15 | Arabic demand missed | M | M | RTL-ready build; decide Phase 2 | Owner | Open |
+
+- SEC-04 (P1, confirmed locally, fixed): CSP template replaced its comment placeholder rather than the actual header, preventing hydration under enforced CSP. Actual-header validation, exact script hashes and browser regression now pass. Live hosting configuration still requires verification; no compromise evidence available.

@@ -14,7 +14,7 @@ test('WhatsApp Integration (ADR_03)', async (t) => {
     const payload = {
       name: 'Ahmed Tariq',
       phone: '+971 50 123 4567',
-      service: 'Mobile Crane Rental (25T, 50T, 100T & 200T)',
+      service: SERVICES.find((service) => service.id === 'crane-rental')!.title,
       location: 'Musaffah Industrial Sector 14',
       craneTonnage: '50 Ton Mobile Crane',
       details: 'Lifting precast concrete units onto second floor',
@@ -23,8 +23,8 @@ test('WhatsApp Integration (ADR_03)', async (t) => {
     const msg = buildMessage(payload);
     assert.ok(msg.includes(`*New Quote Request — ${SITE_CONFIG.legalName}*`));
     assert.ok(msg.includes('Name: Ahmed Tariq'));
-    assert.ok(msg.includes('Phone: +971 50 123 4567'));
-    assert.ok(msg.includes('Service: Mobile Crane Rental (25T, 50T, 100T & 200T)'));
+    assert.ok(msg.includes('Phone: +971501234567'));
+    assert.ok(msg.includes(`Service: ${payload.service}`));
     assert.ok(msg.includes('Location / Area: Musaffah Industrial Sector 14'));
     assert.ok(msg.includes('Crane Capacity: 50 Ton Mobile Crane'));
     assert.ok(msg.includes('Additional Details: Lifting precast concrete units onto second floor'));

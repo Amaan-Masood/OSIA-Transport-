@@ -1,0 +1,8 @@
+{
+  "productionCspApplied": true,
+  "blankNameBlocked": true,
+  "maliciousTextKeptAsData": true,
+  "whatsappSingleEncodedParameter": true,
+  "untrustedInlineScriptBlocked": true,
+  "pageErrors": []
+}

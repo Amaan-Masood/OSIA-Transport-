@@ -35,3 +35,10 @@ next-env.d.ts
 /.next-production/
 
 /.next-dev/
+
+.env
+.env.*
+!.env.example
+*.key
+*.p12
+*.pfx

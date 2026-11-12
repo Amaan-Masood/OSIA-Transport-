@@ -1,0 +1,58 @@
+[
+  {
+    "id": "SEC-01",
+    "severity": "P2",
+    "title": "Normalized required-input checks",
+    "evidence": "src/lib/validation.ts",
+    "confidence": "confirmed",
+    "status": "fixed"
+  },
+  {
+    "id": "SEC-02",
+    "severity": "P2",
+    "title": "Bound every field and validate message-builder inputs",
+    "evidence": "src/lib/validation.ts; src/lib/whatsapp.ts",
+    "confidence": "confirmed",
+    "status": "fixed"
+  },
+  {
+    "id": "SEC-03",
+    "severity": "P2",
+    "title": "Escape structured data against script-element termination",
+    "evidence": "src/lib/serializeJsonLd.ts; src/components/seo/JsonLd.tsx",
+    "confidence": "confirmed",
+    "status": "fixed"
+  },
+  {
+    "id": "SEC-04",
+    "severity": "P1",
+    "title": "Populate actual CSP header and hash exact script bytes",
+    "evidence": "scripts/build-htaccess.mjs; scripts/check-security.mjs",
+    "confidence": "confirmed",
+    "status": "fixed"
+  },
+  {
+    "id": "SEC-05",
+    "severity": "P2",
+    "title": "Enforce export integrity and security CI checks",
+    "evidence": "scripts/check-security.mjs; .github/workflows/security.yml",
+    "confidence": "confirmed",
+    "status": "fixed"
+  },
+  {
+    "id": "SEC-06",
+    "severity": "P3",
+    "title": "Deny accidental private source uploads and ignore secret formats",
+    "evidence": ".gitignore; deploy/htaccess.template",
+    "confidence": "confirmed",
+    "status": "fixed"
+  },
+  {
+    "id": "SEC-07",
+    "severity": "Operational",
+    "title": "Live incident evidence and hosting controls not accessible",
+    "evidence": "hosting logs and deployed configuration",
+    "confidence": "needs-verification",
+    "status": "pending-host-access"
+  }
+]

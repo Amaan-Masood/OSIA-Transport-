@@ -72,6 +72,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
       tractors: 0,
       trailers: 0,
       inspection: 0,
+      cranes: 0,
     };
     for (const item of FLEET_LIBRARY) {
       counts[item.categoryId] += 1;
@@ -193,7 +194,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                 Equipment for water, lifting &amp; haulage
               </h3>
               <p className="text-xs sm:text-sm text-[#64748B] max-w-2xl">
-                Browse by equipment type and open a photograph for a closer look. Reference photos illustrate equipment categories; contact dispatch to confirm the available unit.
+                Browse by equipment type and open a photograph for a closer look. Original photos from our collection are labelled. Additional equipment examples illustrate service types; contact dispatch to confirm the available unit.
               </p>
             </div>
 
@@ -255,14 +256,14 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                       type="button"
                       onClick={() => setSelectedUnit(unit)}
                       aria-label={`Inspect ${unit.title} full view`}
-                      className="relative aspect-[3/2] w-full bg-[#0B1726] overflow-hidden block text-left cursor-pointer"
+                      className="relative aspect-[3/2] w-full bg-surface-muted overflow-hidden block text-left cursor-pointer"
                     >
                       <Image
                         src={unit.src}
                         alt={unit.title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                        className={`object-cover ${unit.objectPosition || 'object-center'} group-hover:scale-105 transition-transform duration-300`}
+                        className={`${unit.aspect === 'portrait' ? 'object-contain' : 'object-cover'} ${unit.objectPosition || 'object-center'} group-hover:scale-105 transition-transform duration-300`}
                       />
                       <span className="absolute bottom-3 right-3 px-2.5 py-1.5 rounded-lg bg-[#0B1726]/85 backdrop-blur-xs text-white text-[10px] font-bold uppercase tracking-wider inline-flex items-center gap-1 border border-white/15 opacity-0 group-hover:opacity-100 transition-opacity">
                         <Maximize2 className="w-3 h-3" />

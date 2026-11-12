@@ -66,3 +66,8 @@
 - Adjusted captions to identify reference photography rather than imply ownership. Public photo credits include source, author, license and transformation details.
 - Browser: services/fleet desktop screenshots and mobile fleet reviewed; no broken images or horizontal overflow; lightbox opens. TypeScript, lint, 14 tests and claims checks pass.
 - Production build and static export pass after the photography refresh.
+
+## Owner-original photo selection - 2026-11-13
+- Reviewed both owner-provided Images folders using a contact sheet. Selected five original photos: Mercedes tanker, grey Volvo, white Globetrotter, white Volvo EEV and blue Renault pair. Optimized new local WebP copies; source files untouched.
+- Original photos appear first and are labelled; crane, vacuum and low-loader reference photos remain because equivalent original photographs were not in the provided folders. Portrait originals use contain framing to preserve the cab.
+- Service tanker visuals and flatbed tractor photo now use owner originals. Browser confirms working category filters, no broken images or mobile overflow. TypeScript and lint pass.

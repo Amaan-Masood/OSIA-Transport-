@@ -82,3 +82,7 @@
 - Tests: 20 pass; lint/typecheck pass; npm audit reports zero vulnerabilities. Browser with production CSP verifies blank-input rejection, safe WhatsApp query encoding, no HTML execution and blocked untrusted inline scripts.
 - No local hosting access/error/WAF logs were available; cannot establish whether a live attack or breach occurred. WAF/2FA/live-header controls require host access and deployment.
 - Final production build, CSP generation and 18-page security export verification pass.
+
+## Central security record - 2026-11-13
+- Added SECURITY.md covering implemented controls, field limits, verification evidence, commands and remaining hosting/incident work; linked from README.md.
+- Documentation-only continuation. Existing verification results retained; live incident status remains unknown without hosting logs.

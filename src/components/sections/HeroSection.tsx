@@ -10,17 +10,17 @@ export const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-12 items-center">
           {/* Mobile-First Visual -> Desktop Right Column */}
-          <div className="order-1 lg:order-2 lg:col-span-5">
-            <div className="relative rounded-2xl overflow-hidden bg-[#0B1726] border border-[#E2E8F0] shadow-xl">
+          <div className="order-1 lg:order-2 lg:col-span-5 osia-enter-delay-1">
+            <div className="relative rounded-2xl overflow-hidden bg-[#0B1726] border border-[#E2E8F0] shadow-[0_22px_48px_-14px_rgba(11,23,38,0.18)] group">
               {/* Image - Matched 1158/1020 ratio (compact 4/3 on tiny phones so headline stays visible below) */}
-              <div className="relative aspect-[4/3] sm:aspect-[1158/1020] w-full bg-[#0B1726]">
+              <div className="relative aspect-[4/3] sm:aspect-[1158/1020] w-full bg-[#0B1726] overflow-hidden">
                 <Image
                   src="/images/fleet/mercedes-actros-water-tanker.webp"
                   alt="OSIA Transport Mercedes-Benz Actros 3341 Water Tanker in Abu Dhabi"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 500px"
-                  className="object-cover object-center"
+                  className="object-cover object-center transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025]"
                 />
               </div>
 
@@ -44,10 +44,10 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Details & Actions -> Desktop Left Column */}
-          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5">
+          <div className="order-2 lg:order-1 lg:col-span-7 space-y-4 sm:space-y-5 osia-enter">
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#E0F2FE] border border-[#BAE6FD] text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#0369A1]">
-              <span className="w-2 h-2 rounded-full bg-[#0284C7] animate-pulse"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7]"></span>
               Abu Dhabi Heavy Logistics &amp; Water Supply
             </div>
 
@@ -108,33 +108,33 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Full-Width Balanced Spec Numbers Strip - Eliminates bottom column asymmetry */}
-        <div className="mt-8 pt-6 border-t border-[#E2E8F0] grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
-            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight">
+        <div className="mt-8 pt-6 border-t border-[#E2E8F0] grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 osia-enter-delay-2">
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-colors">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight tabular-nums">
               25T – 200T
             </span>
             <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
               Mobile Crane Range
             </span>
           </div>
-          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
-            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight">
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-colors">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight tabular-nums">
               24/7
             </span>
             <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
               Emergency Dispatch
             </span>
           </div>
-          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
-            <span className="block text-xl sm:text-2xl font-extrabold font-display uppercase text-[#0F172A] tracking-tight">
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-colors">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display uppercase text-[#0F172A] tracking-tight tabular-nums">
               7 Services
             </span>
             <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">
               Water, Lift &amp; Haulage
             </span>
           </div>
-          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-all">
-            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight">
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl py-3.5 px-4 text-center hover:border-[#CBD5E1] transition-colors">
+            <span className="block text-xl sm:text-2xl font-extrabold font-display text-[#0F172A] tracking-tight tabular-nums">
               100%
             </span>
             <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0369A1]">

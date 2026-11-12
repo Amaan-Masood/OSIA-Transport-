@@ -18,9 +18,9 @@ export const WhyUsTeaser: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-slate-300 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
-              <MapPin className="w-6 h-6" />
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-[0_12px_28px_-6px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1] hover:-translate-y-0.5 transition-all duration-300 space-y-4">
+            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+              <MapPin className="w-5 h-5" />
             </div>
             <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
               Based In Abu Dhabi
@@ -30,9 +30,9 @@ export const WhyUsTeaser: React.FC = () => {
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-slate-300 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
-              <Clock className="w-6 h-6" />
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-[0_12px_28px_-6px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1] hover:-translate-y-0.5 transition-all duration-300 space-y-4">
+            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+              <Clock className="w-5 h-5" />
             </div>
             <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
               24/7 Operations Desk
@@ -42,9 +42,9 @@ export const WhyUsTeaser: React.FC = () => {
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-xl hover:border-slate-300 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
-              <ShieldCheck className="w-6 h-6" />
+          <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-[0_12px_28px_-6px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1] hover:-translate-y-0.5 transition-all duration-300 space-y-4">
+            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+              <ShieldCheck className="w-5 h-5" />
             </div>
             <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
               Certified Operators &amp; Safety

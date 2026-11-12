@@ -87,14 +87,14 @@ export default function ServicesHubPage() {
                 <Card
                   key={s.id}
                   accentTop="water"
-                  className="flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all bg-white border border-[#E2E8F0] rounded-2xl"
+                  className="flex flex-col justify-between group hover:-translate-y-0.5 bg-white border border-[#E2E8F0] rounded-2xl"
                 >
                   <div>
-                    {/* Visual Header: Color-Coded Tanker Flyers / Active Truck Units / Crane Load Range */}
-                    {visual ? (
+                    {/* Visual Header: Clean Equipment Photography */}
+                    {visual && (
                       <Link
                         href={`/services/${s.slug}/`}
-                        className="relative aspect-square w-full overflow-hidden border-b border-[#E2E8F0] bg-[#0B1726] block group"
+                        className="relative aspect-[4/3] w-full overflow-hidden border-b border-[#E2E8F0] bg-[#0B1726] block"
                       >
                         <Image
                           src={visual.src}
@@ -107,57 +107,22 @@ export default function ServicesHubPage() {
                               : s.id === 'low-bed-trailer'
                                 ? 'object-[50%_55%]'
                                 : 'object-center'
-                          } group-hover:scale-105 transition-transform duration-300`}
+                          } transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]`}
                         />
-                      </Link>
-                    ) : (
-                      <Link
-                        href={`/services/${s.slug}/`}
-                        className="relative aspect-square w-full bg-[#0B1726] border-b border-[#E2E8F0] p-6 flex flex-col justify-between text-white group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#38BDF8]">
-                            All-Terrain &amp; Rough-Terrain Fleet
-                          </span>
-                          <Wrench className="w-5 h-5 text-[#38BDF8]" />
-                        </div>
-                        <div className="grid grid-cols-2 gap-2.5 my-auto">
-                          {[
-                            { cap: '25T', desc: 'Urban & MEP' },
-                            { cap: '50T', desc: 'Steel & Precast' },
-                            { cap: '100T', desc: 'Heavy Plant' },
-                            { cap: '200T', desc: 'Infrastructure' },
-                          ].map((tier) => (
-                            <div
-                              key={tier.cap}
-                              className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:border-[#38BDF8]/40 transition-colors"
-                            >
-                              <div className="text-2xl font-extrabold font-display text-[#38BDF8]">
-                                {tier.cap}
-                              </div>
-                              <div className="text-[10px] text-[#94A3B8] font-semibold uppercase tracking-wide">
-                                {tier.desc}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">
-                          Third-Party Load Tested &bull; Certified Operators
-                        </span>
                       </Link>
                     )}
 
-                    <div className="p-6 sm:p-7 space-y-4">
+                    <div className="p-6 space-y-4">
                       <div className="flex items-center justify-between gap-2">
-                        <div className="w-12 h-12 rounded-2xl flex items-center justify-center border bg-[#E0F2FE] border-[#BAE6FD]">
+                        <span className="inline-flex items-center gap-2 text-[#0284C7]">
                           {getServiceIcon(s.id)}
-                        </div>
+                        </span>
                         <Badge variant="water">
                           {s.capacitySnippet}
                         </Badge>
                       </div>
 
-                      <h2 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
+                      <h2 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A] min-h-[3.25rem]">
                         <Link href={`/services/${s.slug}/`} className="hover:text-[#0284C7] transition-colors">
                           {s.title}
                         </Link>

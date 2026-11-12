@@ -5,28 +5,28 @@ import { Badge } from '@/components/ui/Badge';
 const STEPS = [
   {
     step: '01',
-    icon: <MessageSquare className="w-6 h-6 text-[#0284C7]" />,
+    icon: <MessageSquare className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Request In Seconds',
     desc: 'Call our 24/7 hotline or submit your project details via WhatsApp form with your location and load requirements.',
   },
   {
     step: '02',
-    icon: <CalendarClock className="w-6 h-6 text-[#0284C7]" />,
+    icon: <CalendarClock className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Instant Confirmation',
     desc: 'Our dispatch team reviews load charts, equipment availability, and gives an immediate fixed quote and ETA.',
   },
   {
     step: '03',
-    icon: <Truck className="w-6 h-6 text-[#0284C7]" />,
+    icon: <Truck className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Priority Dispatch',
     desc: 'Certified trucks, tankers, or cranes mobilize promptly from our Abu Dhabi base directly to your coordinates.',
   },
   {
     step: '04',
-    icon: <CheckCircle2 className="w-6 h-6 text-[#0284C7]" />,
+    icon: <CheckCircle2 className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Safe Execution & Signoff',
     desc: 'Trained operators complete lifting, water delivery, or transport following strict site safety standards.',

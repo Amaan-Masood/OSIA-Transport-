@@ -1,0 +1,37 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "violations": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "route": "/services/",
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "route": "/fleet/",
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "route": "/contact/",
+    "width": 390,
+    "violations": []
+  },
+  {
+    "route": "/about/",
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "route": "/faq/",
+    "width": 390,
+    "violations": []
+  }
+]

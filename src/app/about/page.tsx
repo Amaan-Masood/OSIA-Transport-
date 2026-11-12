@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldCheck, Target, Eye, Award, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Target, Eye, Award, CheckCircle2, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/content/site';
 import { buildMetadata } from '@/lib/seo';
 import { Badge } from '@/components/ui/Badge';
@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             <div className="order-2 lg:order-1 lg:col-span-7 space-y-5">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0369A1]">
                 Leading Transport &amp; Equipment Rental
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display uppercase tracking-tight text-[#0F172A]">
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 </div>
                 <div className="px-5 py-3 bg-[#F8FAFC] border-t border-[#E2E8F0] flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-[#0F172A]">
                   <span>Official Fleet Identity</span>
-                  <span className="text-[#0284C7]">24/7 Abu Dhabi Dispatch</span>
+                  <span className="text-[#0369A1]">24/7 Abu Dhabi Dispatch</span>
                 </div>
               </div>
 
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Vision */}
             <div className="p-8 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+              <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border-[#BAE6FD] flex items-center justify-center text-[#0369A1]">
                 <Eye className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
             {/* Mission */}
             <div className="p-8 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+              <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0369A1]">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
@@ -141,7 +141,7 @@ export default function AboutPage() {
               <ul className="space-y-2.5 text-xs sm:text-sm text-[#334155]">
                 {SITE_CONFIG.about.mission.map((m, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#0284C7] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#0369A1] shrink-0 mt-0.5" />
                     <span>{m}</span>
                   </li>
                 ))}
@@ -155,7 +155,7 @@ export default function AboutPage() {
       <section className="py-16 sm:py-24 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0369A1]">
               Guiding Principles
             </span>
             <h2 className="text-3xl font-extrabold font-display uppercase text-[#0F172A]">
@@ -184,7 +184,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div className="space-y-2 max-w-2xl">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0369A1]">
                 Inspection &amp; Fleet Readiness
               </span>
               <h2 className="text-3xl font-extrabold font-display uppercase text-[#0F172A]">
@@ -196,7 +196,7 @@ export default function AboutPage() {
             </div>
             <Link
               href="/fleet/"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0B1726] text-white text-xs font-extrabold uppercase tracking-wider hover:bg-[#0284C7] transition-colors self-start md:self-auto"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0B1726] text-white text-xs font-extrabold uppercase tracking-wider hover:bg-[#0369A1] transition-colors self-start md:self-auto"
             >
               <span>Browse Fleet Library</span>
               <ArrowRight className="w-4 h-4" />
@@ -215,7 +215,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="p-5 space-y-1.5">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0284C7] block">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0369A1] block">
                   Mechanical Integrity
                 </span>
                 <h3 className="text-base font-bold font-display uppercase text-[#0F172A]">
@@ -238,7 +238,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="p-5 space-y-1.5">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0284C7] block">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0369A1] block">
                   Heavy Prime Movers
                 </span>
                 <h3 className="text-base font-bold font-display uppercase text-[#0F172A]">
@@ -261,7 +261,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="p-5 space-y-1.5">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0284C7] block">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0369A1] block">
                   Color-Coded Tankers
                 </span>
                 <h3 className="text-base font-bold font-display uppercase text-[#0F172A]">
@@ -280,7 +280,7 @@ export default function AboutPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#0369A1]">
               Market Coverage
             </span>
             <h2 className="text-3xl font-extrabold font-display uppercase text-[#0F172A]">
@@ -294,7 +294,7 @@ export default function AboutPage() {
                 key={i}
                 className="p-5 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow flex items-center gap-3.5 text-xs sm:text-sm font-bold text-[#0F172A]"
               >
-                <Award className="w-5 h-5 text-[#0284C7] shrink-0" />
+                <Award className="w-5 h-5 text-[#0369A1] shrink-0" />
                 <span>{sec}</span>
               </div>
             ))}

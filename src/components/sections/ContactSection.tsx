@@ -102,7 +102,7 @@ export const ContactSection: React.FC = () => {
             {/* Procurement / Corporate Documentation Notice */}
             <div className="p-6 sm:p-7 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F172A]">
-                <FileText className="w-4 h-4 text-[#0284C7]" />
+                <FileText className="w-4 h-4 text-[#0369A1]" />
                 Corporate Procurement &amp; Site Access
               </div>
               <p className="text-xs text-[#475569] leading-relaxed">

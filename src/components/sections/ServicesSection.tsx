@@ -21,21 +21,21 @@ import { buildDirectServiceWhatsAppUrl } from '@/lib/whatsapp';
 const getServiceIcon = (id: string) => {
   switch (id) {
     case 'sweet-water':
-      return <Droplet className="w-6 h-6 text-[#0284C7]" />;
+      return <Droplet className="w-6 h-6 text-[#0369A1]" />;
     case 'non-drinking-water':
-      return <Construction className="w-6 h-6 text-[#0284C7]" />;
+      return <Construction className="w-6 h-6 text-[#0369A1]" />;
     case 'salt-water':
-      return <Waves className="w-6 h-6 text-[#0284C7]" />;
+      return <Waves className="w-6 h-6 text-[#0369A1]" />;
     case 'wastewater-drainage':
-      return <Trash2 className="w-6 h-6 text-[#0284C7]" />;
+      return <Trash2 className="w-6 h-6 text-[#0369A1]" />;
     case 'crane-rental':
-      return <Wrench className="w-6 h-6 text-[#0284C7]" />;
+      return <Wrench className="w-6 h-6 text-[#0369A1]" />;
     case 'low-bed-trailer':
-      return <Truck className="w-6 h-6 text-[#0284C7]" />;
+      return <Truck className="w-6 h-6 text-[#0369A1]" />;
     case 'flatbed-trailer':
-      return <Container className="w-6 h-6 text-[#0284C7]" />;
+      return <Container className="w-6 h-6 text-[#0369A1]" />;
     default:
-      return <Truck className="w-6 h-6 text-[#0284C7]" />;
+      return <Truck className="w-6 h-6 text-[#0369A1]" />;
   }
 };
 
@@ -79,7 +79,7 @@ export const ServicesSection: React.FC = () => {
                   {/* Title */}
                   <div>
                     <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
-                      <Link href={`/services/${service.slug}/`} className="hover:text-[#0284C7] transition-colors">
+                      <Link href={`/services/${service.slug}/`} className="hover:text-[#0369A1] transition-colors">
                         {service.title}
                       </Link>
                     </h3>
@@ -94,7 +94,7 @@ export const ServicesSection: React.FC = () => {
                   <div className="space-y-2 pt-3 border-t border-[#E2E8F0]">
                     {service.features.slice(0, 3).map((f, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-[#334155]">
-                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#0284C7]" />
+                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[#0369A1]" />
                         <span>{f}</span>
                       </div>
                     ))}
@@ -105,7 +105,7 @@ export const ServicesSection: React.FC = () => {
                 <div className="px-6 pb-6 pt-4 border-t border-[#E2E8F0] bg-[#F8FAFC]/50 flex items-center justify-between gap-3">
                   <Link
                     href={`/services/${service.slug}/`}
-                    className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] hover:text-[#0284C7] transition-colors flex items-center gap-1 group"
+                    className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] hover:text-[#0369A1] transition-colors flex items-center gap-1 group"
                   >
                     <span>Full Specs</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -115,7 +115,7 @@ export const ServicesSection: React.FC = () => {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#128C7E] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0E7064] shadow-sm transition-transform active:scale-95"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0E7064] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0E7064] shadow-sm transition-transform active:scale-95"
                   >
                     <MessageSquare className="w-3.5 h-3.5 fill-white text-white" />
                     <span>Quote</span>
@@ -163,7 +163,7 @@ export const ServicesSection: React.FC = () => {
                 href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! We require a multi-service contract quotation.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-lg shadow-sky-500/25 active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0369A1] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-lg shadow-sky-500/25 active:scale-95"
               >
                 <span>Discuss Project Contract</span>
                 <ArrowRight className="w-4 h-4" />

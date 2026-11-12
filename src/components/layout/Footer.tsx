@@ -6,7 +6,7 @@ import { SITE_CONFIG, SERVICES, AREAS } from '@/content/site';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0B1726] text-white pt-14 sm:pt-16 pb-28 md:pb-12 border-t-2 border-[#0284C7]/40">
+    <footer className="bg-[#0B1726] text-white pt-14 sm:pt-16 pb-28 md:pb-12 border-t-2 border-[#0369A1]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Highlight Box: 24/7 Dispatch Banner */}
         <div className="bg-[#132238] border border-white/10 rounded-2xl p-6 md:p-8 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
           <div className="hidden md:flex flex-wrap items-center gap-3 w-full md:w-auto shrink-0">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0284C7] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-md active:scale-95"
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0369A1] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-md active:scale-95"
             >
               <Phone className="w-4 h-4" />
               <span>Call Dispatch</span>
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
               href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an immediate quote.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#128C7E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] transition-all shadow-md active:scale-95"
+              className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0E7064] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] transition-all shadow-md active:scale-95"
             >
               <MessageSquare className="w-4 h-4 fill-white text-white" />
               <span>WhatsApp</span>
@@ -110,7 +110,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Coverage Areas */}
           <div className="space-y-3">
-            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
+            <h4 className="text-xs font-extrabold uppercase tracking-widest text-[#38BDF8]">
               Coverage &amp; Hubs
             </h4>
             <ul className="space-y-2 text-xs text-[#94A3B8]">

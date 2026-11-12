@@ -21,10 +21,10 @@ export const AreasSection: React.FC = () => {
           {AREAS.map((a) => (
             <div
               key={a.slug}
-              className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:border-[#0284C7]/40 hover:shadow-xl transition-all flex flex-col justify-between"
+              className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:border-[#0369A1]/40 hover:shadow-xl transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7] mb-5">
+                <div className="w-12 h-12 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0369A1] mb-5">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A] mb-2">
@@ -40,7 +40,7 @@ export const AreasSection: React.FC = () => {
                   href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent(`Hello OSIA Transport! We need dispatch to ${a.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-extrabold uppercase tracking-wider text-[#0284C7] hover:text-[#0369A1] inline-flex items-center gap-1 group"
+                  className="text-xs font-extrabold uppercase tracking-wider text-[#0369A1] hover:text-[#0369A1] inline-flex items-center gap-1 group"
                 >
                   <span>Request Dispatch to {a.name}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

@@ -10,7 +10,7 @@ import { getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Contact OSIA Transport LLC SPC | 24/7 Abu Dhabi Dispatch',
-  description: 'Reach OSIA Transport operations desk in Abu Dhabi: telephone hotline +971 50 412 7930, instant WhatsApp dispatch, and official email inquiries.',
+  description: `Reach OSIA Transport operations desk in Abu Dhabi: telephone hotline ${SITE_CONFIG.phoneDisplay}, instant WhatsApp dispatch, and official email inquiries.`,
   path: '/contact/',
 });
 
@@ -71,8 +71,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#128C7E] shrink-0 mt-0.5">
-                      <MessageSquare className="w-5 h-5 fill-[#128C7E]" />
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#0E7064] shrink-0 mt-0.5">
+                      <MessageSquare className="w-5 h-5 fill-[#0E7064]" />
                     </div>
                     <div>
                       <span className="text-xs text-[#94A3B8] uppercase font-bold block">
@@ -82,22 +82,22 @@ export default function ContactPage() {
                         href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need a quote.')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-bold text-[#128C7E] hover:underline"
+                        className="text-lg font-bold text-on-dark hover:underline"
                       >
-                        +971 50 412 7930
+                        {SITE_CONFIG.phoneDisplay}
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#0284C7] shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#0369A1] shrink-0 mt-0.5">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
                       <span className="text-xs text-[#94A3B8] uppercase font-bold block">
                         Email Address
                       </span>
-                      <a href={`mailto:${SITE_CONFIG.email}`} className="text-sm font-semibold text-white hover:text-[#0284C7] break-all transition-colors">
+                      <a href={`mailto:${SITE_CONFIG.email}`} className="text-sm font-semibold text-white hover:text-[#0369A1] break-all transition-colors">
                         {SITE_CONFIG.email}
                       </a>
                     </div>

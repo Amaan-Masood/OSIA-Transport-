@@ -6,20 +6,20 @@
   --color-navy-hover: #162842;
   
   /* Single Unified Signature Accent: OSIA Precision Blue (Calibrated to Official Logo) */
-  --color-sky-brand: #0284C7;
+  --color-sky-brand: #0369A1;
   --color-sky-brand-hover: #0369A1;
   --color-sky-brand-light: #E0F2FE;
   --color-sky-brand-text: #0369A1;
 
   /* Aliased cleanly to Precision Blue to prevent any color fragmentation */
-  --color-orange-brand: #0284C7;
+  --color-orange-brand: #0369A1;
   --color-orange-brand-hover: #0369A1;
   --color-orange-brand-light: #E0F2FE;
   --color-orange-brand-text: #0369A1;
   --color-orange-contrast: #FFFFFF;
   
   /* Official Deep WhatsApp Emerald (Executive, Mature & High Contrast) */
-  --color-whatsapp: #128C7E;
+  --color-whatsapp: #0E7064;
   --color-whatsapp-hover: #0E7064;
   --color-whatsapp-contrast: #FFFFFF;
   

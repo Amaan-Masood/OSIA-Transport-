@@ -25,8 +25,8 @@ export const Card: React.FC<CardProps> = ({
   };
 
   const accentClasses = {
-    water: 'border-t-[3px] border-t-[#0284C7]',
-    orange: 'border-t-[3px] border-t-[#0284C7]',
+    water: 'border-t-[3px] border-t-[#0369A1]',
+    orange: 'border-t-[3px] border-t-[#0369A1]',
     none: '',
   };
 

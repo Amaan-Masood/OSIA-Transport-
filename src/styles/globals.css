@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @theme {
   /* Brand Primary Authority Navy */
@@ -8,20 +9,20 @@
   --color-navy-hover: #162842;
   
   /* Brand Signature Accent (OSIA Logo Sky Blue) */
-  --color-sky-brand: #0284C7;
+  --color-sky-brand: #0369A1;
   --color-sky-brand-hover: #0369A1;
   --color-sky-brand-light: #E0F2FE;
   --color-sky-brand-text: #0369A1;
   
   /* Unified to Precision Blue to banish color clutter */
-  --color-orange-brand: #0284C7;
+  --color-orange-brand: #0369A1;
   --color-orange-brand-hover: #0369A1;
   --color-orange-brand-light: #E0F2FE;
   --color-orange-brand-text: #0369A1;
   --color-orange-contrast: #FFFFFF;
   
   /* Official Deep WhatsApp Emerald */
-  --color-whatsapp: #128C7E;
+  --color-whatsapp: #0E7064;
   --color-whatsapp-hover: #0E7064;
   --color-whatsapp-contrast: #FFFFFF;
   
@@ -60,9 +61,9 @@
   --color-navy: #0B1726;
   --color-navy-dark: #070F1A;
   --color-navy-card: #132238;
-  --color-sky-brand: #0284C7;
-  --color-orange-brand: #0284C7;
-  --color-whatsapp: #128C7E;
+  --color-sky-brand: #0369A1;
+  --color-orange-brand: #0369A1;
+  --color-whatsapp: #0E7064;
   --color-bg: #FFFFFF;
   --color-surface-slate: #F8FAFC;
   --color-heading: #0F172A;
@@ -125,7 +126,7 @@ h1, h2, h3 {
 
 /* Accessible focus ring */
 :focus-visible {
-  outline: 2px solid #0284C7;
+  outline: 2px solid #0369A1;
   outline-offset: 2px;
 }
 
@@ -138,3 +139,21 @@ h1, h2, h3 {
     scroll-behavior: auto !important;
   }
 }
+
+/* Shared finishing details keep navigation and form controls consistent. */
+nav a[aria-current="page"] {
+  color: var(--color-sky-brand-text);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+input, textarea, select {
+  font: inherit;
+  accent-color: var(--color-sky-brand);
+}
+p { text-wrap: pretty; }
+::selection {
+  background: var(--color-sky-brand-light);
+  color: var(--color-navy);
+}
+html { scroll-padding-top: 8rem; }

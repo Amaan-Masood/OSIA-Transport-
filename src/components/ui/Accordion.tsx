@@ -35,8 +35,8 @@ export const Accordion: React.FC<AccordionProps> = ({ items, className = '' }) =
             >
               <span className="text-base md:text-lg pr-4">{item.question}</span>
               <ChevronDown
-                className={`h-5 w-5 shrink-0 text-[#0284C7] transition-transform duration-200 ${
-                  isOpen ? 'rotate-180 text-[#0284C7]' : ''
+                className={`h-5 w-5 shrink-0 text-[#0369A1] transition-transform duration-200 ${
+                  isOpen ? 'rotate-180 text-[#0369A1]' : ''
                 }`}
               />
             </button>

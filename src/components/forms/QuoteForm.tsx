@@ -96,7 +96,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               href={submittedUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#128C7E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] shadow-md transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#0E7064] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] shadow-md transition-all active:scale-95"
             >
               <MessageSquare className="w-5 h-5 fill-white text-white" />
               <span>Open in WhatsApp</span>
@@ -106,10 +106,10 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
           <div className="pt-6 border-t border-[#E2E8F0] text-xs text-[#64748B] space-y-2">
             <p className="font-semibold text-[#0F172A]">Or contact dispatch immediately via:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#0284C7] hover:underline flex items-center gap-1">
+              <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#0369A1] hover:underline flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5" /> Call {SITE_CONFIG.phoneDisplay}
               </a>
-              <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#0284C7] hover:underline flex items-center gap-1">
+              <a href={`mailto:${SITE_CONFIG.email}`} className="text-[#0369A1] hover:underline flex items-center gap-1">
                 <Mail className="w-3.5 h-3.5" /> {SITE_CONFIG.email}
               </a>
             </div>
@@ -264,7 +264,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                 placeholder="e.g. Engineer Tariq / Al Futtaim Site"
                 aria-invalid={!!errors.name}
                 className={`w-full px-3.5 py-3 rounded-xl border text-sm text-[#0F172A] focus:outline-none transition-all ${
-                  errors.name ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20'
+                  errors.name ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0369A1] focus:ring-2 focus:ring-[#0369A1]/20'
                 }`}
               />
               {errors.name && (
@@ -288,7 +288,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
                 placeholder="e.g. 050 412 7930"
                 aria-invalid={!!errors.phone}
                 className={`w-full px-3.5 py-3 rounded-xl border text-sm text-[#0F172A] focus:outline-none transition-all ${
-                  errors.phone ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20'
+                  errors.phone ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0369A1] focus:ring-2 focus:ring-[#0369A1]/20'
                 }`}
               />
               {errors.phone && (
@@ -314,7 +314,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               placeholder="e.g. Musaffah Sector 14 / Khalifa City Villa / Yas South"
               aria-invalid={!!errors.location}
               className={`w-full px-3.5 py-3 rounded-xl border text-sm text-[#0F172A] focus:outline-none transition-all ${
-                errors.location ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20'
+                errors.location ? 'border-red-500 bg-red-50/30' : 'border-[#E2E8F0] focus:border-[#0369A1] focus:ring-2 focus:ring-[#0369A1]/20'
               }`}
             />
             {errors.location && (
@@ -337,7 +337,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({ initialServiceId, classNam
               value={formData.details}
               onChange={handleChange}
               placeholder="Provide any additional specifications, site constraints, or urgent timing requirements..."
-              className="w-full px-3.5 py-3 rounded-xl border border-[#E2E8F0] text-sm text-[#0F172A] focus:border-[#0284C7] focus:ring-2 focus:ring-[#0284C7]/20 focus:outline-none transition-all"
+              className="w-full px-3.5 py-3 rounded-xl border border-[#E2E8F0] text-sm text-[#0F172A] focus:border-[#0369A1] focus:ring-2 focus:ring-[#0369A1]/20 focus:outline-none transition-all"
             />
           </div>
 

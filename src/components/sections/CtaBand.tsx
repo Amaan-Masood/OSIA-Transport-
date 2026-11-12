@@ -24,7 +24,7 @@ export const CtaBand: React.FC = () => {
               href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I need an urgent quote.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-[#0284C7] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0369A1] shadow-lg shadow-sky-500/25 hover:shadow-xl transition-all active:scale-95"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-[#0369A1] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0369A1] shadow-lg shadow-sky-500/25 hover:shadow-xl transition-all active:scale-95"
             >
               <MessageSquare className="w-5 h-5 fill-white text-white" />
               <span>Get WhatsApp Quote</span>

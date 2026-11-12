@@ -48,7 +48,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const isWater = service.category === 'water';
+
   const serviceVisual = SERVICE_VISUALS[service.id];
   const whatsappUrl = buildDirectServiceWhatsAppUrl(service.title);
 
@@ -102,7 +102,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#128C7E] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] shadow-md transition-all active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#0E7064] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#0E7064] shadow-md transition-all active:scale-95"
               >
                 <MessageSquare className="w-4 h-4 fill-white text-white" />
                 <span>Instant WhatsApp Quote</span>
@@ -144,7 +144,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </h3>
                     <Link
                       href="/fleet/"
-                      className="text-xs font-extrabold uppercase tracking-wider text-[#0284C7] hover:underline inline-flex items-center gap-1"
+                      className="text-xs font-extrabold uppercase tracking-wider text-[#0369A1] hover:underline inline-flex items-center gap-1"
                     >
                       <span>Full Fleet Library</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -168,7 +168,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </div>
                     <div className="pt-3 flex items-center justify-between gap-2 text-xs text-[#475569] font-semibold">
                       <span>{serviceVisual.label}</span>
-                      <span className="text-[#0284C7] uppercase font-bold">Abu Dhabi Active Fleet</span>
+                      <span className="text-[#0369A1] uppercase font-bold">Abu Dhabi Active Fleet</span>
                     </div>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       key={i}
                       className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-start gap-3 text-xs text-[#334155]"
                     >
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[#0284C7]" />
+                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-[#0369A1]" />
                       <span className="font-semibold">{app}</span>
                     </div>
                   ))}

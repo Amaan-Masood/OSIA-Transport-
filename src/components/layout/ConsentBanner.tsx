@@ -37,7 +37,7 @@ export const ConsentBanner: React.FC = () => {
     <div
       role="region"
       aria-label="Cookie and Privacy Consent"
-      className="fixed bottom-16 md:bottom-6 left-4 right-4 md:left-6 md:right-auto md:max-w-md z-50 bg-[#0B1726] text-white p-5 rounded-2xl border border-white/15 shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-300"
+      className="fixed bottom-20 md:bottom-6 left-4 right-4 md:left-6 md:right-auto md:max-w-md z-50 bg-[#0B1726] text-white p-5 rounded-2xl border border-white/15 shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-300"
     >
       <div className="space-y-2.5">
         <div className="flex items-center justify-between">
@@ -55,14 +55,14 @@ export const ConsentBanner: React.FC = () => {
           <button
             type="button"
             onClick={accept}
-            className="flex-1 px-4 py-2 rounded-xl bg-[#0284C7] text-white text-xs font-extrabold uppercase tracking-wider hover:bg-[#0369A1] transition-colors cursor-pointer"
+            className="flex-1 min-h-11 px-4 py-2 rounded-xl bg-[#0369A1] text-white text-xs font-extrabold uppercase tracking-wider hover:bg-[#0369A1] transition-colors cursor-pointer"
           >
             Accept
           </button>
           <button
             type="button"
             onClick={decline}
-            className="px-4 py-2 rounded-xl border border-white/20 text-[#94A3B8] text-xs font-semibold hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+            className="min-h-11 px-4 py-2 rounded-xl border border-white/20 text-[#94A3B8] text-xs font-semibold hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
           >
             Decline
           </button>

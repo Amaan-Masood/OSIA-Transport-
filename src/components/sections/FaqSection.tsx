@@ -35,7 +35,7 @@ export const FaqSection: React.FC = () => {
             href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent('Hello OSIA Transport! I have a question regarding your services.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#128C7E] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0E7064] transition-all shadow-sm active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0E7064] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0E7064] transition-all shadow-sm active:scale-95"
           >
             <MessageSquare className="w-4 h-4 fill-white text-white" />
             <span>Chat Directly on WhatsApp</span>

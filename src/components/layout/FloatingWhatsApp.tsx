@@ -13,12 +13,12 @@ export const FloatingWhatsApp: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with OSIA Transport on WhatsApp"
-        className="relative group flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#128C7E] text-white shadow-[0_4px_16px_rgba(18,140,126,0.35)] hover:shadow-[0_8px_24px_rgba(18,140,126,0.50)] hover:bg-[#0E7064] hover:scale-105 active:scale-95 transition-all duration-200"
+        className="relative group flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0E7064] text-white shadow-[0_4px_16px_rgba(18,140,126,0.35)] hover:shadow-[0_8px_24px_rgba(18,140,126,0.50)] hover:bg-[#0E7064] hover:scale-105 active:scale-95 transition-all duration-200"
       >
         {/* Subtle Online Pulse Ring */}
         <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#128C7E] border-2 border-white"></span>
+          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#0E7064] border-2 border-white"></span>
         </span>
 
         {/* Authentic WhatsApp Vector Icon */}

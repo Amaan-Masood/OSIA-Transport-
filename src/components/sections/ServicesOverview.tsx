@@ -67,10 +67,10 @@ export const ServicesOverview: React.FC = () => {
           <div>
             <Link
               href="/services/"
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#0284C7] hover:text-[#0369A1] group transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#0369A1] hover:text-[#0369A1] group transition-colors"
             >
               <span className="border-b border-transparent group-hover:border-[#0369A1] transition-colors">
-                Explore All 7 Services Hub
+                Explore all services
               </span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -82,7 +82,7 @@ export const ServicesOverview: React.FC = () => {
           {HIGHLIGHT_SERVICES.map((s) => (
             <Card
               key={s.slug}
-              accentTop="water"
+              accentTop="none"
               variant="surface"
               className="flex flex-col justify-between group hover:-translate-y-0.5 rounded-2xl"
             >
@@ -106,13 +106,13 @@ export const ServicesOverview: React.FC = () => {
                       {s.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold font-display uppercase tracking-tight text-[#0F172A] group-hover:text-[#0284C7] transition-colors leading-snug min-h-[2.75rem]">
+                  <h3 className="text-lg font-semibold font-body tracking-tight text-[#0F172A] group-hover:text-[#0369A1] transition-colors leading-snug min-h-[2.75rem]">
                     <Link href={`/services/${s.slug}/`}>{s.title}</Link>
                   </h3>
                   <div className="text-[11px] font-bold uppercase tracking-wide text-[#0369A1] bg-[#E0F2FE]/80 px-2.5 py-1 rounded-md inline-block tabular-nums">
                     {s.capacity}
                   </div>
-                  <p className="text-xs sm:text-sm text-[#475569] leading-relaxed line-clamp-3">
+                  <p className="text-sm text-text-main leading-relaxed">
                     {s.desc}
                   </p>
                 </div>
@@ -121,7 +121,7 @@ export const ServicesOverview: React.FC = () => {
               <div className="px-5 sm:px-6 py-4 border-t border-[#E2E8F0] bg-[#F8FAFC]/60 flex items-center justify-between">
                 <Link
                   href={`/services/${s.slug}/`}
-                  className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] hover:text-[#0284C7] transition-colors flex items-center gap-1 group/link"
+                  className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] hover:text-[#0369A1] transition-colors flex items-center gap-1 group/link"
                 >
                   <span>Specs</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
@@ -131,7 +131,7 @@ export const ServicesOverview: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`WhatsApp quote for ${s.title}`}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#128C7E] hover:text-[#0E7064] transition-colors active:scale-95"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#0E7064] hover:text-[#0E7064] transition-colors active:scale-95"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
                   <span>WhatsApp</span>
@@ -144,14 +144,14 @@ export const ServicesOverview: React.FC = () => {
         {/* Bottom Banner */}
         <div className="mt-10 sm:mt-12 p-5 sm:p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#128C7E] shrink-0"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#0E7064] shrink-0"></span>
             <p className="text-xs sm:text-sm text-[#334155]">
               <strong>Also Available:</strong> Salt Water Supply, Wastewater &amp; Septic Tank Drainage, and Heavy Multi-Axle Flatbed Transit across Abu Dhabi.
             </p>
           </div>
           <Link
             href="/services/"
-            className="text-xs font-extrabold uppercase tracking-wider text-[#0284C7] hover:text-[#0369A1] shrink-0 transition-colors"
+            className="text-xs font-extrabold uppercase tracking-wider text-[#0369A1] hover:text-[#0369A1] shrink-0 transition-colors"
           >
             View Full Service Catalog (7 Solutions) →
           </Link>

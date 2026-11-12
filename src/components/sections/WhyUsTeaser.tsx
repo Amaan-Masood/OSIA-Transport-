@@ -19,37 +19,37 @@ export const WhyUsTeaser: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-[0_12px_28px_-6px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1] hover:-translate-y-0.5 transition-all duration-300 space-y-4">
-            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0369A1]">
               <MapPin className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
+            <h3 className="text-xl font-semibold font-body text-[#0F172A]">
               Based In Abu Dhabi
             </h3>
-            <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+            <p className="text-sm text-text-main leading-relaxed">
               Fast, priority dispatch to Musaffah Industrial Area, ICAD, Khalifa City, MBZ City, and all Western Region project corridors.
             </p>
           </div>
 
           <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-[0_12px_28px_-6px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1] hover:-translate-y-0.5 transition-all duration-300 space-y-4">
-            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0369A1]">
               <Clock className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
+            <h3 className="text-xl font-semibold font-body text-[#0F172A]">
               24/7 Operations Desk
             </h3>
-            <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+            <p className="text-sm text-text-main leading-relaxed">
               Round-the-clock dispatch coordinators reachable by phone and WhatsApp for immediate tanker delivery and crane mobilization.
             </p>
           </div>
 
           <div className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-white hover:shadow-[0_12px_28px_-6px_rgba(15,23,42,0.08)] hover:border-[#CBD5E1] hover:-translate-y-0.5 transition-all duration-300 space-y-4">
-            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0284C7]">
+            <div className="w-11 h-11 rounded-xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center text-[#0369A1]">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-bold font-display uppercase text-[#0F172A]">
+            <h3 className="text-xl font-semibold font-body text-[#0F172A]">
               Certified Operators &amp; Safety
             </h3>
-            <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
+            <p className="text-sm text-text-main leading-relaxed">
               Strict HSE protocols, licensed crane operators, food-grade clean potable water tanks, and regular mechanical maintenance.
             </p>
           </div>
@@ -58,7 +58,7 @@ export const WhyUsTeaser: React.FC = () => {
         <div className="text-center mt-10">
           <Link
             href="/about/"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#0284C7] hover:text-[#0369A1] group transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#0369A1] hover:text-[#0369A1] group transition-colors"
           >
             <span>Learn More About Our Company &amp; Mission</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

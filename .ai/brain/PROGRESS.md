@@ -36,3 +36,26 @@
 |------|-----|------|
 | 2026-11-11 | Claude Chat | Brief v2, stack lock, ADRs, TRD, tokens, UI spec, threat model, test plan, runbook |
 | 2026-11-11 | Antigravity | Full implementation: Scaffold, Tailwind v4 tokens, real fleet image pipeline, UI components, quote form, 19 static routes, 14 unit tests, strict CSP hash pipeline, out/ export |
+
+## UI finishing — 2026-11-13
+- Refined hero spacing, mobile reading order, visible quote actions, lighter shared buttons, current-page navigation and form typography.
+- Verification: see session output for typecheck, tests and static build. Browser visual review and Lighthouse not performed.
+- Suggested commit: style: polish hero and shared navigation
+
+
+### UI review follow-up ? 2026-11-13
+- Reviewed desktop (1440px), tablet (768px), and mobile (390px) in Chrome. Refined service heading readability, card borders, mobile consent clearance, and keyboard services dropdown.
+- Browser checks: no horizontal overflow, mobile menu navigation passed, homepage images loaded, services/fleet/about/contact/FAQ returned 200, no page errors.
+- TypeScript passes; 14/14 unit tests pass; claims gate passes. ESLint is not configured. Live npm audit reports 3 high and 1 moderate dependency advisories; dependency migrations are outside this visual change.
+- Initial production build passed; subsequent build encountered shared .next cache conflicts during concurrent dev use. Final retry result recorded in session output.
+
+- Final production build PASS (20 pages generated, static export and CSP completed). Separated production cache into .next-production to prevent collisions with auto-running development servers.
+
+## Final completion - 2026-11-13
+- Installed ESLint/Next/TypeScript configuration and pinned the existing test runner locally; removed unused imports without disabling lint rules.
+- Updated Zod to 4.6.7 and Sharp to 0.35.5. Scoped patched PostCSS 8.5.32 and minimatch 11.0.1 overrides. npm audit: zero vulnerabilities.
+- Self-hosted licensed Barlow fonts and removed Google Fonts links, matching the site's CSP.
+- Improved blue/green contrast; retained the existing navy/blue design direction. See ADR_06_UI_FINISH.md.
+- Corrected cache isolation: development uses .next-dev, production uses the static exporter default .next and out. Supersedes earlier .next-production note.
+- Validation: production build and CSP generation pass; TypeScript passes; 14/14 tests pass; claims check passes; lint passes. Browser screenshots and accessibility report are under .ai/reviews.
+- Final axe checks: homepage at 390/1440, services, fleet, contact, about and FAQ have zero WCAG A/AA violations in tested states. Screenshots visually reviewed. No deployment performed.

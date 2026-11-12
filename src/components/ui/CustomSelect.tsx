@@ -83,7 +83,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
         onClick={() => setIsOpen((prev) => !prev)}
         className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm font-semibold transition-all duration-200 cursor-pointer bg-white text-left ${
           isOpen
-            ? 'border-[#0284C7] ring-4 ring-[#0284C7]/10 shadow-sm'
+            ? 'border-[#0369A1] ring-4 ring-[#0369A1]/10 shadow-sm'
             : 'border-[#CBD5E1] hover:border-[#94A3B8] shadow-xs'
         } ${value ? 'text-[#0F172A]' : 'text-[#94A3B8]'}`}
       >
@@ -91,7 +91,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
           {selectedOption ? selectedOption.label : placeholder}
         </span>
         <ChevronDown
-          className={`w-4 h-4 shrink-0 text-[#0284C7] transition-transform duration-200 ${
+          className={`w-4 h-4 shrink-0 text-[#0369A1] transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -115,7 +115,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
                 className={`px-4 py-2.5 text-xs sm:text-sm font-semibold cursor-pointer transition-colors flex items-center justify-between ${
                   isSelected
                     ? 'bg-[#E0F2FE] text-[#0369A1] font-bold'
-                    : 'text-[#334155] hover:bg-[#F8FAFC] hover:text-[#0284C7]'
+                    : 'text-[#334155] hover:bg-[#F8FAFC] hover:text-[#0369A1]'
                 }`}
               >
                 <div className="flex items-center gap-2 truncate">
@@ -126,7 +126,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
                     </span>
                   )}
                 </div>
-                {isSelected && <Check className="w-4 h-4 text-[#0284C7] shrink-0 ml-2" />}
+                {isSelected && <Check className="w-4 h-4 text-[#0369A1] shrink-0 ml-2" />}
               </div>
             );
           })}

@@ -3,11 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Phone, Mail, Clock, Menu, X, ChevronDown } from 'lucide-react';
 import { SITE_CONFIG, SERVICES } from '@/content/site';
 import { Button } from '@/components/ui/Button';
 
 export const Navbar: React.FC = () => {
+  const pathname = usePathname().replace(/\/$/, '') || '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -58,7 +60,8 @@ export const Navbar: React.FC = () => {
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all ${scrolled ? 'py-2' : 'py-3'}`}>
         <div className="flex items-center justify-between">
           {/* Brand Official Logo */}
-          <Link href="/" className="flex items-center gap-3 group focus-visible:outline-2">
+          <Link href="/"
+                aria-current={pathname === "/" ? "page" : undefined} className="flex items-center gap-3 group focus-visible:outline-2">
             <Image
               src="/images/logo-transparent.png"
               alt="OSIA Transport LLC Official Logo"
@@ -68,7 +71,7 @@ export const Navbar: React.FC = () => {
               priority
             />
             <div className="flex flex-col">
-              <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-[#0F172A] uppercase font-display leading-none group-hover:text-[#0284C7] transition-colors">
+              <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-[#0F172A] uppercase font-display leading-none group-hover:text-[#0369A1] transition-colors">
                 OSIA Transport
               </span>
               <span className="text-[10px] tracking-widest text-[#64748B] uppercase font-bold mt-0.5">
@@ -81,7 +84,8 @@ export const Navbar: React.FC = () => {
           <nav className="hidden lg:flex items-center gap-7">
             <Link
               href="/"
-              className="text-sm font-bold uppercase tracking-wider text-[#334155] hover:text-[#0284C7] transition-colors"
+                aria-current={pathname === "/" ? "page" : undefined}
+              className="text-sm font-semibold text-[#334155] hover:text-[#0369A1] transition-colors"
             >
               Home
             </Link>
@@ -89,12 +93,15 @@ export const Navbar: React.FC = () => {
             {/* Services Dropdown */}
             <div
               className="relative"
+              onFocus={() => setServicesDropdownOpen(true)}
+              onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setServicesDropdownOpen(false); }}
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
             >
               <Link
                 href="/services/"
-                className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-[#334155] hover:text-[#0284C7] transition-colors py-2"
+                aria-current={pathname === "/services" ? "page" : undefined}
+                className="flex items-center gap-1 text-sm font-semibold text-[#334155] hover:text-[#0369A1] transition-colors py-2"
               >
                 Services
                 <ChevronDown className="w-4 h-4 text-[#64748B]" />
@@ -109,7 +116,7 @@ export const Navbar: React.FC = () => {
                     <Link
                       key={s.id}
                       href={`/services/${s.slug}/`}
-                      className="block px-3 py-2 rounded-xl text-sm text-[#0F172A] hover:bg-[#F8FAFC] hover:text-[#0284C7] transition-colors"
+                      className="block px-3 py-2 rounded-xl text-sm text-[#0F172A] hover:bg-[#F8FAFC] hover:text-[#0369A1] transition-colors"
                     >
                       <div className="font-bold">{s.shortTitle}</div>
                       <div className="text-xs text-[#64748B] line-clamp-1">{s.capacitySnippet}</div>
@@ -118,7 +125,8 @@ export const Navbar: React.FC = () => {
                   <div className="pt-2 mt-1 border-t border-[#E2E8F0] px-3">
                     <Link
                       href="/services/"
-                      className="text-xs font-bold text-[#0284C7] hover:underline"
+                aria-current={pathname === "/services" ? "page" : undefined}
+                      className="text-xs font-bold text-[#0369A1] hover:underline"
                     >
                       View All 7 Services Hub →
                     </Link>
@@ -130,7 +138,8 @@ export const Navbar: React.FC = () => {
             {/* Dedicated Page: Fleet */}
             <Link
               href="/fleet/"
-              className="text-sm font-bold uppercase tracking-wider text-[#334155] hover:text-[#0284C7] transition-colors"
+                aria-current={pathname === "/fleet" ? "page" : undefined}
+              className="text-sm font-semibold text-[#334155] hover:text-[#0369A1] transition-colors"
             >
               Fleet Specs
             </Link>
@@ -138,7 +147,8 @@ export const Navbar: React.FC = () => {
             {/* Dedicated Page: About */}
             <Link
               href="/about/"
-              className="text-sm font-bold uppercase tracking-wider text-[#334155] hover:text-[#0284C7] transition-colors"
+                aria-current={pathname === "/about" ? "page" : undefined}
+              className="text-sm font-semibold text-[#334155] hover:text-[#0369A1] transition-colors"
             >
               About Us
             </Link>
@@ -146,7 +156,8 @@ export const Navbar: React.FC = () => {
             {/* Dedicated Page: FAQ */}
             <Link
               href="/faq/"
-              className="text-sm font-bold uppercase tracking-wider text-[#334155] hover:text-[#0284C7] transition-colors"
+                aria-current={pathname === "/faq" ? "page" : undefined}
+              className="text-sm font-semibold text-[#334155] hover:text-[#0369A1] transition-colors"
             >
               FAQ
             </Link>
@@ -154,7 +165,8 @@ export const Navbar: React.FC = () => {
             {/* Dedicated Page: Contact */}
             <Link
               href="/contact/"
-              className="text-sm font-bold uppercase tracking-wider text-[#334155] hover:text-[#0284C7] transition-colors"
+                aria-current={pathname === "/contact" ? "page" : undefined}
+              className="text-sm font-semibold text-[#334155] hover:text-[#0369A1] transition-colors"
             >
               Contact
             </Link>
@@ -162,8 +174,9 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Right Action */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button asLink href="/contact/" variant="cta" size="sm">
-              Get Instant Quote
+            <Button asLink href="/contact/"
+                aria-current={pathname === "/contact" ? "page" : undefined} variant="cta" size="sm">
+              Request a quote
             </Button>
           </div>
 
@@ -174,12 +187,14 @@ export const Navbar: React.FC = () => {
               className="hidden md:inline-flex p-2 rounded-lg bg-[#F8FAFC] text-[#0B1726] hover:bg-[#F1F5F9] transition-colors"
               aria-label="Call OSIA Transport"
             >
-              <Phone className="w-5 h-5 text-[#0284C7]" />
+              <Phone className="w-5 h-5 text-[#0369A1]" />
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-[#0A1B2E] hover:bg-[#F4F7FB] transition-colors"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -190,11 +205,12 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-white z-[60] overflow-y-auto border-t border-[#E2E8F0] p-5 flex flex-col justify-between">
+        <div id="mobile-navigation" className="lg:hidden fixed inset-x-0 top-[72px] sm:top-[116px] bottom-0 bg-white z-[60] overflow-y-auto border-t border-[#E2E8F0] p-5 flex flex-col justify-between">
           <div className="space-y-2">
             <div className="space-y-0.5">
               <Link
                 href="/"
+                aria-current={pathname === "/" ? "page" : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
@@ -204,21 +220,22 @@ export const Navbar: React.FC = () => {
                 <div className="text-xs font-extrabold uppercase text-[#64748B] mb-1.5 tracking-wider">
                   Our Services
                 </div>
-                <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#0284C7]">
+                <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#0369A1]">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.id}
                       href={`/services/${s.slug}/`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="py-1 text-sm font-semibold text-[#334155] hover:text-[#0284C7]"
+                      className="py-1 text-sm font-semibold text-[#334155] hover:text-[#0369A1]"
                     >
                       {s.shortTitle}
                     </Link>
                   ))}
                   <Link
                     href="/services/"
+                aria-current={pathname === "/services" ? "page" : undefined}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="py-1 text-xs font-bold text-[#0284C7]"
+                    className="py-1 text-xs font-bold text-[#0369A1]"
                   >
                     All Services Hub →
                   </Link>
@@ -226,6 +243,7 @@ export const Navbar: React.FC = () => {
               </div>
               <Link
                 href="/fleet/"
+                aria-current={pathname === "/fleet" ? "page" : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
@@ -233,6 +251,7 @@ export const Navbar: React.FC = () => {
               </Link>
               <Link
                 href="/about/"
+                aria-current={pathname === "/about" ? "page" : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
@@ -240,6 +259,7 @@ export const Navbar: React.FC = () => {
               </Link>
               <Link
                 href="/faq/"
+                aria-current={pathname === "/faq" ? "page" : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
@@ -247,6 +267,7 @@ export const Navbar: React.FC = () => {
               </Link>
               <Link
                 href="/contact/"
+                aria-current={pathname === "/contact" ? "page" : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
@@ -259,12 +280,13 @@ export const Navbar: React.FC = () => {
             <Button
               asLink
               href="/contact/"
+                aria-current={pathname === "/contact" ? "page" : undefined}
               variant="cta"
               size="lg"
               className="w-full"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Get Instant Quote
+              Request a quote
             </Button>
             <div className="text-center text-xs text-[#64748B]">
               24/7 Hotline: <a href={SITE_CONFIG.phoneHref} className="font-bold text-[#0F172A]">{SITE_CONFIG.phoneDisplay}</a>

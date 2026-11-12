@@ -4,37 +4,37 @@ import { Badge } from '@/components/ui/Badge';
 
 const REASONS = [
   {
-    icon: <MapPin className="w-6 h-6 text-[#0284C7]" />,
+    icon: <MapPin className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Based in Abu Dhabi',
     desc: 'Strategically located for priority dispatch across Musaffah Industrial Area, Khalifa City, ICAD, and all Western Region infrastructure hubs.',
   },
   {
-    icon: <Users className="w-6 h-6 text-[#0284C7]" />,
+    icon: <Users className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Experienced & Certified Crew',
     desc: 'Our heavy crane operators and tanker drivers hold full UAE certifications, rigorous site access passes, and extensive industrial experience.',
   },
   {
-    icon: <Truck className="w-6 h-6 text-[#0284C7]" />,
+    icon: <Truck className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Modern & Inspected Fleet',
     desc: 'High-torque Volvo FH tractor units, Mercedes-Benz Actros tankers, and certified multi-tonnage cranes inspected to strict safety standards.',
   },
   {
-    icon: <DollarSign className="w-6 h-6 text-[#0284C7]" />,
+    icon: <DollarSign className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Competitive & Transparent Pricing',
     desc: 'Fair hourly, daily, trip, and monthly contract rates with clear quotation and no surprise add-ons.',
   },
   {
-    icon: <Clock className="w-6 h-6 text-[#0284C7]" />,
+    icon: <Clock className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: '24/7 Standby Support',
     desc: 'Active round-the-clock telephone and WhatsApp dispatch desk for urgent dewatering, potable water top-ups, and emergency site lifting.',
   },
   {
-    icon: <ShieldCheck className="w-6 h-6 text-[#0284C7]" />,
+    icon: <ShieldCheck className="w-6 h-6 text-[#0369A1]" />,
     iconBg: 'bg-[#E0F2FE] border-[#BAE6FD]',
     title: 'Safety-Focused Operations',
     desc: 'Dedicated to Zero Incident safety protocols, comprehensive PPE, third-party load charts, and environmental disposal compliance.',

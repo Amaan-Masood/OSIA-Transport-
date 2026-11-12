@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ShieldCheck, Wrench } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 
 export const FleetTeaser: React.FC = () => {
@@ -41,7 +41,7 @@ export const FleetTeaser: React.FC = () => {
             <div className="pt-2">
               <Link
                 href="/fleet/"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all duration-200 active:scale-[0.985] shadow-lg shadow-sky-500/25 group hover:shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#0369A1] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all duration-200 active:scale-[0.985] shadow-lg shadow-sky-500/25 group hover:shadow-xl"
               >
                 <span>View Complete Fleet Specifications</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

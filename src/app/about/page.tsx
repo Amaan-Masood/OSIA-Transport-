@@ -42,10 +42,10 @@ export default function AboutPage() {
       </section>
 
       {/* Bio / Overview */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#E2E8F0]">
+      <section className="py-10 sm:py-24 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7 space-y-5">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            <div className="order-2 lg:order-1 lg:col-span-7 space-y-5">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
                 Leading Transport &amp; Equipment Rental
               </span>
@@ -65,8 +65,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Brand Showcase & Operational Snapshot */}
-            <div className="lg:col-span-5 space-y-6">
+            {/* Right Brand Showcase & Operational Snapshot (Shown first on mobile) */}
+            <div className="order-1 lg:order-2 lg:col-span-5 space-y-5 sm:space-y-6">
               {/* Official OSIA Twin-Tanker Brand Card */}
               <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-sm">
                 <div className="relative aspect-[16/10] w-full bg-white">
@@ -203,14 +203,14 @@ export default function AboutPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
+          <div className="flex overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden gap-4 pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible md:grid md:grid-cols-3 md:gap-6">
+            <div className="min-w-[82%] sm:min-w-[55%] md:min-w-0 snap-start shrink-0 bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
               <div className="relative aspect-square w-full bg-[#0B1726]">
                 <Image
                   src="/images/fleet/volvo-chassis-inspection.webp"
                   alt="Clean inspected Volvo chassis rail, bolts and OEM filter"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  sizes="(max-width: 768px) 82vw, 400px"
                   className="object-cover object-center"
                 />
               </div>
@@ -227,13 +227,13 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
+            <div className="min-w-[82%] sm:min-w-[55%] md:min-w-0 snap-start shrink-0 bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
               <div className="relative aspect-square w-full bg-[#0B1726]">
                 <Image
                   src="/images/fleet/volvo-fh500-white-led.webp"
                   alt="Volvo FH 500 Globetrotter heavy haulage prime mover"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  sizes="(max-width: 768px) 82vw, 400px"
                   className="object-cover object-[50%_75%]"
                 />
               </div>
@@ -250,7 +250,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
+            <div className="min-w-[82%] sm:min-w-[55%] md:min-w-0 snap-start shrink-0 bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-xs hover:shadow-lg transition-shadow">
               <div className="relative aspect-square w-full bg-[#0B1726]">
                 <Image
                   src="/images/fleet/mercedes-actros-water-tanker.webp"

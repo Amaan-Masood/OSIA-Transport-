@@ -130,29 +130,29 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
         )}
 
         {/* Crane Tonnage Numerals Cards */}
-        <div className="mb-16">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
-            <h3 className="text-xl font-extrabold uppercase font-display tracking-wider text-[#0F172A] flex items-center gap-2">
-              <Wrench className="w-5 h-5 text-[#0284C7]" />
-              Mobile Crane Rental Capacities (Abu Dhabi)
+        <div className="mb-10 sm:mb-16">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5 sm:mb-6">
+            <h3 className="text-lg sm:text-xl font-extrabold uppercase font-display tracking-wider text-[#0F172A] flex items-center gap-2">
+              <Wrench className="w-5 h-5 text-[#0284C7] shrink-0" />
+              <span>Mobile Crane Capacities</span>
             </h3>
             <span className="text-xs font-semibold text-[#64748B]">Third-party load tested &amp; certified</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {CRANE_TONNAGES.map((c, i) => (
               <div
                 key={i}
-                className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-6 hover:bg-white hover:border-[#0284C7]/40 hover:shadow-xl transition-all duration-200 flex flex-col justify-between shadow-xs group"
+                className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4 sm:p-6 hover:bg-white hover:border-[#0284C7]/40 hover:shadow-xl transition-all duration-200 flex flex-col justify-between shadow-xs group"
               >
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold font-display text-[#0284C7] tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">
+                  <div className="text-2xl sm:text-4xl font-extrabold font-display text-[#0284C7] tracking-tight mb-1 group-hover:scale-105 transition-transform origin-left">
                     {c.tonnage}
                   </div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-3">
+                  <div className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-2 sm:mb-3 leading-snug">
                     {c.type}
                   </div>
-                  <div className="text-xs text-[#64748B] space-y-1.5 pt-3 border-t border-[#E2E8F0]">
+                  <div className="hidden sm:block text-xs text-[#64748B] space-y-1.5 pt-3 border-t border-[#E2E8F0]">
                     <p>
                       <strong className="text-[#0F172A]">Application:</strong> {c.bestFor}
                     </p>
@@ -160,16 +160,19 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                       <strong className="text-[#0F172A]">Boom:</strong> {c.boom}
                     </p>
                   </div>
+                  <p className="sm:hidden text-[11px] text-[#64748B] leading-snug pt-2 border-t border-[#E2E8F0]">
+                    {c.bestFor}
+                  </p>
                 </div>
 
-                <div className="pt-5 mt-5 border-t border-[#E2E8F0]">
+                <div className="pt-3 sm:pt-5 mt-3 sm:mt-5 border-t border-[#E2E8F0]">
                   <a
                     href={`https://wa.me/${SITE_CONFIG.whatsappRaw}?text=${encodeURIComponent(`Hello OSIA Transport! I need a quote for a ${c.tonnage} Mobile Crane in Abu Dhabi.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-[#0284C7] text-white font-extrabold text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-sm hover:shadow-md active:scale-[0.98]"
+                    className="w-full inline-flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-2 rounded-xl bg-[#0284C7] text-white font-extrabold text-[11px] sm:text-xs uppercase tracking-wider hover:bg-[#0369A1] transition-all shadow-sm hover:shadow-md active:scale-[0.98]"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 fill-white" />
+                    <MessageSquare className="w-3.5 h-3.5 fill-white shrink-0" />
                     <span>Inquire {c.tonnage}</span>
                   </a>
                 </div>
@@ -179,7 +182,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
         </div>
 
         {/* Interactive Fleet & Tanker Library */}
-        <div className="space-y-8 pt-10 border-t border-[#E2E8F0]">
+        <div className="space-y-6 sm:space-y-8 pt-8 sm:pt-10 border-t border-[#E2E8F0]">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
             <div className="space-y-2">
               <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-[#0284C7]">
@@ -200,8 +203,12 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
             </div>
           </div>
 
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-2" role="tablist" aria-label="Fleet equipment categories">
+          {/* Filter Tabs (single horizontal swipe row on mobile) */}
+          <div
+            className="flex flex-nowrap overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap gap-2 pb-1 -mx-4 px-4 sm:mx-0 sm:px-0"
+            role="tablist"
+            aria-label="Fleet equipment categories"
+          >
             {FLEET_CATEGORIES.map((category) => {
               const isActive = activeCategory === category.id;
               return (
@@ -211,7 +218,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                   role="tab"
                   aria-selected={isActive}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer inline-flex items-center gap-2 ${
+                  className={`shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer inline-flex items-center gap-2 ${
                     isActive
                       ? 'bg-[#0B1726] text-white shadow-sm'
                       : 'bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] hover:bg-[#E0F2FE] hover:text-[#0284C7] hover:border-[#BAE6FD]'

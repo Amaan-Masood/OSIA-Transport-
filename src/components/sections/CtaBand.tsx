@@ -31,7 +31,7 @@ export const CtaBand: React.FC = () => {
             </a>
             <a
               href={SITE_CONFIG.phoneHref}
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
+              className="hidden sm:inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-white/10 text-white border border-white/20 font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors"
             >
               <Phone className="w-5 h-5 text-[#38BDF8]" />
               <span>Call {SITE_CONFIG.phoneDisplay}</span>

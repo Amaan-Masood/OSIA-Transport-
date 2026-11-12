@@ -167,11 +167,11 @@ export const Navbar: React.FC = () => {
             </Button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Hamburger Button (Call stays in sticky MobileBottomBar on phones) */}
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href={SITE_CONFIG.phoneHref}
-              className="p-2 rounded-lg bg-[#F8FAFC] text-[#0B1726] hover:bg-[#F1F5F9] transition-colors"
+              className="hidden md:inline-flex p-2 rounded-lg bg-[#F8FAFC] text-[#0B1726] hover:bg-[#F1F5F9] transition-colors"
               aria-label="Call OSIA Transport"
             >
               <Phone className="w-5 h-5 text-[#0284C7]" />
@@ -190,27 +190,27 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-white z-40 overflow-y-auto border-t border-[#E2E8F0] p-5 flex flex-col justify-between">
-          <div className="space-y-4">
-            <div className="space-y-1">
+        <div className="lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-white z-[60] overflow-y-auto border-t border-[#E2E8F0] p-5 flex flex-col justify-between">
+          <div className="space-y-2">
+            <div className="space-y-0.5">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
+                className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
                 Home
               </Link>
-              <div className="py-2 px-3">
-                <div className="text-xs font-extrabold uppercase text-[#64748B] mb-2 tracking-wider">
+              <div className="py-1.5 px-3">
+                <div className="text-xs font-extrabold uppercase text-[#64748B] mb-1.5 tracking-wider">
                   Our Services
                 </div>
-                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l-2 border-[#0284C7]">
+                <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-[#0284C7]">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.id}
                       href={`/services/${s.slug}/`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="py-1.5 text-sm font-semibold text-[#334155] hover:text-[#0284C7]"
+                      className="py-1 text-sm font-semibold text-[#334155] hover:text-[#0284C7]"
                     >
                       {s.shortTitle}
                     </Link>
@@ -218,7 +218,7 @@ export const Navbar: React.FC = () => {
                   <Link
                     href="/services/"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="py-1.5 text-xs font-bold text-[#0284C7]"
+                    className="py-1 text-xs font-bold text-[#0284C7]"
                   >
                     All Services Hub →
                   </Link>
@@ -227,35 +227,35 @@ export const Navbar: React.FC = () => {
               <Link
                 href="/fleet/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
+                className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
                 Fleet Specifications
               </Link>
               <Link
                 href="/about/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
+                className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
                 About Us
               </Link>
               <Link
                 href="/faq/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
+                className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
                 FAQ
               </Link>
               <Link
                 href="/contact/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
+                className="block py-2 px-3 rounded-xl text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
               >
                 Contact & Location
               </Link>
             </div>
           </div>
 
-          <div className="pt-6 border-t border-[#E2E8F0] space-y-3 pb-20">
+          <div className="pt-4 border-t border-[#E2E8F0] space-y-3 pb-24">
             <Button
               asLink
               href="/contact/"

@@ -65,9 +65,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-[#0B1726] text-white py-12 sm:py-16 border-b border-white/10">
+      <section className="bg-[#0B1726] text-white py-8 sm:py-16 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-4">
+          <div className="mb-3 sm:mb-4">
             <Link
               href="/services/"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-[#94A3B8] hover:text-[#38BDF8] uppercase tracking-wider transition-colors"
@@ -77,7 +77,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </Link>
           </div>
 
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
             <div className="flex flex-wrap items-center gap-3">
               <Badge variant="water">
                 {service.capacitySnippet}
@@ -88,15 +88,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-display uppercase tracking-tight text-white">
               {service.title}
             </h1>
 
-            <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed">
+            <p className="text-sm sm:text-lg text-[#94A3B8] leading-relaxed">
               {service.summary}
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            {/* Hidden on mobile phones (< md) because sticky MobileBottomBar handles Call & WhatsApp cleanly */}
+            <div className="hidden md:flex flex-wrap items-center gap-3 pt-2">
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -119,13 +120,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* Main Content & Specs Grid */}
-      <section className="py-14 sm:py-20 bg-white">
+      <section className="py-8 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-10">
+            {/* Left Content Column (Mobile puts visual showcase first cleanly) */}
+            <div className="lg:col-span-7 flex flex-col gap-8 sm:gap-10">
               {/* Overview */}
-              <div className="space-y-4">
+              <div className="order-2 lg:order-1 space-y-4">
                 <h2 className="text-2xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
                   Operational Overview &amp; Standards
                 </h2>
@@ -136,7 +137,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
               {/* Verified Service Visual Showcase */}
               {serviceVisual && (
-                <div className="space-y-4">
+                <div className="order-1 lg:order-2 space-y-4">
                   <div className="flex items-center justify-between gap-2">
                     <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#0F172A]">
                       Verified Fleet &amp; Dispatch Visual

@@ -48,8 +48,8 @@ export const FLEET_LIBRARY: FleetLibraryItem[] = [
 
 export const SERVICE_VISUALS: Partial<Record<string, ServiceVisual>> = {
   'sweet-water': { src: '/images/equipment/original-water-tanker.webp', alt: 'Water delivery tanker with white cab and cylindrical tank', label: 'Water delivery equipment', aspect: 'square' },
-  'non-drinking-water': { src: '/images/equipment/original-water-tanker.webp', alt: 'Original photo of the Mercedes-Benz water tanker', label: 'Original water tanker photo', aspect: 'square' },
-  'salt-water': { src: '/images/equipment/original-water-tanker.webp', alt: 'Mercedes-Benz tanker supplied in the original photo collection', label: 'Original water transport photo', aspect: 'square' },
+  'non-drinking-water': { src: '/images/equipment/site-water.webp', alt: 'Non-drinking water tanker on a city delivery route', label: 'Site water delivery - reference photo', aspect: 'square' },
+  'salt-water': { src: '/images/equipment/water-logistics.webp', alt: 'Water transport tanker beside an industrial site', label: 'Water transport - reference photo', aspect: 'square' },
   'wastewater-drainage': { src: '/images/equipment/vacuum-tanker.webp', alt: 'Yellow vacuum tanker with suction equipment and white cab', label: 'Vacuum tanker - illustrative photo', aspect: 'square' },
   'crane-rental': { src: '/images/equipment/mobile-crane.webp', alt: 'Telescopic mobile crane with deployed outriggers on a construction site', label: 'Mobile lifting equipment - illustrative photo', aspect: 'square' },
   'low-bed-trailer': { src: '/images/equipment/low-loader.webp', alt: 'Multi-axle low-loader trailer coupled to a Mercedes tractor', label: 'Low-bed transport - illustrative photo', aspect: 'square' },

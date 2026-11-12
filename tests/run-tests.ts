@@ -140,3 +140,11 @@ test('Content Truth & Anti-Hallucination Gate (TRD §9)', async (t) => {
     assert.ok(craneService?.capacitySnippet.includes('25 Ton – 200 Ton'));
   });
 });
+
+
+test('Service cards use a different photograph for every service', async () => {
+  const { SERVICE_VISUALS } = await import('../src/content/fleetVisuals');
+  const images = SERVICES.map((service) => SERVICE_VISUALS[service.id]?.src);
+  assert.ok(images.every(Boolean), 'Every service needs a photograph');
+  assert.equal(new Set(images).size, SERVICES.length, 'Service photographs must not repeat');
+});

@@ -18,7 +18,7 @@ const HIGHLIGHT_SERVICES = [
     desc: 'Hygienic potable water tankers for construction sites, labor camps, and commercial facilities with 24/7 emergency dispatch.',
   },
   {
-    image: '/images/equipment/original-water-tanker.webp',
+    image: '/images/equipment/site-water.webp',
     alt: 'Multi-axle construction site water tanker for compaction and dust control',
     objectPosition: 'object-center',
     title: 'Non-Drinking Site Water',

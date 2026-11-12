@@ -124,7 +124,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
               Equipment &amp; Fleet Specifications
             </h2>
             <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
-              Real equipment photographs from our active Abu Dhabi fleet. Maintained to strict UAE municipal and HSE standards with certified operators.
+              Explore equipment types for water supply, construction lifting and heavy haulage. Reference photographs illustrate equipment categories.
             </p>
           </div>
         )}
@@ -187,19 +187,19 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
             <div className="space-y-2">
               <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-[#0369A1]">
                 <Layers className="w-3.5 h-3.5" />
-                <span>Trucks &amp; Tankers Visual Library</span>
+                <span>Equipment gallery</span>
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-display uppercase tracking-tight text-[#0F172A]">
-                Active Fleet On Site Across Abu Dhabi
+                Equipment for water, lifting &amp; haulage
               </h3>
               <p className="text-xs sm:text-sm text-[#64748B] max-w-2xl">
-                Filter by color-coded water tankers, Volvo FH 500 prime movers, heavy haulage chassis, or chassis inspection readiness. Click any unit for full-screen view.
+                Browse by equipment type and open a photograph for a closer look. Reference photos illustrate equipment categories; contact dispatch to confirm the available unit.
               </p>
             </div>
 
             <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0E7064] bg-emerald-50 border border-emerald-200/60 px-3.5 py-2 rounded-full self-start lg:self-auto">
               <ShieldCheck className="w-4 h-4 text-[#0E7064]" />
-              <span>{filteredUnits.length} Verified Units Shown</span>
+              <span>{filteredUnits.length} Equipment Photos</span>
             </div>
           </div>
 
@@ -255,7 +255,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                       type="button"
                       onClick={() => setSelectedUnit(unit)}
                       aria-label={`Inspect ${unit.title} full view`}
-                      className="relative aspect-square w-full bg-[#0B1726] overflow-hidden block text-left cursor-pointer"
+                      className="relative aspect-[3/2] w-full bg-[#0B1726] overflow-hidden block text-left cursor-pointer"
                     >
                       <Image
                         src={unit.src}
@@ -275,7 +275,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                       <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#0369A1] block">
                         {unit.categoryLabel} &middot; {unit.badge}
                       </span>
-                      <h4 className="text-base font-bold font-display uppercase text-[#0F172A] leading-snug">
+                      <h4 className="text-base font-semibold font-body text-[#0F172A] leading-snug">
                         {unit.title}
                       </h4>
                       <p className="text-xs text-[#475569] leading-relaxed">{unit.specs}</p>
@@ -300,7 +300,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                       onClick={() => setSelectedUnit(unit)}
                       className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] hover:text-[#0369A1] transition-colors cursor-pointer"
                     >
-                      Inspect Unit
+                      View equipment
                     </button>
 
                     <a
@@ -415,7 +415,7 @@ export const FleetSection: React.FC<FleetSectionProps> = ({ showHeader = true })
                   <span>Book Unit on WhatsApp</span>
                 </a>
                 <Link
-                  href="/#quote"
+                  href="/contact/#quote"
                   onClick={() => setSelectedUnit(null)}
                   className="w-full inline-flex items-center justify-center py-2.5 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] text-[#0F172A] hover:border-[#0369A1] hover:text-[#0369A1] font-extrabold text-xs uppercase tracking-wider transition-colors"
                 >

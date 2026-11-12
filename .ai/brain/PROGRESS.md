@@ -59,3 +59,10 @@
 - Corrected cache isolation: development uses .next-dev, production uses the static exporter default .next and out. Supersedes earlier .next-production note.
 - Validation: production build and CSP generation pass; TypeScript passes; 14/14 tests pass; claims check passes; lint passes. Browser screenshots and accessibility report are under .ai/reviews.
 - Final axe checks: homepage at 390/1440, services, fleet, contact, about and FAQ have zero WCAG A/AA violations in tested states. Screenshots visually reviewed. No deployment performed.
+
+## Equipment photography refresh - 2026-11-13
+- Replaced flyer-heavy fleet gallery with six selected equipment photos, including five newly sourced Creative Commons photographs optimized to local WebP files.
+- Shared service imagery now uses tankers, crane and complete low-loader photography instead of chassis close-ups; gallery photos use landscape framing.
+- Adjusted captions to identify reference photography rather than imply ownership. Public photo credits include source, author, license and transformation details.
+- Browser: services/fleet desktop screenshots and mobile fleet reviewed; no broken images or horizontal overflow; lightbox opens. TypeScript, lint, 14 tests and claims checks pass.
+- Production build and static export pass after the photography refresh.

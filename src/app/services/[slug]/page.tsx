@@ -168,7 +168,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </div>
                     <div className="pt-3 flex items-center justify-between gap-2 text-xs text-[#475569] font-semibold">
                       <span>{serviceVisual.label}</span>
-                      <span className="text-[#0369A1] uppercase font-bold">Abu Dhabi Active Fleet</span>
+                      <span className="text-[#0369A1] uppercase font-bold">Equipment reference</span>
                     </div>
                   </div>
                 </div>

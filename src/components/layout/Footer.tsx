@@ -176,6 +176,7 @@ export const Footer: React.FC = () => {
           </p>
         </div>
       </div>
+    <p className="max-w-7xl mx-auto px-4 pb-6 text-xs text-on-dark-muted"><a href="/images/equipment/credits.html" className="underline hover:text-white">Equipment photo credits</a></p>
     </footer>
   );
 };

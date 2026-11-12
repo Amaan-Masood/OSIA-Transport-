@@ -101,13 +101,7 @@ export default function ServicesHubPage() {
                           alt={visual.alt}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                          className={`object-cover ${
-                            s.id === 'flatbed-trailer'
-                              ? 'object-[50%_75%]'
-                              : s.id === 'low-bed-trailer'
-                                ? 'object-[50%_55%]'
-                                : 'object-center'
-                          } transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]`}
+                          className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                         />
                       </Link>
                     )}

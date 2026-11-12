@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '@/content/site';
 
 const HIGHLIGHT_SERVICES = [
   {
-    image: '/images/services/sweet-water-tanker.webp',
+    image: '/images/fleet/mercedes-actros-water-tanker.webp',
     alt: 'Stainless steel sweet potable water tanker semi-truck in Abu Dhabi',
     objectPosition: 'object-center',
     title: 'Drinking Sweet Water Supply',
@@ -18,7 +18,7 @@ const HIGHLIGHT_SERVICES = [
     desc: 'Hygienic potable water tankers for construction sites, labor camps, and commercial facilities with 24/7 emergency dispatch.',
   },
   {
-    image: '/images/services/non-drinking-tanker.webp',
+    image: '/images/equipment/site-water.webp',
     alt: 'Multi-axle construction site water tanker for compaction and dust control',
     objectPosition: 'object-center',
     title: 'Non-Drinking Site Water',
@@ -28,7 +28,7 @@ const HIGHLIGHT_SERVICES = [
     desc: 'High-volume spray bar tankers for sub-base compaction, dust suppression on haul roads, and machinery site washing.',
   },
   {
-    image: '/images/services/mobile-crane-service.webp',
+    image: '/images/equipment/mobile-crane.webp',
     alt: '25T to 200T hydraulic telescopic mobile crane ready for Abu Dhabi lifting',
     objectPosition: 'object-center',
     title: 'Mobile Crane Rental (25T – 200T)',
@@ -38,9 +38,9 @@ const HIGHLIGHT_SERVICES = [
     desc: 'All-terrain inspected mobile cranes with third-party certified operators for structural steel, HVAC, and precast placement.',
   },
   {
-    image: '/images/fleet/heavy-multi-axle-chassis.webp',
+    image: '/images/equipment/low-loader.webp',
     alt: 'Multi-axle heavy low-bed transport unit for industrial equipment haulage',
-    objectPosition: 'object-[50%_55%]',
+    objectPosition: 'object-center',
     title: 'Low Bed & Flatbed Haulage',
     slug: 'low-bed-trailer-abu-dhabi',
     category: 'Heavy Equipment Transport',
